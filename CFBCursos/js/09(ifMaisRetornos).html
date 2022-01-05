@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.write("<p style='color:#f00'>CFB Cursos</p>")
+        var nota = 50
+        var res
+
+        if (nota>= 60){
+            res = "Aprovado"
+        }
+        else if (nota >=40){
+            res = "Recuperação"
+        }
+        else{
+            res = "Reprovado"
+        }
+
+        document.write(res)
     </script>
 </head>
 <body>

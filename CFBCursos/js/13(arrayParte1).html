@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //
+        var cor1, cor2
+        cor1 = "Preto"
+        cor2 = "Branco"
+
+        var cor = []
+        cor.push("Preto")
+        cor.push("Branco")
+        cor.push("Vermelho")
+        cor.push("Verde")
+        cor.push("Azul")
+        cor[80] = "roxo"
+
+
+        document.write(cor1 + ", "+ cor2 +"<br>") 
+        document.write(cor + "<br>")
+        document.write(cor[2])
+
+        var itens=["Faca", "Pederneira", "Corda", "Lanterna"]
+        var mochila = []
+
+        mochila.push(2)
+        document.write("<br>")
+        document.write(mochila)
+        document.write("<br>")
+        document.write(itens[mochila[0]]) // pq o item mochila[0] é o número 2 fazendo com que mostre o itens[2]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

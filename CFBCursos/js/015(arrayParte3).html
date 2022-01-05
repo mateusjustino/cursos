@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+                
+        var mochila = []
+        var pos
+
+        mochila.push("Faca")
+        mochila.push("Corda")
+        mochila.push("Pederneira")
+        mochila.push("Chave")
+        mochila.push("Lanterna")
+        mochila.push("Pedra")  // para adicionar no inicio da array
+
+        pos = mochila.indexOf("Lanterna")  // retorna a posição do item caso exista na array
+
+        if (pos < 0){
+            document.write("Item não está na mocila")
+        }
+        else{
+            document.write("Item está na mocila na posição " + pos)
+        }
+
+        document.write("<br>")
+        document.write("<br>")
+
+        var num = [5, 4, 2, 7, 3, 5, 8]
+        document.write(num)        
+
+        document.write("<br>")
+        document.write("<br>")
+        document.write(num.sort()) //sort para ordenar os elementos
+
+        document.write("<br>")
+        document.write("<br>")
+        document.write(num.reverse()) //reverse para simplesmente reverter a ordem dos elementos
+
+        var numeros
+        numeros = num.join()  // adiona os elementos para a variavel
+        document.write("<br>")
+        document.write("<br>")
+        document.write(numeros) 
+
+        var mochila1=[], mochila2=[], mochila3=[], pos
+
+        mochila1.push("Faca")
+        mochila1.push("Corda")
+        mochila1.push("Pederneira")
+        mochila1.push("Chave")
+        mochila1.push("Lanterna")
+        mochila1.push("Pedra")
+
+        mochila2.push("Arame")
+        mochila2.push("Luvas")
+        mochila2.push("Joelheira")
+        mochila2.push("Meias")
+        mochila2.push("Moeda")
+        mochila2.push("Canivete")
+
+        mochila3=mochila1.concat(mochila2)  // junta os elementos da mochila 1 e 2 na mochila 3
+        document.write("<br>")
+        document.write("<br>")
+        document.write(mochila3) 
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

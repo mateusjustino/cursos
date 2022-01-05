@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.write("<p style='color:#f00'>CFB Cursos</p>")
+        var pontos = 50
+        if (((pontos>=30) && (pontos<=40)) || ((pontos>=70) && (pontos<=80))){
+            document.write("Ganhou")
+        }
+        else{
+            document.write("Perdeu")
+        }
     </script>
 </head>
 <body>
