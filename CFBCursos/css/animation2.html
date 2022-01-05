@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        @keyframes anima{
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                left: 500px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 500px;
+            }
+
+            75% {
+                left: 0px;
+                top: 500px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+        p{            
+            width: 260px;
+            height: 260px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: justify;
+
+            position: relative;
+
+            left: 0px;
+            top: 0px;
+            background-color: lightblue;
+            
+
+            animation-name: anima;   /* nome da animação criada */
+            animation-duration: 2s;
+            animation-timing-function: linear;  /* igual no transition */
+            animation-delay: 0s;  /* 0s para a primeira animação selecionada e 2s para a segunda animação selecionada */
+            animation-iteration-count: infinite; /* quantas vezes executa a animação */
+            animation-play-state: running; /* para pausar a animação */
+            animation-direction: alternate; /* direção da animação */
+
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corporis laboriosam, eligendi numquam incidunt soluta aut, minus voluptatum aliquam iure molestiae quasi voluptate commodi minima cupiditate? Quo autem iste velit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, sed. Provident odio a excepturi maxime. Odio, eos reprehenderit qui dolor dicta accusamus quibusdam eius error laudantium earum. Laborum, rem saepe! lo</p>
+    
+</body>
+</html>

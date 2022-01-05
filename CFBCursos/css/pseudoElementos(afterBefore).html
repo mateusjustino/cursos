@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        p{
+            font-size: 20px;
+        }
+        p::before{
+            background-image: url(https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png);
+            background-size: 40px 40px;
+            display: inline-block;
+            width: 40px; 
+            height: 40px;
+            content:"";
+        }
+        p::after{
+            color: red;
+            content: " - CFB";
+        }
+    </style>
+</head>
+<body>
+    <p>Canal Fessor Bruno - Curso de CSS</p>
+    <p>Canal Fessor Bruno - Curso de CSS</p>
+    <p>Canal Fessor Bruno - Curso de CSS</p>
+</body>
+</html>

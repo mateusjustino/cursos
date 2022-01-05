@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(205, 223, 235);
+        }
+        section{
+            border: 1px solid red;
+            height: 200px;
+
+            display: flex;   /* os elementos ficam flexiveis */
+            display: -webkit-flex;   /* para navegadores antigos */
+            display: -moz-flex;    /* para firefox antigo */
+
+            /* quebra de linha */
+            flex-wrap: nowrap; /* se ira quebrar a linha (wrap) ou manter na mesma linha (nowrap) */
+            -webkit-flex-wrap: nowrap;
+            -moz-flex-wrap: nowrap;
+
+            /* alinhamento horizontal: flex-start - center - flex-end */
+            justify-content: center;  /* para onde ira se alinhar o conteudo */
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+
+            /* alinhamento vertical */
+            align-items: center;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+
+            /* direção dos elementos: row - collum | reverse */
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            -moz-flex-direction: row;
+        }
+        div{
+            border: 1px solid black;
+            height: 50px;
+            /* flex: 1;   /* os elementos se ajustam ocupando o espaço igualmente*/
+            /* width: 100px;   /* ou usa flex 1 ou um width especifico */
+            /* apenas flex: ; é a shorthand das propriedades (flex-grow; flex-shrink; flex-basis) */
+            
+        }
+        #d1{
+            order: 1;
+            flex-grow: 1;  /* ocupa o espaço vazio */
+        }
+        #d2{
+            order: 5;   
+            width: 100px;
+
+        }
+        #d3{
+            order: 3;
+            flex-basis: 50%;  /* ocupa o espaço especifico na div */
+
+        }
+        #d4{
+            order: 4;
+            width: 100px;
+
+        }
+        #d5{
+            order: 2;
+            width: 100px;
+
+        }
+        #d6{
+            order: 6;
+            flex-shrink: 1; /* o contrario do grow, ele encolhe o elemento pra sobrar espaço*/
+        }
+    </style>
+</head>
+<body>
+
+    <section id="s1">
+        <div id="d1">CFB 1</div>
+        <div id="d2">CFB 2</div>
+        <div id="d3">CFB 3</div>
+        <div id="d4">CFB 4</div>
+        <div id="d5">CFB 5</div>
+        <div id="d6">CFB 6</div>
+    </section>
+    
+</body>
+</html>

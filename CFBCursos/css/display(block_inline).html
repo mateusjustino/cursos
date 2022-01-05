@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(205, 223, 235);
+
+        }
+        div, span {
+            border: 1px solid black;
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+        }
+        #d1{
+            display: none;  /* o elemento existe mas não aparece e nem ocupa espaço visivel*/
+            visibility: hidden; /* oculta o elemento e ainda ocupa espaço visivel */
+        }
+        #s1{
+            display: block;  /* o elemento vira um bloco, ocupando toda a linha por padrão */
+        }
+        #d2{
+            display: inline; /* deixa o elemento ocupando só o espaço necessario na mesma linha */
+        }        
+        #s2{
+            display: inline-block; /* funciona como inline e respeitando o seu tamanho permitindo mais itens na linha */
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">DIV 1</div>
+    <span id="s1">SPAN 1</span>
+    <div id="d2">DIV 2</div>
+    <span id="s2">SPAN 2</span>
+    <span id="s2">SPAN 2</span>
+</body>
+</html>

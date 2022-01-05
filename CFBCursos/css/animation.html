@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentt</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        @keyframes anima1{
+            from{
+                left: 500px; 
+                top: 500px;
+            }
+            to{
+                left: 0px; 
+                top: 0px;
+            }
+        }        
+        @keyframes anima2{
+            from{
+                left: 0px; 
+                top: 0px;
+                background-color: lightblue;
+            }
+            to{
+                left: 0px; 
+                top: 0px;
+                background-color: lightgreen;
+            }
+        }   
+        @keyframes anima3{
+            from{
+                left: 0px; 
+                top: 0px;
+                background-color: lightgreen;
+            }
+            to{
+                left: 0px; 
+                top: 0px;
+                background-color: lightblue;
+            }
+        }
+        @keyframes anima4{
+            from{
+                left: 0px; 
+                top: 0px;
+            }
+            to{
+                left: 500px; 
+                top: 500px;
+            }
+        } 
+        p{            
+            width: 260px;
+            height: 260px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: justify;
+
+            position: relative;
+
+            left: 500px;
+            top: 500px;
+            background-color: lightblue;
+            
+
+            animation-name: anima1, anima2, anima3, anima4;   /* nome da animação criada */
+            animation-duration: 2s;
+            animation-timing-function: linear;  /* igual no transition */
+            animation-delay: 0s, 2s, 4s, 6s;  /* 0s para a primeira animação selecionada e 2s para a segunda animação selecionada */
+
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corporis laboriosam, eligendi numquam incidunt soluta aut, minus voluptatum aliquam iure molestiae quasi voluptate commodi minima cupiditate? Quo autem iste velit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, sed. Provident odio a excepturi maxime. Odio, eos reprehenderit qui dolor dicta accusamus quibusdam eius error laudantium earum. Laborum, rem saepe! lo</p>
+    
+</body>
+</html>
