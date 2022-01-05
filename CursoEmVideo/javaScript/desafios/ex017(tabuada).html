@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-color: rgb(87, 159, 161);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            text-align: center;
+            padding: 40px;
+            color: white;
+        }
+        section{
+            max-width: 450px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            padding: 30px;
+            margin: auto;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.381);
+        }
+        .itens {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        #numero {
+            font-size: 15px;
+        }
+        #btn {
+            padding: 4px;
+            border: none;
+            background-color: rgb(87, 159, 161);
+            border-radius: 7px;
+            color: white;
+        }
+        #btn:hover{
+            background-color: rgb(107, 179, 181);
+        }
+        #btn:active {
+            background-color: rgb(127, 199, 201);
+            transform: translateY(1px);
+        }
+        #tabuada {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <p>
+            <label for="numero" class="itens">Número:</label>
+            <input type="number" name="numero" id="numero" class="itens">
+            <input type="button" value="Gerar Tabuada" id="btn" class="itens">
+        </p>
+        <div id="tabuada">
+            <p style="padding-top: 10px;">Digite a tabuada desejada</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;CursoemVideo</p>
+    </footer>
+    <script>
+        var btn = document.getElementById('btn')
+        btn.addEventListener('click', clicar)
+
+        function clicar() {
+            var tabuada = document.getElementById('tabuada')
+            var n = Number(document.getElementById('numero').value)
+            
+            var c = 1            
+            var text = ''
+            while (c <= 10) {
+                var mult = c * n
+                text += `<p style="margin-top: 15px;">${n} x ${c} = ${mult}</p>`
+                c++
+            }            
+            tabuada.innerHTML = text
+        }
+    </script>
+</body>
+</html>

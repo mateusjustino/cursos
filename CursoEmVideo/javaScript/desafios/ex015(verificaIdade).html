@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(91, 90, 155);
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            color: whitesmoke;
+        }
+        section {
+            background-color: whitesmoke;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            line-height: 50px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.26);
+        }
+        #nasc {
+            font-size: 0.9em;
+            width: 100px;
+            text-align: right;
+        }      
+        
+        #button {
+            border: 1px thick black;
+            background-color: rgb(147, 146, 223);
+            padding: 7px;
+            border-radius: 5px; 
+            width: 100px;
+        }
+        #button:hover {
+            background-color: rgb(167, 166, 243);
+        }
+
+        #resultado {
+            
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-style: italic;
+            font-size: 1.1em;
+            color: white;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <label for="nasc">Ano de Nascimento: </label>
+        <input type="number" name="nasc" id="nasc" min="0" max="2100"> <br>
+
+        <label for="">Sexo:</label>
+        <input type="radio" name="sexo" value="Feminino" id="feminino" checked>
+        <label for="feminino">Feminino</label>
+        <input type="radio" name="sexo" value="Masculino" id='masculino'>
+        <label for="masculino">Masculino</label>        <br>
+
+        <input type="button" value="Verificar" id="button">
+        <p style="text-align: center;">Preencha os dados acima para ver o resultado!</p>
+        <div id="resultado">
+            <!--Preencha os dados acima para ver o resultado!-->            
+        </div>
+    </section>
+    <footer>
+        <p>CursoemVideo</p>
+    </footer>
+
+    <script>
+        var botao = window.document.getElementById('button')
+        botao.addEventListener('click', clicar) 
+
+        function clicar() {
+            var resultado = window.document.getElementById('resultado')
+            var info = window.document.getElementsByTagName('p')[0]
+            var sexo = window.document.getElementsByName('sexo')
+            var nascimento = Number(window.document.getElementById('nasc').value)
+            var data = new Date()
+            var anoAtual = data.getFullYear()
+            var idade = anoAtual - nascimento
+            //info.innerHTML = `nascimento: ${idade}`
+
+            //css da foto
+            resultado.style.height = '200px'
+            resultado.style.width = '200px'
+            resultado.style.borderRadius = '100px'
+            resultado.style.backgroundSize = '100% 100%'
+            resultado.style.backgroundRepeat = 'no-repeat'
+            resultado.style.margin = 'auto' 
+
+            if (nascimento > anoAtual) {
+                info.innerHTML = 'Ano inserido inválido!'
+            }
+            else {
+                if (sexo[0].checked == true) {                    
+                    if (idade < 10) {
+                        info.innerHTML = `Uma criança com ${idade} anos`
+                        resultado.style.backgroundImage = 'url(https://images.pexels.com/photos/1912868/pexels-photo-1912868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+                    }
+                    else if (idade < 20) {
+                        info.innerHTML = `Uma jovem com ${idade} anos`
+                        resultado.style.backgroundImage = 'url(https://images.pexels.com/photos/10544092/pexels-photo-10544092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+                    }
+                    else if (idade < 60) {
+                        info.innerHTML = `Uma mulher com ${idade} anos`
+                        resultado.style.backgroundImage = 'url(https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+                    }
+                    else {
+                        info.innerHTML = `Uma mulher com ${idade} anos`
+                        resultado.style.backgroundImage = 'url(https://images.pexels.com/photos/8940008/pexels-photo-8940008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+                    }
+                }
+
+                else {
+                    if (idade < 10) {
+                        info.innerHTML = `Uma criança com ${idade} anos`
+                        resultado.style.backgroundImage = 'url(https://images.pexels.com/photos/1231215/pexels-photo-1231215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+                    }
+                    else if (idade < 20) {
+                        info.innerHTML = `Um jovem com ${idade} anos`
+                        resultado.style.backgroundImage = 'url(https://images.pexels.com/photos/1813923/pexels-photo-1813923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+                    }
+                    else if (idade < 60) {
+                        info.innerHTML = `Um homem com ${idade} anos`
+                        resultado.style.backgroundImage = 'url(https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+                    }
+                    else {
+                        info.innerHTML = `Um homem com ${idade} anos`
+                        resultado.style.backgroundImage = 'url(https://images.pexels.com/photos/8940013/pexels-photo-8940013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

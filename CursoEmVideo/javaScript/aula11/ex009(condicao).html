@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringo</title>
+</head>
+<body>
+    <h1>Verificar se é BR</h1>
+
+    <label for="">Digite seu País:</label>
+    <input type="text" name="txtpais" id="txtpais" placeholder="País">
+
+    <input type="button" value="Verificar" onclick="checar()">
+    <h3 id="res">Resultado</h3>
+
+    <script>
+        function checar() {
+            var nome = window.document.getElementById('txtpais').value
+            var resultado = window.document.getElementById('res')
+            if (nome == 'Brasil') {
+                resultado.innerHTML = `É <strong>Brasileiro</strong>!`
+            }
+            else {
+                resultado.innerHTML = `É <strong>Estrangeiro</strong>`
+            }
+
+        }
+    </script>
+</body>
+</html>
+

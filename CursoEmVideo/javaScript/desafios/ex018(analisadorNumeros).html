@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Número</title>
+    <style>
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(79, 172, 67);
+        }
+        header {
+            text-align: center;
+            padding: 25px;
+            color: white;
+        }
+        section {
+            background-color: whitesmoke;
+            border-radius: 15px;
+            max-width: 470px;
+            margin: auto;
+            padding: 15px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.438);
+        } 
+        .itens {
+            margin-bottom: 10px;
+        }      
+        #btnFinalizar {
+            width: 100%;
+        } 
+        select {
+            width: 100%;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            font-style: italic;
+        }
+        option {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <section>
+        <p>
+            <label for="txtn" class="itens">Número (entre 1 e 100):</label>
+            <input type="number" name="txtn" id="txtn" class="itens">
+            <input type="button" value="Adicionar" id="btnAdicionar" class="itens">
+        </p>
+        <p>
+            <select name="tabela" id="tabela" size="10">
+            </select>  
+        </p>      
+        <input type="button" value="Finalizar" id="btnFinalizar">
+        </p>
+        <div id="arrayLista"></div>
+        <div id="resultado"></div>
+    </section>
+    <script>
+        let adicionar = document.getElementById('btnAdicionar')
+        adicionar.addEventListener('click', clicaAdicionar)
+
+        let array = []
+
+        function clicaAdicionar() {
+            let numero = Number(document.getElementById('txtn').value)
+            let res = document.getElementById('resultado')      
+            res.innerHTML = ``  
+
+            if (numero < 1 || numero > 100) {
+                window.alert('Número inválido')
+            }
+            //se não existe na atual lista adiciona
+            else if (array.indexOf(numero) == -1) {
+                array.push(numero)
+                let tab = document.getElementById('tabela')
+                let item = document.createElement('option')
+                item.text = `Valor ${numero} adicionado.`
+                tab.appendChild(item)                
+            }
+            else {
+                window.alert('Número já inserido')
+            }
+            numero.value = ''
+            numero.focus()
+        }
+
+        let finalizar = document.getElementById('btnFinalizar')
+        finalizar.addEventListener('click', clicaFinalizar)
+
+        function clicaFinalizar() {
+            if (array.length == 0) {
+                window.alert('Adicione valores antes')
+            }
+            else {
+                text = `<p>Ao todo, temos ${array.length} números cadastrados</p>`
+                let maior = array[0]
+                let menor = array[0]
+                let soma = 0
+                for (let n = 0; n < array.length; n++) {
+                    if (array[n] > maior) {
+                        maior = array[n]
+                    }
+                    if (array[n] < menor) {
+                        menor = array[n]
+                    }
+                    soma += array[n]
+                }
+                text += `<p>O maior valor informado foi ${maior}</p>`
+                text += `<p>O menor valor informado foi ${menor}</p>`
+                text += `<p>Somando todos os valores, temos ${soma}</p>`
+                text += `<p>A média dos valores digitados é ${soma / array.length}</p>`
+
+                let res = document.getElementById('resultado')
+                res.innerHTML = text
+            }            
+        }
+    </script>
+    <footer>
+        <p>&copy;CursoemVideo</p>
+    </footer>
+</body>
+</html>

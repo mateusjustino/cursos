@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(2, 40, 66);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciado estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <div name='msg2'>Teste outra div</div>
+    <div id="msg3">Mais uma div</div>
+    <script>
+        window.document.write('Olá, mundo! <br>')
+        window.document.write(window.document.charset + '<br>')
+        window.document.write(window.document.URL + '<br>')
+
+        var p1 = window.document.getElementsByTagName('p')[0] // 0 para selecionar o 'p' na ordem que aparece no meu html (0 > 1º,    1 > 2º,    2 > 3º...)
+        window.document.write(p1.innerText + '<br>')  // innerText para escrever o texto que esta na minha variavel(que é p1)
+        p1.style.color = 'blue'   // mudei a cor da minha variavel
+        var p2 = window.document.getElementsByTagName('p')[1]
+        document.write(p2.innerHTML)   // já vem formato como está no html
+
+        var corpo = window.document.body     // guardei a tag body do html em uma variavel
+        corpo.style.background = 'darkgray' // mudei a cor de fundo
+
+        var d = window.document.getElementById('msg')  // guardo um id que usei no html 
+        d.style.background = 'green'
+        d.innerText = 'Modifiquei o que estava escrito por JS'
+
+        var d2 = window.document.getElementsByName('msg2')[0]
+        d2.innerText = 'Mudei essa tbm'
+
+        var d3 = window.document.querySelector('div#msg3')    // seleciona usando como se fosse representada no codigo do css
+        d3.style.color = 'red'
+    </script>
+</body>
+</html>

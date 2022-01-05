@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(82, 162, 189);
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        section {
+            background-color: whitesmoke;
+            max-width: 300px;
+            margin: auto;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.253);
+        }
+
+        p {
+            padding: 10px;
+        }
+
+        .campo {
+            height: 20px;
+            font-size: 14px;
+            width: 200px;
+            text-align: right;
+            
+        }
+        
+        .btn {
+            padding: 7px;
+            margin: 10px;
+            border: thick 1px;
+            background-color: rgb(82, 162, 189);
+            color: white;
+            font-size: 14px;
+        }
+
+        
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            padding: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>        
+        <div id="campos">
+
+            <p>
+                <label for="inicio">Início: </label>
+                <input type="number" name="txtinicio" id="txtinicio" class="campo" >
+            </p>
+
+            <p>
+                <label for="fim">Fim:</label>
+                <input type="number" name="txtfim" id="txtfim" class="campo" >
+            </p>
+
+            <p>
+                <label for="passo">Passo:</label>
+                <input type="number" name="txtpasso" id="txtpasso" class="campo" >
+            </p>
+
+            <input type="button" value="Contar" id="btn" class="btn">
+        </div>
+        <div id="res">
+            <p>Preparando a contagem...</p>
+        </div>
+    </section>
+
+    <script>
+        var btn = document.getElementById('btn')
+        btn.addEventListener('click', clicar)
+
+        function clicar() {
+            var inicio = document.getElementById('txtinicio').value;
+            var fim = document.getElementById('txtfim').value;
+            var passo = document.getElementById('txtpasso').value;
+            var res = document.getElementById('res');
+
+
+            if(inicio.length == 0 || fim.length == 0 || passo.length == 0) {
+                res.innerHTML = 'Está faltando preencher algum campo!';
+            } else if (passo <= 0) {
+                res.innerHTML = 'O passo não pode ser menor que 1'
+            } else {
+                var i = Number(inicio);
+                var f = Number(fim);
+                var p = Number(passo);
+
+                res.style.marginLeft = '10px'
+                res.innerHTML = 'Contando...<br>'
+                if(i < f) {
+                    // Contagem Crescente
+                    for (i; i <= f; i += p) {
+                        res.innerHTML += `\u{1F449} ${i} `
+                    }
+                } else {
+                    // Contagem Regressiva
+                    for(i; i >= f; i -= p) {
+                        res.innerHTML += `\u{1F449} ${i} `
+                    }
+                }
+                res.innerHTML += '<br>Fim! \u{1F3C1}'
+            }
+        }  
+        
+    </script>
+
+    <footer>
+        <p>&copy;CursoemVideo</p>
+    </footer>
+</body>
+</html>

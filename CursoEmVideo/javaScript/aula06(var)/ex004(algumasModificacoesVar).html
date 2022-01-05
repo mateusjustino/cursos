@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(90, 90, 90);
+            font: normal 20pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é seu nome: ')
+        document.write(`<h1> Olá ${nome}, seu nome tem ${nome.length} letras </h1>`)
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()} <br>`)
+        var numero = Number(window.prompt('Digite um número quebrado: '))
+        document.write(`Seu número é ${numero} <br>`)
+        document.write(`Arredondando ele em 2 casas é ${numero.toFixed(2)} <br>`)
+        document.write(`Para substituir "." para "," ficando assim ${numero.toFixed(2).replace('.', ',')} <br>`)
+        document.write(`Para converter a formatação na moeda Real: ${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>`)
+        document.write(`Para converter a formatação na moeda Dolar: ${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} <br>`)
+        document.write(`Para converter a formatação na moeda Euro: ${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})} <br>`)
+    </script>
+</body>
+</html>

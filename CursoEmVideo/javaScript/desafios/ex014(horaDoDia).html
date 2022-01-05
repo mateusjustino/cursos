@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }        
+
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+
+        section {
+            background-color: rgb(238, 238, 238);
+            max-width: 400px;
+            height: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.164);
+        }
+
+        section p {
+            text-align: center;
+            padding: 20px;
+        }
+
+        div#foto {
+            background-image: url('https://gcn.net.br/dir-arquivo-imagem/2013/10/%7B20131026095521%7D_06_09_2011___oli___clima_seco____(9).jpg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            border-radius: 100px;
+
+        }
+
+        footer {
+            font-size: 20px;
+            font-style: italic;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+
+    <section id="conteudo">
+        <p id="horasHTML">Agora são 9 horas</p>
+        <div id="foto">
+
+        </div>
+    </section>
+
+    <footer>
+        <p>CursoemVídeo</p>
+    </footer>
+
+    <script>
+        var hora = new Date()
+        var horaAgora = hora.getHours()
+        
+        
+        var corpo = window.document.body
+        var secao = window.document.getElementById('conteudo')
+        var foto = window.document.getElementById('foto')
+        
+        
+        if (horaAgora < 6 || horaAgora > 18) {
+            corpo.style.background = 'rgb(58, 68, 77)'
+            corpo.style.color = 'white'
+            foto.style.backgroundImage = 'url(https://images.pexels.com/photos/2745254/pexels-photo-2745254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+            secao.style.color = 'black'
+            secao.style.boxShadow = '1px 1px 10px 1px rgba(0, 0, 0, 0.364)';
+        }
+        else if (horaAgora >= 6 && horaAgora < 12) {
+            corpo.style.background = 'rgb(252, 244, 183)'
+            foto.style.backgroundImage = 'url(https://images.pexels.com/photos/635279/pexels-photo-635279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+            secao.style.color = 'black'
+            secao.style.boxShadow = '1px 1px 4px 1px rgba(0, 0, 0, 0.364)';
+        }
+        else if (horaAgora >= 12 && horaAgora < 17) {
+            corpo.style.background = 'rgb(248, 245, 121)'
+            corpo.style.color = 'black'
+            foto.style.backgroundImage = 'url(https://images.pexels.com/photos/666839/pexels-photo-666839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+            secao.style.boxShadow = '1px 1px 5px 1px rgba(0, 0, 0, 0.564)';
+        }
+        else {
+            corpo.style.background = 'rgb(226, 228, 149)'
+            foto.style.backgroundImage = 'url(https://images.pexels.com/photos/635279/pexels-photo-635279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)'
+            secao.style.color = 'black'
+            secao.style.boxShadow = '1px 1px 4px 1px rgba(0, 0, 0, 0.364)';
+        }
+        
+
+        var titulo = window.document.getElementById('horasHTML')
+        titulo.innerHTML = `Agora são <strong>${horaAgora} horas</strong>.`
+
+
+
+
+    </script>
+</body>
+</html>
