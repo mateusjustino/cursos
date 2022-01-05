@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+@font-face {
+    font-family: 'Idroid';
+    src: url(fontes/idroid.otf) format('opentype');
+}
+
+body {    
+    margin: 0px;
+    background-color: #41f08d;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: justify;
+}
+
+header {
+    padding-top: 1px;
+    margin-bottom: 3px;
+    color: white;
+    background-image: linear-gradient(to bottom, #3BD580, #1A5C38  );
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.363);
+}
+
+header > h1 {  
+    
+    padding-top: 25px;
+
+    text-align: center;
+    font-size: 2em;    
+}
+
+header > h2 {
+    
+    padding-bottom: 25px;
+
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: normal;    
+}
+header > nav {
+    
+    padding-bottom: 5px;
+    
+}
+header > nav > a{
+    text-decoration: none;
+    color: white;
+
+    font-size: 1.03em;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    font-weight: bold;
+
+
+}
+
+header > nav > a:hover{
+    background-color: rgb(34, 139, 48);
+    border-radius: 5px;
+}
+
+
+
+
+main {    
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    background-color: rgb(240, 250, 245);
+
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.342);
+    
+    font-weight: 500;
+}
+
+main > h2{
+    font-family: 'Idroid';
+    color: #1b8d4f;
+    text-align: left;
+}
+
+main > h3 {
+    font-family: 'Idroid';
+    text-align: left;
+    color: #1b8d4f;
+    background-image: linear-gradient(to right, rgb(198, 236, 203), rgba(255, 255, 255, 0));
+    text-indent: 0.2em;
+    
+}
+
+p {
+    text-indent: 1em;
+}
+
+.imgCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+.blocoTitulo {
+    color: white;
+    background-color: #2FA866;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 1px 1px 1px 20px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.363);
+    }
+
+.bloco {
+    background-color: #C5EBD6;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1px 10px 3px 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.363);    
+}
+
+footer {
+    background-color: #1A5C38;
+    color: white;
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+.tabela {
+    display: inline-table;
+}
