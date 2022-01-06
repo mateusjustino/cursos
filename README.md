@@ -40,4 +40,5 @@
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/025(background)/fundo006.html">Background (posicionando itens)</a> <br>
 <h4>Desafios</h4>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/desafios/projetoandroid/index.html">Projeto Android</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/desafios/projetocordel/index.html">Projeto Cordel</a> <br>
 
