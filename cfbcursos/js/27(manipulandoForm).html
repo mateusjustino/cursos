@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+        }
+        input{
+            display: block;
+        }
+        input[type=submit], label{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#" name="curso1" id="curso1" method="post">
+        <label for="">Nome</label>
+        <input type="text" name="fNome" id="teste" value="Primeiro - 1">
+        <label for="">Senha</label>
+        <input type="password" name="fSenha" id="" value="123">
+        <input type="submit" value="Enviar" name="btEnviar">
+    </form>
+
+    <form action="#" name="curso2" id="curso2" method="post">
+        <label for="">Nome</label>
+        <input type="text" name="fNome" id="teste" value="Primeiro - 2">
+        <label for="">Senha</label>
+        <input type="password" name="fSenha" id="" value="123">
+        <input type="submit" value="Enviar" name="btEnviar">
+    </form>
+
+    <hr>
+
+    <script>
+
+        var fm = document.forms.length // retorna a quantidade de forms
+        var fm = document.forms[1].id // retorna o id do form escolhido
+        var fm = document.forms[1].innerHTML // retorna o html do form
+        var fm = document.forms[1].elements[0].value // retorna o valor do elemento 0 no form 1
+
+
+        var fm = document.forms[0]
+        var el = fm.elements  // pego todos os elementos do form
+        el[0].style.backgroundColor = '#ddd'
+
+
+        document.write(document.getElementById('curso1').elements[0].value)
+
+    </script>
+
+</body>
+</html>
