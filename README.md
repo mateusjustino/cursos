@@ -1,4 +1,4 @@
-# Cursos
+# Cursos (em manutenção)
 
 <p> Links com acesso rápido aos materiais criado durante o curso com conteúdos aprendidos durante as aulas </p>
 
@@ -62,9 +62,25 @@
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/desafios/ex017(tabuadaComLista).html">Tabuada com lista </a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/desafios/ex018(analisadorNumeros).html">Analisador de números </a> <br>
 
+<h2>A basic HTML table</h2>
 
+<table>  
+  
+  <tr>    
+    <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/001/index.html">Olá, Mundo!</a></td>
+    <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/002(paragrafosQuesbrasSimbolosEmoji)/index.html">Parágrafos, quebras, símbolos e emoji</a></td>
+    <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/003(imagens)/index.html">Imagens</a></td>
+    <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/004(favIcon)/index.html">Fav Icon</a></td>
+  </tr>
+  
+</table>
 
-
+<ul>
+  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/001/index.html">Olá, Mundo!</a></li>
+  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/002(paragrafosQuesbrasSimbolosEmoji)/index.html">Parágrafos, quebras, símbolos e emoji</a></li>
+  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/003(imagens)/index.html">Imagens</a></li>
+  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/004(favIcon)/index.html">Fav Icon</a></li>
+</ul>
 
 
 
