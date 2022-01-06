@@ -64,12 +64,12 @@
 
 <h2>A basic HTML table</h2>
 
-<table>
+<table>  
   
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+  <tr>    
+    <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/001/index.html">Olá, Mundo!</a></td>
+    <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/002(paragrafosQuesbrasSimbolosEmoji)/index.html">Parágrafos, quebras, símbolos e emoji</a></td>
+    <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/003(imagens)/index.html">Imagens</a></td>
   </tr>
   
 </table>
