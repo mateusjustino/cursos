@@ -49,7 +49,7 @@
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex002(promptAlert).html">Prompt e alert</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex003(somaVar).html">Somando variáveis</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex004(algumasModificacoesVar).html">Write</a> <br>
-<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex005(modificandoElementosHTML).html"></a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex005(modificandoElementosHTML).html">Modificando HTML e CSS</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex006(funcoes).html">Funções (parte 1)</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex007(funcoes2).html">Funções (parte 2)</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex009(condicao).html">Condição (parte 1)</a> <br>
