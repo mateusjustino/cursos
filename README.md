@@ -71,7 +71,6 @@
     <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/002(paragrafosQuesbrasSimbolosEmoji)/index.html">Parágrafos, quebras, símbolos e emoji</a></td>
     <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/003(imagens)/index.html">Imagens</a></td>
     <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/004(favIcon)/index.html">Fav Icon</a></td>
-    <td><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/006(h1)/index.html">H1</a></td>
   </tr>
   
 </table>
