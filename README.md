@@ -4,9 +4,7 @@
 
 # Curso em Vídeo
 <h3> HTML e CSS </h3>
-<ul>
-  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/001/index.html">Olá, Mundo!</a></li>
-</ul>
+
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/001/index.html">Olá, Mundo!</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/002(paragrafosQuesbrasSimbolosEmoji)/index.html">Parágrafos, quebras, símbolos e emoji</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/003(imagens)/index.html">Imagens</a> <br>
@@ -76,6 +74,13 @@
   </tr>
   
 </table>
+
+<ul>
+  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/001/index.html">Olá, Mundo!</a></li>
+  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/002(paragrafosQuesbrasSimbolosEmoji)/index.html">Parágrafos, quebras, símbolos e emoji</a></li>
+  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/003(imagens)/index.html">Imagens</a></li>
+  <li><a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/004(favIcon)/index.html">Fav Icon</a></li>
+</ul>
 
 
 
