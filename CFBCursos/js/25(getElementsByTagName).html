@@ -7,6 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <p>CFB Cursos</p>
+    <p>Curso de Javascript</p>
+    <p>Aula 25</p>
+    <p>youtube.com</p>
+    <p>cfbcursos.com.br</p>
+
+    <h3>teste</h3>
+
+    <hr>
+
+    <script>
+
+        var tagsP = document.getElementsByTagName('p') // pega todas as tag P
+        document.write(tagsP[0].innerHTML) // pega o elemento html da tag P[0]
+        document.write("<hr>")
+
+        // para customizar todos os P mais facil
+        for(var i = 0; i < tagsP.length; i++){
+            tagsP[i].style.color = 'green'
+        }
+
+        var tagsP2 = document.getElementsByTagName('p')[2]  // só pega a tag p na posicao 2
+        document.write(tagsP2.innerHTML) // pega o elemento html da tag P[2]
+
+        tagsP2.style.color = 'red'
+
+
+        var allTags = document.getElementsByTagName("*") // pega todas as tag da pagina
+
+        for(var i = 0; i < allTags.length; i++){
+            allTags[i].style.textDecoration = 'underline'
+        }
+
+    </script>
+
 </body>
 </html>
