@@ -21,7 +21,7 @@
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/016(cores)/cor01.html">Cores (simples)</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/016(cores)/gradiente.html">Cores (gradiente)</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/016(cores)/index.html">Cores (completo)</a> <br>
-<a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/017(fontes)/index.html">Fontes</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/017(fontes)/font.html">Fontes</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/018(fontExterna)/fontBaixada.html">Fontes (baixada)</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/018(fontExterna)/fontOnline.html">Fontes (online)</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/019(alinhamento)/index.html">Alinhamento de texto</a> <br>
