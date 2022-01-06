@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        try {
+            document.writ("CFB Cursos")
+        } 
+        catch (error) {
+            document.write(error)
+            document.write("<br>")
+            document.write(error.message)
+        }
+        document.write("<br>")
+        document.write("<hr>")
+
+        var num
+        try {
+            num = prompt("Digite um valor")
+            if(num>10){
+                throw new Error("Valor inválido, o valor deve ser menor que 10")
+            }
+            document.write("Valor: " + num)
+        } 
+        catch (error) {
+            document.write("Erro: " + error.message)
+        }
+        finally{
+            document.write("<br>Fim do tratamento")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
