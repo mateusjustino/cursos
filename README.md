@@ -1,2 +1,4 @@
-# cursos
-Curso de HTML, CSS e JS
+# Cursos
+# Curso em Vídeo
+
+HTML e CSS
