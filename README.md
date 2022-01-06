@@ -4,6 +4,7 @@
 
 # Curso em Vídeo
 <h3> HTML e CSS </h3>
+
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/001/index.html">Olá, Mundo!</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/002(paragrafosQuesbrasSimbolosEmoji)/index.html">Parágrafos, quebras, símbolos e emoji</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/003(imagens)/index.html">Imagens</a> <br>
@@ -41,4 +42,32 @@
 <h4>Desafios</h4>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/desafios/projetoandroid/index.html">Projeto Android</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/desafios/projetocordel/index.html">Projeto Cordel</a> <br>
+
+<h3> Javascript </h3>
+
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex001.html">Alert, confirm, prompt</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex002(promptAlert).html">Prompt e alert</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex003(somaVar).html">Somando variáveis</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex004(algumasModificacoesVar).html">Write</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex005(modificandoElementosHTML).html"></a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex006(funcoes).html">Funções (parte 1)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex007(funcoes2).html">Funções (parte 2)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex009(condicao).html">Condição (parte 1)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex010(condicao).html">Condição (parte 2) </a> <br>
+<h4>Desafios</h4>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/desafios/ex014(horaDoDia).html">Hora do dia </a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/desafios/ex015(verificaIdade).html">Verifica a idade </a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/desafios/ex016(contador).html">Contador </a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/desafios/ex017(tabuada).html">Tabuada </a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/desafios/ex017(tabuadaComLista).html">Tabuada com lista </a> <br>
+<a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/desafios/ex018(analisadorNumeros).html">Analisador de números </a> <br>
+
+
+
+
+
+
+
+
+
 
