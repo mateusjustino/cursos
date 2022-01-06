@@ -64,12 +64,12 @@
 
 <h2>A basic HTML table</h2>
 
-<table style="width:100%">
+<table>
   
   <tr>
     <td>Centro comercial Moctezuma</td>
     <td>Francisco Chang</td>
-    <td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td><td>Mexico</td>
+    <td>Mexico</td>
   </tr>
   
 </table>
