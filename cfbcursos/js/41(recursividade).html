@@ -13,6 +13,30 @@
             height: 100px;
         }
     </style>
+    <script>
+
+        function separador() {
+            document.write("<hr>")
+        }
+
+        function contador(min, max){
+            document.write(min + "<br>")
+            if (min < max){
+                contador(++min, max)
+            }
+        }
+        contador(0, 10)
+        separador()
+        function fatorial(n) {
+            if (n == 1){
+                return 1
+            }
+            return n*fatorial(n-1)
+        }
+        document.write(fatorial(5))
+        separador()
+
+    </script>
 </head>
 <body>
     <div id="quad"></div>
