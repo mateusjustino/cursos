@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table, td, tr, th{
+            border: 1px solid black;
+            text-align: center;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo"></div>
+
+    <table id="tbNotas">
+        <tr>
+            <td>Alunos</td>
+            <td>Nota 1</td>
+            <td>Nota 2</td>
+            <td>Resultado</td>
+        </tr>
+        <tr>
+            <td>Al1</td>
+            <td>35</td>
+            <td>28</td>
+            <td id="n1"></td>
+        </tr>
+        <tr>
+            <td>Al2</td>
+            <td>60</td>
+            <td>75</td>
+            <td id="n2"></td>
+        </tr>
+        <tr>
+            <td>Al3</td>
+            <td>48</td>
+            <td>48</td>
+            <td id="n3"></td>
+        </tr>
+        <tr>
+            <td>Al4</td>
+            <td>25</td>
+            <td>21</td>
+            <td id="n4"></td>
+        </tr>
+    </table>
+
+    <script>
+
+        var tabela = document.getElementById('tbNotas')
+        var nota
+
+        for (let i = 1; i < tabela.rows.length; i++) {
+            nota = parseFloat(tabela.rows[i].cells[1].innerHTML) + parseFloat(tabela.rows[i].cells[2].innerHTML)
+            tabela.rows[i].cells[3].innerHTML = nota
+            
+        }
+
+        var n = []
+        n[0] = document.getElementById('n1')
+        n[1] = document.getElementById('n2')
+        n[2] = document.getElementById('n3')
+        n[3] = document.getElementById('n4')
+
+        for (let i = 0; i < 4; i++) {
+            if (n[i].innerHTML < 70) {
+                n[i].style.color = 'red'                
+            }
+            else{
+                n[i].style.color = 'blue'
+            }
+        n[0].innerHTML
+        }
+
+    </script>
+</body>
+</html>
