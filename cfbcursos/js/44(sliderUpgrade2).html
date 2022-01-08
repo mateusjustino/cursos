@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        body{
+            background-image: linear-gradient(to left, rgb(118, 216, 118), rgb(143, 194, 143), rgb(116, 226, 116), rgb(147, 185, 147));
+            background-attachment: fixed;
+            color: black;
+        }
+        h1, h2, p, #config{
+            text-align: center;
+        }
+        #dvslider{
+            max-width: 800px;
+            height: 300px;
+            background-position: center center;
+            border: 1px solid black;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #trocaSlider{
+            margin: auto;
+            margin-top: 10px;
+            display: flex;      
+            max-width: 800px;
+        }
+        .btnSlider{
+            width: 50px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            outline: none;
+            background-color: rgb(84, 205, 84);
+            cursor: pointer;
+        }
+        #dvLoad{
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+        #dvBarra{
+            width: 0%;
+            height: 100%;
+            background-color: rgb(84, 175, 84);
+        }     
+        
+        .btnMuda{
+            background-color: rgb(84, 205, 84);            
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            outline: none;
+            cursor: pointer;
+        }
+        .btnMuda:hover, .btnSlider:hover{
+            background-color: rgb(104, 225, 104);
+        }
+        
+        #txtTempo{
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            outline: none;
+            width: 50px;
+        }
+
+        /* font size*/
+        
+    </style>
+    <script>
+
+        var imgs = []
+        var slider
+        var imgAtual
+        var maxImg
+        var tempoTroca
+        var vtempo
+        var vbarra
+
+
+        function preCarregamento() {
+            var s=1
+            for (let i = 0; i < 5; i++) {
+                imgs[i] = new Image()
+                imgs[i].src = "imgs/s"+ s +".jpg"
+                s++
+            }            
+        }
+
+        function carregarImg(img) {
+            slider.style.backgroundImage = "url('"+imgs[img].src+"')"
+        }
+
+        function inicia() {
+            preCarregamento()
+            imgAtual = 0
+            maxImg = imgs.length -1
+            slider = document.getElementById('dvslider')
+            vbarra = document.getElementById('dvBarra')
+            carregarImg(imgAtual)
+            tempoTroca = 0
+            anima()
+            
+            var varTempoAtual = document.getElementById('tempoAtual')            
+            varTempoAtual.innerHTML = `Tempo de Transição atual (s): ${animaTroca / 100}`
+        }
+
+        function troca(direcao) {
+            tempoTroca = 0
+            imgAtual += direcao
+            if (imgAtual > maxImg){
+                imgAtual = 0
+            }
+            else if (imgAtual < 0){
+                imgAtual = maxImg
+            }
+            carregarImg(imgAtual)
+        }
+
+
+        var animaTroca = 200
+        
+
+        function mudaTempo(){
+            var valor = document.getElementById('txtTempo').value
+
+            if (valor < 1){
+                valor = 1
+                document.getElementById('txtTempo').value = 1
+                animaTroca = valor * 100
+                var varTempoAtual = document.getElementById('tempoAtual')
+                varTempoAtual.innerHTML = `Tempo de Transição atual (s): ${animaTroca / 100}`
+            }
+            else{
+                animaTroca = valor * 100
+                var varTempoAtual = document.getElementById('tempoAtual')
+                varTempoAtual.innerHTML = `Tempo de Transição atual (s): ${animaTroca / 100}`
+            }
+            
+        }
+
+        function anima(){
+            tempoTroca++
+            if (tempoTroca >= animaTroca){
+                tempoTroca = 0
+                troca(1)
+            }
+            vtempo = tempoTroca / (animaTroca / 100)
+            vbarra.style.width = vtempo + "%"
+            window.requestAnimationFrame(anima)
+        }
+
+        
+        window.addEventListener('load', inicia)
+
+    </script>
+</head>
+<body>
+    <h1>Slider</h1>
+    <div id="dvslider"></div>
+    <div id="trocaSlider">
+        <button class="btnSlider" onclick="troca(-1)"><</button>
+        <div id="dvLoad">
+            <div id="dvBarra"></div>
+        </div>
+        <button class="btnSlider" onclick="troca(-1)">></button>
+    </div>
+
+    <h2>Mudar o tempo</h2>
+    <div id="config">
+        <label for="txtTempo">Tempo de transição (s): </label>
+        <input type="number" name="txtTempo" id="txtTempo" min="1" value="2">
+        <button onclick="mudaTempo()" class="btnMuda">Confirmar</button>
+        <p id="tempoAtual">Tempo de Transição atual (s): </p>
+    </div>
+
+</body>
+</html>
