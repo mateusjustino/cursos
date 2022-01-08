@@ -19,6 +19,7 @@
             height: 300px;
             background-position: center center;
             border: 1px solid black;
+            border-radius: 5px;
             margin: auto;
             display: flex;
             justify-content: space-between;
@@ -52,6 +53,7 @@
             padding: 4px;
             background-color: rgb(84, 205, 84);            
             border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
             outline: none;
             cursor: pointer;
         }
@@ -70,6 +72,15 @@
 
         #config{
             font-size: 20px;
+        }
+
+        #btnSliderAntes{
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        #btnSliderDepois{
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
         }
         
     </style>
@@ -165,11 +176,11 @@
     <h1>Slider</h1>
     <div id="dvslider"></div>
     <div id="trocaSlider">
-        <button class="btnSlider" onclick="troca(-1)"><</button>
+        <button class="btnSlider" onclick="troca(-1)" id="btnSliderAntes"><</button>
         <div id="dvLoad">
             <div id="dvBarra"></div>
         </div>
-        <button class="btnSlider" onclick="troca(-1)">></button>
+        <button class="btnSlider" onclick="troca(-1)" id="btnSliderDepois">></button>
     </div>
 
     <h2>Mudar o tempo</h2>
