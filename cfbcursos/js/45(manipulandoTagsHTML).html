@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Tags Html</title>
+    <style>
+        #carro{
+            width: 200px;
+            height: 379px;
+        }
+        .c1{
+            background-image: url(imgs/s1.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .c2{
+            background-image: url(imgs/s2.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .c3{
+            background-image: url(imgs/s3.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <script>
+
+        function trocaCarro(c){
+            var obj = document.getElementById('carro')
+
+            if (c==1){
+                obj.setAttribute('class', 'c1') // para adicionar atributo ao elemento html (primeiro a tag e dps o valor)
+            }
+            else if (c==2){
+                obj.setAttribute('class', 'c2')
+            }
+            else if (c==3){
+                obj.setAttribute('class', 'c3')
+            }
+        }
+        function removerCarro(params) {
+            var obj = document.getElementById('carro')
+            obj.removeAttribute('class') // remove o atributo do elemento html
+        }
+        function verifica() {
+            var obj = document.getElementById('carro')
+            if (obj.hasAttribute('class')){  // verifica se existe o atributo no elemento html
+                document.getElementById('status').innerHTML = 'Atributo class está na tag'
+            }  
+            else{
+                document.getElementById('status').innerHTML = 'Atributo class não está na tag'
+
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <button onclick="trocaCarro(1)">Carro 1</button>
+    <button onclick="trocaCarro(2)">Carro 2</button>
+    <button onclick="trocaCarro(3)">Carro 3</button>
+    <button onclick="removerCarro()">Remover Carro</button>
+    <button onclick="verifica()">Verifica</button>
+    <p id="status">Atributo class não está na tag</p>
+    <div id="carro"></div>
+    
+</body>
+</html>
