@@ -83,6 +83,21 @@
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;
         }
+
+        #sliderPos{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+        .sliderPosicoes{
+            background-color: rgb(84, 175, 84);
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
         
     </style>
     <script>
@@ -100,13 +115,14 @@
             var s=1
             for (let i = 0; i < 5; i++) {
                 imgs[i] = new Image()
-                imgs[i].src = "imgs/s"+ s +".jpg"
+                imgs[i].src = "../imgs/s"+ s +".jpg"
                 s++
             }            
         }
 
         function carregarImg(img) {
-            slider.style.backgroundImage = "url('"+imgs[img].src+"')"
+            slider.style.transition = 'background-image 0.5s linear'
+            slider.style.backgroundImage = "url('"+ imgs[img].src +"')"
         }
 
         function inicia() {
@@ -121,18 +137,41 @@
             
             var varTempoAtual = document.getElementById('tempoAtual')            
             varTempoAtual.innerHTML = `Tempo de Transição atual (s): ${animaTroca / 100}`
+
+            document.getElementById('pos0').style.backgroundColor = 'rgb(84, 205, 84)'
+            
         }
 
-        function troca(direcao) {
-            tempoTroca = 0
-            imgAtual += direcao
-            if (imgAtual > maxImg){
-                imgAtual = 0
+        function troca(direcao, posicao = -1) {
+            if (posicao == -1) {
+                tempoTroca = 0
+                imgAtual += direcao
+                if (imgAtual > maxImg){
+                    imgAtual = 0
+                }
+                else if (imgAtual < 0){
+                    imgAtual = maxImg
+                }
+                carregarImg(imgAtual)
+                pos = document.querySelectorAll('.sliderPosicoes')
+                for (let i = 0; i < pos.length; i++) {
+                    pos[i].style.backgroundColor = 'rgb(84, 175, 84)'
+                    
+                }
+                pos[imgAtual].style.backgroundColor = 'rgb(84, 205, 84)'
+            } else {
+                tempoTroca = 0
+                imgAtual = posicao
+                
+                carregarImg(imgAtual)
+                pos = document.querySelectorAll('.sliderPosicoes')
+                for (let i = 0; i < pos.length; i++) {
+                    pos[i].style.backgroundColor = 'rgb(84, 175, 84)'
+                    
+                }
+                pos[imgAtual].style.backgroundColor = 'rgb(84, 205, 84)'
             }
-            else if (imgAtual < 0){
-                imgAtual = maxImg
-            }
-            carregarImg(imgAtual)
+            
         }
 
 
@@ -168,6 +207,10 @@
             window.requestAnimationFrame(anima)
         }
 
+        function selecionaFoto() {
+            
+        }
+
         
         window.addEventListener('load', inicia)
 
@@ -176,12 +219,21 @@
 <body>
     <h1>Slider</h1>
     <div id="dvslider"></div>
+
+    <div id="sliderPos">
+        <div class="sliderPosicoes" id="pos0" onclick="troca(+1, 0)"></div>
+        <div class="sliderPosicoes" id="pos1" onclick="troca(+1, 1)"></div>
+        <div class="sliderPosicoes" id="pos2" onclick="troca(+1, 2)"></div>
+        <div class="sliderPosicoes" id="pos3" onclick="troca(+1, 3)"></div>
+        <div class="sliderPosicoes" id="pos4" onclick="troca(+1, 4)"></div>
+    </div>
+
     <div id="trocaSlider">
         <button class="btnSlider" onclick="troca(-1)" id="btnSliderAntes"><</button>
         <div id="dvLoad">
             <div id="dvBarra"></div>
         </div>
-        <button class="btnSlider" onclick="troca(-1)" id="btnSliderDepois">></button>
+        <button class="btnSlider" onclick="troca(+1)" id="btnSliderDepois">></button>
     </div>
 
     <h2>Mudar o tempo</h2>
@@ -190,7 +242,6 @@
         <input type="number" name="txtTempo" id="txtTempo" min="1" value="2">
         <button onclick="mudaTempo()" class="btnMuda">Confirmar</button>
         <p id="tempoAtual">Tempo de Transição atual (s): </p>
-        colocar posicao das fotos, bolinhas mostrando posicao
     </div>
 
 </body>
