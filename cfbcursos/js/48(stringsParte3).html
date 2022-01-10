@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+    <script>
+        function separa() {
+            document.write('<hr>')
+        }
+        var texto = document.getElementById('txt').innerHTML
+        separa()
+       
+        var res = texto.indexOf('a') // retorna a posição do primeiro caracter especificado, se não encontrar retorna -1
+        if (res > 0){
+            document.write(res)
+        }
+        else{
+            document.write('Letra não encontrada')
+        }
+        separa()
+
+        var res = texto.lastIndexOf('a') // retorna a posição do ultimo caracter especificado, se não encontrar retorna -1
+        if (res > 0){
+            document.write(res)
+        }
+        else{
+            document.write('Letra não encontrada')
+        }
+        separa()
+
+        var texto1 = texto
+        var res = texto.localeCompare(texto1) // compara as strings, se retornar "0" é pq é igual, se for diferente de "0" é pq são diferentes
+        if (res != 0){
+            document.write('Strings diferentes')
+        }
+        else{
+            document.write('String iguais')
+        }
+        separa()
+
+        var res = texto.slice(0, 10) // retorna da string os caracteres entre as posições indicadas
+        document.write(res)
+        separa()
+
+        var res = texto.split('') // faz com que a string vire um vetor
+        document.write(res)
+        separa()
+
+        var res = texto.split('') // faz com que a string vire um vetor
+        document.write(res[0])
+        separa()
+
+        var res = texto.substr(4, 6) // faz um corte indicando a posição inicial e o tamanho do corte
+        document.write(res)
+        separa()
+
+        var res = texto.toLocaleLowerCase() // converte toda a string para minusculo
+        document.write(res)
+        separa()
+
+        var res = texto.toLocaleLowerCase() // converte toda a string para maiusculo
+        document.write(res)
+        separa()
+
+        var res = texto.toUpperCase().substr(21, 11) // usando dois metodos para deixar tudo maiusculo e um recorte na string
+        document.write(res)
+        separa()
+
+
+    </script>
+</body>
+</html>

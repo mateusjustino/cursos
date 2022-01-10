@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+    <script>
+        function separa() {
+            document.write('<hr>')
+        }
+        var texto = document.getElementById('txt').innerHTML
+        
+        var res = texto.search(/curso/i) // retorna a posição dentro da variavel em que se encontra a primeira palavra encontrada
+        document.write(res)
+        separa()
+
+        var res = texto.replace(/curso/i, 'aula') // substitui a primeira palavra encontra por aula
+        document.write(res)
+        separa()
+
+        var res = texto.replace(/curso/ig, 'aula') // substitui todas as palavra encontra por aula
+        document.write(res)
+        separa()
+
+        var res = texto.charAt(1) // retorna o caracter na posição indicada
+        document.write(res)
+        separa()
+
+        var res = texto.charCodeAt(1) // retorna o código do caracter na pposição indicada
+        document.write(res)
+        separa()
+        
+        document.write(String.fromCharCode(70)) // retorna o carcter representado pelo charCode indicado
+        separa()
+
+        var txt2 = ' - Strings'
+
+        var res = texto.concat(txt2) // faz junção de duas strings
+        document.write(res)
+        
+
+    </script>
+</body>
+</html>

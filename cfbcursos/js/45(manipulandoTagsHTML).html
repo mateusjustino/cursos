@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulando Tags Html</title>
     <style>
-        #carro{
+        #arvore{
             width: 200px;
             height: 379px;
         }
@@ -28,8 +28,8 @@
     </style>
     <script>
 
-        function trocaCarro(c){
-            var obj = document.getElementById('carro')
+        function trocaArvore(c){
+            var obj = document.getElementById('arvore')
 
             if (c==1){
                 obj.setAttribute('class', 'c1') // para adicionar atributo ao elemento html (primeiro a tag e dps o valor)
@@ -41,12 +41,12 @@
                 obj.setAttribute('class', 'c3')
             }
         }
-        function removerCarro(params) {
-            var obj = document.getElementById('carro')
+        function removerArvore() {
+            var obj = document.getElementById('arvore')
             obj.removeAttribute('class') // remove o atributo do elemento html
         }
         function verifica() {
-            var obj = document.getElementById('carro')
+            var obj = document.getElementById('arvore')
             if (obj.hasAttribute('class')){  // verifica se existe o atributo no elemento html
                 document.getElementById('status').innerHTML = 'Atributo class está na tag'
             }  
@@ -59,13 +59,13 @@
     
 </head>
 <body>
-    <button onclick="trocaCarro(1)">Carro 1</button>
-    <button onclick="trocaCarro(2)">Carro 2</button>
-    <button onclick="trocaCarro(3)">Carro 3</button>
-    <button onclick="removerCarro()">Remover Carro</button>
+    <button onclick="trocaArvore(1)">Árvore 1</button>
+    <button onclick="trocaArvore(2)">Árvore 2</button>
+    <button onclick="trocaArvore(3)">Árvore 3</button>
+    <button onclick="removerArvore()">Remover Árvore</button>
     <button onclick="verifica()">Verifica</button>
     <p id="status">Atributo class não está na tag</p>
-    <div id="carro"></div>
+    <div id="arvore"></div>
     
 </body>
 </html>

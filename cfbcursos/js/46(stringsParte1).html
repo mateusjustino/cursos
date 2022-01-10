@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+    <script>
+        function separa() {
+            document.write('<hr>')
+        }
+        var texto = document.getElementById('txt').innerHTML
+        
+        var res = texto.match('aula')   // procura e retorna a primeira palavra encontrada
+        document.write(res)
+        separa()
+
+        var res = texto.match(/de/g)  // mostra todas strings encontradas
+        document.write(`foram encontradas: ${res}. Com um total de ${res.length} palavras`)
+        separa()
+
+        var res = texto.match(/javascript/ig)  // mostra todas strings encontradas ignorando letras maiusculas ou minusculas
+        document.write(res)
+        separa()
+
+        document.write(res[1]) // escolhe a posição de todos os encontrados
+        separa()
+
+        var res = texto.match(/[oa]/ig) // retorna todas as letras "o" e "a" encontradas
+        document.write(res)
+        separa()
+
+        var res = texto.match(/[^oa]/ig) // retorna todas as letras encontradas menos "o" e "a"
+        document.write(res)
+        separa()
+
+        var res = texto.match(/[a-g]/ig) // retorna todas as letras encontradas entre "a" e "g"
+        document.write(res)
+        separa()
+
+        var res = texto.match(/[^a-g]/ig) // retorna todas as letras encontradas menos as que estão entre "a" e "g"
+        document.write(res)
+        separa()
+
+        var res = texto.match(/\d/ig) // é um metacaracter que retorna todos os numerais
+        document.write(res)
+        separa()
+
+        var res = texto.match(/\D/ig) // é um metacaracter que retorna todos os não numerais
+        document.write(res)
+        separa()
+
+        var res = texto.match(/\w/ig) // é um metacaracter que retorna somente letras e numeros, ignorando espaços, traços, etc
+        document.write(res)
+        separa()
+
+    </script>
+</body>
+</html>

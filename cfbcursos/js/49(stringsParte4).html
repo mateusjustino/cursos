@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+
+    <script>
+        function separa() {
+            document.write('<hr>')
+        }
+       
+        var num = 15
+        var res = num.toString()   // converte a variavel para string
+        document.write(res)
+        separa()
+
+        var bin = num.toString(2)   // converte a variavel para binário
+        document.write(bin)
+        separa()
+
+        var oct = num.toString(8)   // converte a variavel para octagonal
+        document.write(oct)
+        separa()
+
+        var hex = num.toString(16)   // converte a variavel para hexadecimal
+        document.write(hex)
+        separa()
+
+        var res = num.toString()   // converte a variavel para string
+        document.write(res)
+        separa()
+
+        var texto = '   CFB Cursos - Curso de Javascript    '
+        var res = texto.trim() // elimina os espaços no começo e no fim
+        alert(res)
+        document.write(res)
+        separa()
+
+        var texto = "CFB \"Cursos\" - Curso de Javascript" // para imprimir as áspas
+        document.write(texto)
+        separa()
+
+        var texto = "CFB Cursos \n Curso de\n Javascript" // para quebrar a linha, isso não funciona no html, pra html se usa o br
+        alert(texto)
+        separa()
+
+    </script>
+</body>
+</html>
