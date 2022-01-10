@@ -6,6 +6,18 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+input{
+    outline: none;
+    font-size: 1em;
+    padding: 2px;
+    border-radius: 5px;
+}
+button{
+    outline: none;
+    font-size: 1em;
+    padding: 2px;
+    border-radius: 5px;
+}
 
 #forca{
     margin: auto;
@@ -38,6 +50,7 @@ body{
     height: 50px;
     width: 50px;
     border-radius: 100%;
+    visibility: hidden;
 }
 #corpo > #cabeca > #olhos{
     position: relative;
@@ -45,6 +58,9 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: red;
     font-weight: bolder;
+    user-select: none;
+    visibility: hidden;
+
 }
 
 #corpo > #membros > #tronco{
@@ -53,44 +69,55 @@ body{
     height: 100px;
     width: 10px;
     border-radius: 5px;
+    visibility: hidden;
+
 }
 
 #corpo > #membros > #bracoEsquerdo{
     position: relative;
     top: -80px;
+    left: -10px;
     background-color: black;
     height: 10px;
     width: 70px;
     border-radius: 5px;
+    visibility: hidden;
+
 }
 #corpo > #membros > #bracoDireito{
     position: relative;
-    left: 50px;
+    left: 60px;
     top: -90px;
     background-color: black;
     height: 10px;
     width: 70px;
     border-radius: 5px;
+    visibility: hidden;
+
 }
 
 #corpo > #membros > #pernaDireita{
     position: relative;
-    top: -10px;
+    top: -6px;
     background-color: black;
     height: 10px;
     width: 70px;
     border-radius: 5px;
     transform: rotate(135deg);
+    visibility: hidden;
+
 }
 #corpo > #membros > #pernaEsquerda{
     position: relative;
-    top: -20px;
+    top: -15px;
     left: 48px;
     background-color: black;
     height: 10px;
     width: 70px;
     border-radius: 5px;
     transform: rotate(45deg);
+    visibility: hidden;
+
 }
 
 #palavraNaForca{
@@ -104,8 +131,10 @@ body{
     margin-left: 10px;
     margin-top: 15px;
     text-align: left;
+    font-size: 1.1em;
+
 }
-#escolheLetra{
+#txtEscolheLetra{
     width: 50px;
     text-align: center;
     font-size: 1em;
@@ -133,6 +162,10 @@ body{
     background-color: transparent;
     border: none;
     margin-right: 5px;
+    user-select: none;
+}
+.letrasClassVazia::selection{
+    background-color: transparent;
 }
 
 #letrasErradas{

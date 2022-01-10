@@ -11,15 +11,14 @@
 <body>
     <header>
         <h1>Forca</h1>
-        <p>Acerte as letras!</p>
+        <p style="font-size: 1.1em;">Acerte as letras!</p>
     </header>
 
     <main>
         
-        <label for="txtPalavra">Digite a palavra: </label>
-        <input type="tel" name="txtPalavra" id="txtPalavra">
-        <button id="btnConfirmarPalavra">Confirmar</button>
-        <p>lembrar de colocar dicaaaaa</p>
+        <label for="txtPalavra"  style="font-size: 1.1em;">Digite a palavra: </label>
+        <input type="tel" name="txtPalavra" id="txtPalavra" >
+        <button id="btnConfirmarPalavra" >Confirmar</button>
 
         <div id="forca">
             <div id="bordaTop"></div>
@@ -38,32 +37,16 @@
             </div>        
 
             <div id="palavraNaForca">
-                <!--
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                <p id="" class="letrasClass" >A</p>
-                -->
+              
             </div>
             <div id="menu">
                 <label for="escolheLetra">Escolha uma letra:</label>
-                <input type="text" name="escolheLetra" id="escolheLetra" maxlength="1"/>
-                <button>Confirmar</button>
+                <input type="text" name="txtEscolheLetra" id="txtEscolheLetra" maxlength="1"/>
+                <button id="btnConfirmarLetra">Confirmar</button>
             </div>
-            <div id="letrasErradas">Letras erradas: A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A</div>
+            <div id="letrasErradas">Letras erradas:</div>
         </div>
-    </main>
-        
-    <div id="testeDiv"></div>
-    
+    </main>       
     
     <script src="script.js"></script>
 
