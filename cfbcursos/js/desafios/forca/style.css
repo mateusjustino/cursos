@@ -21,7 +21,7 @@ body{
     height: 10px;
 }
 #corda{
-    background-color: black;
+    background-color: rgb(161, 98, 4);
     height: 50px;
     width: 10px;
     margin-left: 130px;
@@ -94,7 +94,7 @@ body{
 }
 
 #palavraNaForca{
-    margin-top: 40px;    
+    margin-top: 25px;    
     margin-left: 10px;
     text-align: left;
     
@@ -114,14 +114,27 @@ body{
 
 .letrasClass{
     display: inline;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: bold;
     width: 20px;
     text-align: center;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
+    margin-right: 5px;
 }
+
+.letrasClassVazia{
+    display: inline;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    margin-right: 5px;
+}
+
 #letrasErradas{
     margin-left: 10px;
     margin-top: 10px;
