@@ -39,10 +39,11 @@ body{
 }
 
 .bloco{
-    background-color: rgba(128, 0, 128, 0.055);
+    background-color: rgba(128, 0, 128, 0.2);
     transition: all 1s;
     height: 95px;
     width: 95px;
+    border-radius: 5px;
 }
 
 button{
@@ -51,6 +52,12 @@ button{
     width: 150px;
     margin-bottom: 50px;
     border: 1px dashed black;
+    outline: none;
     background-color: transparent;
     cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 5px;
+}
+button:hover{
+    background-color: rgba(128, 0, 128, 0.1);
 }

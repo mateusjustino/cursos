@@ -37,7 +37,24 @@ function posiciona() {
 posiciona()
     
 
-function anima() {
+function start() {
+
+    for (let c = 1; c < 4; c++) {
+        for (let l = 1; l < 4; l++) {
+            obj = document.getElementById('bloco'+[c]+[l])
+            obj.style.cursor = 'pointer'
+            obj.setAttribute('onclick', 'marcar()')            
+            document.getElementById('bloco'+[c]+[l]).onmouseover = function () {
+
+                this.style.transition = 'background-color 0.5s'
+                this.style.backgroundColor = 'rgba(128, 0, 128, 0.5)'
+            }
+            document.getElementById('bloco'+[c]+[l]).onmouseout = function () {
+                this.style.backgroundColor = 'rgba(128, 0, 128, 0.2)'
+            }
+        }
+    }
+
     var bloco11 = document.getElementById('bloco11')
     bloco11.style.transform = 'translate(-100px, -100px)'
 
@@ -84,5 +101,8 @@ function anima() {
     linha2.style.width = '295px'
     linha2.style.left = '0px'
 
+}
 
+function marcar() {
+    this.style.backgroundColor = 'red'
 }
