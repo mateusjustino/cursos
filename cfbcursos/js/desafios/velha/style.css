@@ -57,6 +57,7 @@ button{
     cursor: pointer;
     border-radius: 5px;
     letter-spacing: 5px;
+    transition: all 1s;
 }
 button:hover{
     background-color: rgba(128, 0, 128, 0.1);

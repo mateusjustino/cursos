@@ -101,8 +101,78 @@ function start() {
     linha2.style.width = '295px'
     linha2.style.left = '0px'
 
+    var obj = document.getElementById('btnIniciar')
+    obj.setAttribute('onclick', 'back()')   
+    obj.innerHTML = 'PARAR'  
+
+
+}
+
+function back() {
+
+    for (let c = 1; c < 4; c++) {
+        for (let l = 1; l < 4; l++) {
+            obj = document.getElementById('bloco'+[c]+[l])
+            obj.style.cursor = 'default'
+            obj.setAttribute('onclick', '')
+            obj.style.backgroundColor = 'rgba(128, 0, 128, 0.2)'
+        }
+    }
+
+    var bloco11 = document.getElementById('bloco11')
+    bloco11.style.transform = 'translate(0px, 0px)'
+
+    var bloco12 = document.getElementById('bloco12')
+    bloco12.style.transform = 'translate(0px, 0px)'
+
+    var bloco13 = document.getElementById('bloco13')
+    bloco13.style.transform = 'translate(0px, 0px)'
+
+    var bloco21 = document.getElementById('bloco21')
+    bloco21.style.transform = 'translate(0px, 0px)'
+
+    var bloco22 = document.getElementById('bloco22')
+    bloco22.style.transform = 'translate(0px, 0px)'
+
+    var bloco23 = document.getElementById('bloco23')
+    bloco23.style.transform = 'translate(0px, 0px)'
+
+    var bloco31 = document.getElementById('bloco31')
+    bloco31.style.transform = 'translate(0px, 0px)'
+
+    var bloco32 = document.getElementById('bloco32')
+    bloco32.style.transform = 'translate(0px, 0px)'
+
+    var bloco33 = document.getElementById('bloco33')
+    bloco33.style.transform = 'translate(0px, 0px)'
+
+    var coluna1 = document.getElementById('coluna1')
+    coluna1.style.width = '50px'
+    coluna1.style.left = '172.5px'
+    coluna1.style.top = '-712px'
+
+    var coluna2 = document.getElementById('coluna2')
+    coluna2.style.width = '50px'
+    coluna2.style.left = '75px'
+    coluna2.style.top = '-715px'
+
+    var linha1 = document.getElementById('linha1')
+    linha1.style.width = '50px'
+    linha1.style.left = '122.5px'
+
+    var linha2 = document.getElementById('linha2')
+    linha2.style.width = '50px'
+    linha2.style.left = '122.5px'
+
+    var obj = document.getElementById('btnIniciar')
+    obj.setAttribute('onclick', 'start()')   
+    obj.innerHTML = 'INICIAR'  
 }
 
 function marcar() {
-    this.style.backgroundColor = 'red'
+    var objPosLeft = document.getElementById('bloco11').getBoundingClientRect().left
+    var objPosTop = document.getElementById('bloco11').getBoundingClientRect().top
+   
+    document.write(objPosLeft)
+    document.write(objPosTop)
 }
