@@ -43,7 +43,7 @@ function start() {
         for (let l = 1; l < 4; l++) {
             obj = document.getElementById('bloco'+[c]+[l])
             obj.style.cursor = 'pointer'
-            obj.setAttribute('onclick', 'marcar()')            
+            obj.setAttribute('onclick', 'marcar'+[c]+[l]+'()')            
             document.getElementById('bloco'+[c]+[l]).onmouseover = function () {
 
                 this.style.transition = 'background-color 0.5s'
