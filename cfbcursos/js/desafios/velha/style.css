@@ -1,0 +1,56 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-image: linear-gradient(to bottom, rgb(216, 151, 216), rgb(182, 129, 182));
+    background-attachment: fixed;
+    text-align: center;
+    margin: auto;
+}
+
+#jogo{
+    width: 295px;
+    height: 295px;
+    margin: auto;
+}
+#coluna1{
+    background-color: black;
+    height: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+#coluna2{
+    background-color: black;
+    height: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+#linha1{
+    background-color: black;
+    height: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+#linha2{
+    background-color: black;
+    height: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.bloco{
+    background-color: rgba(128, 0, 128, 0.055);
+    transition: all 1s;
+    height: 95px;
+    width: 95px;
+}
+
+button{
+    font-size: 1em;
+    padding: 5px;
+    width: 150px;
+    margin-bottom: 50px;
+    border: 1px dashed black;
+    background-color: transparent;
+    cursor: pointer;
+}
