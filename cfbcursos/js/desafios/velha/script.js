@@ -168,4 +168,3 @@ function back() {
     obj.setAttribute('onclick', 'start()')   
     obj.innerHTML = 'INICIAR'  
 }
-
