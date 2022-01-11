@@ -141,3 +141,13 @@ function verificarLetra() {
         document.getElementById('txtEscolheLetra').focus
     }  
 }
+
+function umaLetra() {
+    
+    var txt = document.getElementById('txtEscolheLetra')
+    
+    if (txt.value.length > 0) {
+        txt.value = txt.value.charAt(1)
+    }
+    
+}
