@@ -169,10 +169,3 @@ function back() {
     obj.innerHTML = 'INICIAR'  
 }
 
-function marcar() {
-    var objPosLeft = document.getElementById('bloco11').getBoundingClientRect().left
-    var objPosTop = document.getElementById('bloco11').getBoundingClientRect().top
-   
-    document.write(objPosLeft)
-    document.write(objPosTop)
-}
