@@ -1,6 +1,11 @@
 var simboloDaVez = 'xis'
+
 var bloco11Check, bloco12Check, bloco13Check, bloco21Check, bloco22Check, bloco23Check, bloco31Check, bloco32Check, bloco33Check
+
 var rodadas = 0
+
+var tituloEndgame = document.getElementsByTagName('h2')[0]
+var subtituloEndgame = document.getElementsByTagName('h3')[0]
 
 function posiciona() {
     var top = 100
@@ -43,7 +48,20 @@ posiciona()
 
 function start() {
 
+    bloco11Check = 0
+    bloco12Check = 0
+    bloco13Check = 0
+    bloco21Check = 0
+    bloco22Check = 0
+    bloco23Check = 0
+    bloco31Check = 0
+    bloco32Check = 0
+    bloco33Check = 0
+
     rodadas = 0
+    tituloEndgame.innerHTML = ''
+    subtituloEndgame.innerHTML = ''
+
     for (let c = 1; c < 4; c++) {
         for (let l = 1; l < 4; l++) {
             obj = document.getElementById('bloco'+[c]+[l])
@@ -116,6 +134,9 @@ function start() {
 }
 
 function back() {
+
+    tituloEndgame.innerHTML = ''
+    subtituloEndgame.innerHTML = ''
 
     for (let c = 1; c < 4; c++) {
         for (let l = 1; l < 4; l++) {
@@ -232,34 +253,54 @@ function marcar(blocoSelecionado) {
 
 function checar() {
 
-    if (bloco11Check == simboloDaVez && bloco12Check == simboloDaVez && bloco13Check == simboloDaVez){
-        document.getElementById('teste').innerHTML = 'ganhouuuu'
-    }
-    if (bloco21Check == simboloDaVez && bloco22Check == simboloDaVez && bloco23Check == simboloDaVez){
-        document.getElementById('teste').innerHTML = 'ganhouuuu'
-    }
-    if (bloco31Check == simboloDaVez && bloco32Check == simboloDaVez && bloco33Check == simboloDaVez){
-        document.getElementById('teste').innerHTML = 'ganhouuuu'
-    }
-
-    
-    if (bloco11Check == simboloDaVez && bloco21Check == simboloDaVez && bloco31Check == simboloDaVez){
-        document.getElementById('teste').innerHTML = 'ganhouuuu'
-    }
-    if (bloco12Check == simboloDaVez && bloco22Check == simboloDaVez && bloco32Check == simboloDaVez){
-        document.getElementById('teste').innerHTML = 'ganhouuuu'
-    }
-    if (bloco13Check == simboloDaVez && bloco23Check == simboloDaVez && bloco33Check == simboloDaVez){
-        document.getElementById('teste').innerHTML = 'ganhouuuu'
-    }
-
-    if (bloco11Check == simboloDaVez && bloco22Check == simboloDaVez && bloco33Check == simboloDaVez){
-        document.getElementById('teste').innerHTML = 'ganhouuuu'
-    }
-    
     rodadas += 1
-    if (rodadas == 9){
-        document.getElementById('teste').innerHTML = 'empate'
+
+    if (bloco11Check == simboloDaVez && bloco12Check == simboloDaVez && bloco13Check == simboloDaVez){
+        endgame()
+    }
+    else if (bloco21Check == simboloDaVez && bloco22Check == simboloDaVez && bloco23Check == simboloDaVez){
+        endgame()
+    }
+    else if (bloco31Check == simboloDaVez && bloco32Check == simboloDaVez && bloco33Check == simboloDaVez){
+        endgame()
+    }
+
+    
+    else if (bloco11Check == simboloDaVez && bloco21Check == simboloDaVez && bloco31Check == simboloDaVez){
+        endgame()
+    }
+    else if (bloco12Check == simboloDaVez && bloco22Check == simboloDaVez && bloco32Check == simboloDaVez){
+        endgame()
+    }
+    else if (bloco13Check == simboloDaVez && bloco23Check == simboloDaVez && bloco33Check == simboloDaVez){
+        endgame()
+    }
+
+    else if (bloco11Check == simboloDaVez && bloco22Check == simboloDaVez && bloco33Check == simboloDaVez){
+        endgame()
+    }   
+    
+    else if (rodadas == 9){
+        endgame(empate = 1)
+    }
+    
+}
+
+
+function endgame(empate = 0) {
+
+    if (simboloDaVez == 'xis') {
+        tituloEndgame.innerHTML = 'Vitória!!!!'
+        subtituloEndgame.innerHTML = `X ganhouuii`
+    }
+    else if (simboloDaVez == 'bolinha'){
+        tituloEndgame.innerHTML = 'Vitória!!!!'
+        subtituloEndgame.innerHTML = `O ganhouuii`
+    }
+
+    if (empate == 1){
+        tituloEndgame.innerHTML = 'Empate!!!!'
+        subtituloEndgame.innerHTML = `ninguem ganhouuii`
     }
     
 }
