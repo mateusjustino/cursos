@@ -62,6 +62,9 @@ function start() {
     tituloEndgame.innerHTML = ''
     subtituloEndgame.innerHTML = ''
 
+    tituloEndgame.style.fontSize = '1px'
+    subtituloEndgame.style.fontSize = '1px'
+
     for (let c = 1; c < 4; c++) {
         for (let l = 1; l < 4; l++) {
             obj = document.getElementById('bloco'+[c]+[l])
@@ -128,15 +131,19 @@ function start() {
 
     var obj = document.getElementById('btnIniciar')
     obj.setAttribute('onclick', 'back()')   
-    obj.innerHTML = 'PARAR'  
+    obj.innerHTML = 'REINICIAR'  
 
 
 }
 
 function back() {
 
-    tituloEndgame.innerHTML = ''
-    subtituloEndgame.innerHTML = ''
+    tituloEndgame.style.fontSize = '0.1px'
+    tituloEndgame.style.color = 'transparent'
+    subtituloEndgame.style.fontSize = '0.1px'
+    subtituloEndgame.style.color = 'transparent'
+
+    
 
     for (let c = 1; c < 4; c++) {
         for (let l = 1; l < 4; l++) {
@@ -289,7 +296,30 @@ function checar() {
 
 function endgame(empate = 0) {
 
+    for (let c = 1; c < 4; c++) {
+        for (let l = 1; l < 4; l++) {
+            obj = document.getElementById('bloco'+[c]+[l])
+            obj.style.cursor = 'default'
+            obj.style.transition = 'all 1s'
+            obj.setAttribute('onclick', '')
+        }
+    }
+
+    tituloEndgame.style.transition = 'all 1s'
+    tituloEndgame.style.fontSize = '2em'
+    tituloEndgame.style.color = 'black'
+
+    subtituloEndgame.style.transition = 'all 1s'
+    subtituloEndgame.style.marginTop = '-20px'    
+    subtituloEndgame.style.fontSize = '1.5em'
+    subtituloEndgame.style.fontWeight = 'normal'
+    subtituloEndgame.style.color = 'black'
+
+
+
+
     if (simboloDaVez == 'xis') {
+        
         tituloEndgame.innerHTML = 'Vitória!!!!'
         subtituloEndgame.innerHTML = `X ganhouuii`
     }
