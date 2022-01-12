@@ -285,7 +285,10 @@ function checar() {
 
     else if (bloco11Check == simboloDaVez && bloco22Check == simboloDaVez && bloco33Check == simboloDaVez){
         endgame()
-    }   
+    }
+    else if (bloco33Check == simboloDaVez && bloco22Check == simboloDaVez && bloco11Check == simboloDaVez){
+        endgame()
+    }
     
     else if (rodadas == 9){
         endgame(empate = 1)

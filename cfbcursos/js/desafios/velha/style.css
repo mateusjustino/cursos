@@ -73,13 +73,13 @@ body{
 }
 
 h2, h3{
-    font-size: 1px;
+    font-size: 0.1px;
 }
 
 button{
     font-size: 1em;
-    padding: 5px;
-    width: 150px;
+    padding: 6px;
+    width: 180px;
     margin-bottom: 50px;
     border: 1px dashed black;
     outline: none;
