@@ -342,7 +342,7 @@ function checar() {
     else if (bloco11Check == simboloDaVez && bloco22Check == simboloDaVez && bloco33Check == simboloDaVez){
         endgame()
     }
-    else if (bloco33Check == simboloDaVez && bloco22Check == simboloDaVez && bloco11Check == simboloDaVez){
+    else if (bloco13Check == simboloDaVez && bloco22Check == simboloDaVez && bloco31Check == simboloDaVez){
         endgame()
     }
     
