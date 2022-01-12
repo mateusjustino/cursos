@@ -231,9 +231,6 @@ function marcar(blocoSelecionado) {
         div1.setAttribute('class', 'marcax1')
         bloco.appendChild(div1)
 
-        
-
-
 
         var div2 = document.createElement('div')
         div2.setAttribute('id', 'div' + blocoSelecionado)
@@ -242,7 +239,6 @@ function marcar(blocoSelecionado) {
 
         checar()
         simboloDaVez = 'bolinha'
-
 
     }
     else{
@@ -254,7 +250,9 @@ function marcar(blocoSelecionado) {
 
         checar()
         simboloDaVez = 'xis'
-    }   
+    }
+
+    
 
 
 }
@@ -323,16 +321,16 @@ function endgame(empate = 0) {
     if (simboloDaVez == 'xis') {
         
         tituloEndgame.innerHTML = 'Vitória!!!!'
-        subtituloEndgame.innerHTML = `X ganhouuii`
+        subtituloEndgame.innerHTML = `"X" ganhou.`
     }
     else if (simboloDaVez == 'bolinha'){
         tituloEndgame.innerHTML = 'Vitória!!!!'
-        subtituloEndgame.innerHTML = `O ganhouuii`
+        subtituloEndgame.innerHTML = `"O" ganhou.`
     }
 
     if (empate == 1){
-        tituloEndgame.innerHTML = 'Empate!!!!'
-        subtituloEndgame.innerHTML = `ninguem ganhouuii`
+        tituloEndgame.innerHTML = 'Empate!'
+        subtituloEndgame.innerHTML = `Ninguém ganhou.`
     }
     
 }

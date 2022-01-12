@@ -55,14 +55,12 @@ body{
     height: 5px;
     width: 90px;    
     transform: rotate(135deg);
-    transition: all 1s;
 }
 .marcax2{
     background-color: black;
     height: 5px;
     width: 90px;    
     transform: rotate(45deg);    
-    transition: all 1s;
 }
 
 .bolinha{
