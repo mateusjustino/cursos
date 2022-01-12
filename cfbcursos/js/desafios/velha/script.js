@@ -1,3 +1,7 @@
+var simboloDaVez = 'xis'
+var bloco11Check, bloco12Check, bloco13Check, bloco21Check, bloco22Check, bloco23Check, bloco31Check, bloco32Check, bloco33Check
+var rodadas = 0
+
 function posiciona() {
     var top = 100
     for (let c = 1; c < 4; c++) {
@@ -39,6 +43,7 @@ posiciona()
 
 function start() {
 
+    rodadas = 0
     for (let c = 1; c < 4; c++) {
         for (let l = 1; l < 4; l++) {
             obj = document.getElementById('bloco'+[c]+[l])
@@ -51,6 +56,8 @@ function start() {
             }
             document.getElementById('bloco'+[c]+[l]).onmouseout = function () {
                 this.style.backgroundColor = 'rgba(128, 0, 128, 0.2)'
+                this.style.transition = 'background-color 1s'
+
             }
         }
     }
@@ -114,8 +121,21 @@ function back() {
         for (let l = 1; l < 4; l++) {
             obj = document.getElementById('bloco'+[c]+[l])
             obj.style.cursor = 'default'
+            obj.style.transition = 'all 1s'
             obj.setAttribute('onclick', '')
             obj.style.backgroundColor = 'rgba(128, 0, 128, 0.2)'
+
+            /* verifica se existe antes*/
+            var obj = document.getElementById('div'+[c]+[l])
+            if (obj != null){
+                var div = document.querySelector('#div'+[c]+[l])
+                div.parentNode.removeChild(div)
+            }
+            var obj = document.getElementById('div'+[c]+[l])
+            if (obj != null){
+                var div = document.querySelector('#div'+[c]+[l])
+                div.parentNode.removeChild(div)
+            }
         }
     }
 
@@ -167,4 +187,155 @@ function back() {
     var obj = document.getElementById('btnIniciar')
     obj.setAttribute('onclick', 'start()')   
     obj.innerHTML = 'INICIAR'  
+}
+
+
+
+function marcar(blocoSelecionado) {    
+
+    
+    var bloco = document.getElementById('bloco'+blocoSelecionado)
+
+    if (simboloDaVez == 'xis') {
+        /* se é x */
+        var div1 = document.createElement('div')
+        div1.setAttribute('id', 'div' + blocoSelecionado)
+        div1.setAttribute('class', 'marcax1')
+        bloco.appendChild(div1)
+
+
+        var div2 = document.createElement('div')
+        div2.setAttribute('id', 'div' + blocoSelecionado)
+        div2.setAttribute('class', 'marcax2')
+        bloco.appendChild(div2)
+
+        checar()
+        simboloDaVez = 'bolinha'
+
+    }
+    else{
+        /* ou bolinha */
+        var div = document.createElement('div')
+        div.setAttribute('id', 'div' + blocoSelecionado)
+        div.setAttribute('class', 'bolinha')
+        bloco.appendChild(div)
+
+        checar()
+        simboloDaVez = 'xis'
+    }
+
+    
+
+
+}
+
+
+function checar() {
+
+    if (bloco11Check == simboloDaVez && bloco12Check == simboloDaVez && bloco13Check == simboloDaVez){
+        document.getElementById('teste').innerHTML = 'ganhouuuu'
+    }
+    if (bloco21Check == simboloDaVez && bloco22Check == simboloDaVez && bloco23Check == simboloDaVez){
+        document.getElementById('teste').innerHTML = 'ganhouuuu'
+    }
+    if (bloco31Check == simboloDaVez && bloco32Check == simboloDaVez && bloco33Check == simboloDaVez){
+        document.getElementById('teste').innerHTML = 'ganhouuuu'
+    }
+
+    
+    if (bloco11Check == simboloDaVez && bloco21Check == simboloDaVez && bloco31Check == simboloDaVez){
+        document.getElementById('teste').innerHTML = 'ganhouuuu'
+    }
+    if (bloco12Check == simboloDaVez && bloco22Check == simboloDaVez && bloco32Check == simboloDaVez){
+        document.getElementById('teste').innerHTML = 'ganhouuuu'
+    }
+    if (bloco13Check == simboloDaVez && bloco23Check == simboloDaVez && bloco33Check == simboloDaVez){
+        document.getElementById('teste').innerHTML = 'ganhouuuu'
+    }
+
+    if (bloco11Check == simboloDaVez && bloco22Check == simboloDaVez && bloco33Check == simboloDaVez){
+        document.getElementById('teste').innerHTML = 'ganhouuuu'
+    }
+    
+    rodadas += 1
+    if (rodadas == 9){
+        document.getElementById('teste').innerHTML = 'empate'
+    }
+    
+}
+
+
+
+
+
+
+function marcar11() {
+    var obj = document.getElementById('div11')
+    if (obj == null){
+        bloco11Check = simboloDaVez
+        marcar(11)
+        
+    }
+}
+function marcar12() {
+    var obj = document.getElementById('div12')
+    if (obj == null){
+        bloco12Check = simboloDaVez
+        marcar(12)
+    }
+}
+function marcar13() {
+    var obj = document.getElementById('div13')
+    if (obj == null){
+        bloco13Check = simboloDaVez
+        marcar(13)
+    }
+}
+
+function marcar21() {
+    var obj = document.getElementById('div21')
+    if (obj == null){
+        bloco21Check = simboloDaVez
+        marcar(21)
+    }
+}
+function marcar22() {
+    var obj = document.getElementById('div22')
+    if (obj == null){
+        bloco22Check = simboloDaVez
+        marcar(22)
+    }
+}
+function marcar23() {
+    var obj = document.getElementById('div23')
+    if (obj == null){
+        bloco23Check = simboloDaVez
+        marcar(23)
+        
+    }
+}
+
+function marcar31() {
+    var obj = document.getElementById('div31')
+    if (obj == null){
+        bloco31Check = simboloDaVez
+        marcar(31)
+        
+    }
+}
+function marcar32() {
+    var obj = document.getElementById('div32')
+    if (obj == null){
+        bloco32Check = simboloDaVez
+        marcar(32)
+        
+    }
+}
+function marcar33() {
+    var obj = document.getElementById('div33')
+    if (obj == null){
+        bloco33Check = simboloDaVez
+        marcar(33)
+        
+    }
 }

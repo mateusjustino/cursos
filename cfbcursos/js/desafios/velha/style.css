@@ -44,6 +44,32 @@ body{
     height: 95px;
     width: 95px;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.marcax1{
+    background-color: black;
+    height: 5px;
+    width: 90px;    
+    transform: rotate(135deg);
+}
+.marcax2{
+    background-color: black;
+    height: 5px;
+    width: 90px;    
+    transform: rotate(45deg);
+}
+
+.bolinha{
+    background-color: transparent;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    border: 5px solid black;
+    box-sizing: border-box;
 }
 
 button{
