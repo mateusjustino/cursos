@@ -69,7 +69,66 @@ function start() {
         for (let l = 1; l < 4; l++) {
             obj = document.getElementById('bloco'+[c]+[l])
             obj.style.cursor = 'pointer'
-            obj.setAttribute('onclick', 'marcar'+[c]+[l]+'()')            
+            obj.setAttribute('onclick', 'marcar'+[c]+[l]+'()') 
+
+            /* cria o x1 */
+            var div1 = document.createElement('div')
+            div1.setAttribute('id', 'div' + [c]+[l] + 'x1')
+            obj.appendChild(div1)
+
+            /* css do x1*/
+            var divx1css = document.getElementById('div' + [c]+[l] + 'x1')
+            divx1css.style.backgroundColor = 'transparent'
+            divx1css.style.height = '5px'
+            divx1css.style.width = '0px'
+            divx1css.style.transform = 'rotate(135deg)'
+            /*
+            divx1css.style.position = 'relative'
+            divx1css.style.top = '40px'
+            */
+            divx1css.style.transition = 'all 0.5s'
+            divx1css.style.transitionDelay = '0.3s'
+
+
+
+            var div2 = document.createElement('div')
+            div2.setAttribute('id', 'div' + [c]+[l] + 'x2')
+            obj.appendChild(div2)
+
+            /* css do x2*/
+            var divx2css = document.getElementById('div' + [c]+[l] + 'x2')
+            divx2css.style.backgroundColor = 'transparent'
+            divx2css.style.height = '5px'
+            divx2css.style.width = '0px'
+            divx2css.style.transform = 'rotate(45deg)'
+            divx2css.style.position = 'relative'
+            divx2css.style.top = '-5px'
+            divx2css.style.transition = 'all 0.5s'
+
+
+            /* cria a bolinha */
+            var div = document.createElement('div')
+            div.setAttribute('id', 'div' + [c]+[l] + 'bolinha')
+            div.setAttribute('class', 'bolinha')
+            obj.appendChild(div)
+
+            /* css da bolinha */
+            var divbolinha = document.getElementById('div' + [c]+[l] + 'bolinha')
+            divbolinha.style.backgroundColor = 'transparent'
+            divbolinha.style.height = '0px'
+            divbolinha.style.width = '0px'
+            divbolinha.style.borderRadius = '100%'
+            divbolinha.style.boxSizing = 'border-box'
+            divbolinha.style.border = '0px solid transparent'
+            divbolinha.style.position = 'relative'
+            divbolinha.style.top = '-5px'
+            divbolinha.style.transition = 'all 0.5s'
+
+
+
+            
+            
+            /* cria os efeitos quando passa o mouse em cima */
             document.getElementById('bloco'+[c]+[l]).onmouseover = function () {
 
                 this.style.transition = 'background-color 0.5s'
@@ -153,17 +212,20 @@ function back() {
             obj.setAttribute('onclick', '')
             obj.style.backgroundColor = 'rgba(128, 0, 128, 0.2)'
 
-            /* verifica se existe antes*/
-            var obj = document.getElementById('div'+[c]+[l])
-            if (obj != null){
-                var div = document.querySelector('#div'+[c]+[l])
-                div.parentNode.removeChild(div)
-            }
-            var obj = document.getElementById('div'+[c]+[l])
-            if (obj != null){
-                var div = document.querySelector('#div'+[c]+[l])
-                div.parentNode.removeChild(div)
-            }
+            /* css pra desaparecer*/
+            var divx1 = document.getElementById('div'+[c]+[l]+ 'x1')
+            divx1.style.width = '0px'
+            divx1.style.backgroundColor = 'transparent'  
+
+            var divx2 = document.getElementById('div'+[c]+[l]+ 'x2')
+            divx2.style.width = '0px'
+            divx2.style.backgroundColor = 'transparent'  
+            
+            var divbolinha = document.getElementById('div'+[c]+[l]+ 'bolinha')
+            divbolinha.style.width = '0px'
+            divbolinha.style.height = '0px'
+            divbolinha.style.border = '0px solid transparent'  
+            
         }
     }
 
@@ -219,23 +281,17 @@ function back() {
 
 
 
-function marcar(blocoSelecionado) {    
-
-    
-    var bloco = document.getElementById('bloco'+blocoSelecionado)
+function marcar(posicao) {    
 
     if (simboloDaVez == 'xis') {
         /* se é x */
-        var div1 = document.createElement('div')
-        div1.setAttribute('id', 'div' + blocoSelecionado)
-        div1.setAttribute('class', 'marcax1')
-        bloco.appendChild(div1)
+        var obj1 = document.getElementById('div' + posicao + 'x1')
+        obj1.style.width = '60px'
+        obj1.style.backgroundColor = 'black'  
 
-
-        var div2 = document.createElement('div')
-        div2.setAttribute('id', 'div' + blocoSelecionado)
-        div2.setAttribute('class', 'marcax2')
-        bloco.appendChild(div2)
+        var obj2 = document.getElementById('div' + posicao + 'x2')
+        obj2.style.width = '60px'
+        obj2.style.backgroundColor = 'black'  
 
         checar()
         simboloDaVez = 'bolinha'
@@ -243,10 +299,10 @@ function marcar(blocoSelecionado) {
     }
     else{
         /* ou bolinha */
-        var div = document.createElement('div')
-        div.setAttribute('id', 'div' + blocoSelecionado)
-        div.setAttribute('class', 'bolinha')
-        bloco.appendChild(div)
+        var obj1 = document.getElementById('div' + posicao + 'bolinha')
+        obj1.style.width = '50px'
+        obj1.style.height = '50px'
+        obj1.style.border = '5px solid black'  
 
         checar()
         simboloDaVez = 'xis'
@@ -319,8 +375,6 @@ function endgame(empate = 0) {
     subtituloEndgame.style.color = 'black'
 
 
-
-
     if (simboloDaVez == 'xis') {
         
         tituloEndgame.innerHTML = 'Vitória!!!!'
@@ -338,78 +392,61 @@ function endgame(empate = 0) {
     
 }
 
-
-
-
-
-
 function marcar11() {
-    var obj = document.getElementById('div11')
-    if (obj == null){
+    if (bloco11Check == 0){
         bloco11Check = simboloDaVez
-        marcar(11)
-        
+        marcar(11)   
     }
+    
 }
 function marcar12() {
-    var obj = document.getElementById('div12')
-    if (obj == null){
+    if (bloco12Check == 0){
         bloco12Check = simboloDaVez
-        marcar(12)
+        marcar(12)   
     }
+    
 }
-function marcar13() {
-    var obj = document.getElementById('div13')
-    if (obj == null){
+function marcar13() {  
+    if (bloco13Check == 0){
         bloco13Check = simboloDaVez
-        marcar(13)
+        marcar(13)   
     }
 }
 
-function marcar21() {
-    var obj = document.getElementById('div21')
-    if (obj == null){
+function marcar21() {  
+    if (bloco21Check == 0){
         bloco21Check = simboloDaVez
-        marcar(21)
-    }
+        marcar(21)   
+    } 
 }
 function marcar22() {
-    var obj = document.getElementById('div22')
-    if (obj == null){
+    if (bloco22Check == 0){
         bloco22Check = simboloDaVez
-        marcar(22)
+        marcar(22)   
     }
 }
 function marcar23() {
-    var obj = document.getElementById('div23')
-    if (obj == null){
+    if (bloco23Check == 0){
         bloco23Check = simboloDaVez
-        marcar(23)
-        
+        marcar(23)   
     }
 }
 
 function marcar31() {
-    var obj = document.getElementById('div31')
-    if (obj == null){
+    if (bloco31Check == 0){
         bloco31Check = simboloDaVez
-        marcar(31)
-        
+        marcar(31)   
     }
 }
 function marcar32() {
-    var obj = document.getElementById('div32')
-    if (obj == null){
+    if (bloco32Check == 0){
         bloco32Check = simboloDaVez
-        marcar(32)
-        
+        marcar(32)   
     }
 }
 function marcar33() {
-    var obj = document.getElementById('div33')
-    if (obj == null){
+    if (bloco33Check == 0){
         bloco33Check = simboloDaVez
-        marcar(33)
-        
+        marcar(33)   
     }
 }

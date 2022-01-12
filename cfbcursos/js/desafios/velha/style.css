@@ -50,27 +50,6 @@ body{
     flex-direction: column;
 }
 
-.marcax1{
-    background-color: black;
-    height: 5px;
-    width: 90px;    
-    transform: rotate(135deg);
-}
-.marcax2{
-    background-color: black;
-    height: 5px;
-    width: 90px;    
-    transform: rotate(45deg);    
-}
-
-.bolinha{
-    background-color: transparent;
-    height: 80px;
-    width: 80px;
-    border-radius: 100%;
-    border: 5px solid black;
-    box-sizing: border-box;
-}
 
 h2, h3{
     font-size: 0.1px;
@@ -81,7 +60,7 @@ button{
     padding: 6px;
     width: 180px;
     margin-bottom: 50px;
-    border: 1px dashed black;
+    border: 1px currentColor rgb(117, 88, 88);
     outline: none;
     background-color: transparent;
     cursor: pointer;
