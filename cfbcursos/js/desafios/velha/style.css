@@ -60,7 +60,6 @@ button{
     padding: 6px;
     width: 180px;
     margin-bottom: 50px;
-    border: 1px currentColor rgb(117, 88, 88);
     outline: none;
     background-color: transparent;
     cursor: pointer;
