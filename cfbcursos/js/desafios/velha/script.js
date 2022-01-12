@@ -231,6 +231,9 @@ function marcar(blocoSelecionado) {
         div1.setAttribute('class', 'marcax1')
         bloco.appendChild(div1)
 
+        
+
+
 
         var div2 = document.createElement('div')
         div2.setAttribute('id', 'div' + blocoSelecionado)
@@ -239,6 +242,7 @@ function marcar(blocoSelecionado) {
 
         checar()
         simboloDaVez = 'bolinha'
+
 
     }
     else{
@@ -250,9 +254,7 @@ function marcar(blocoSelecionado) {
 
         checar()
         simboloDaVez = 'xis'
-    }
-
-    
+    }   
 
 
 }
