@@ -61,7 +61,7 @@ button{
     width: 180px;
     margin-bottom: 50px;
     outline: none;
-    border: 1px outset black;
+    border: 1px dashed black;
     background-color: transparent;
     cursor: pointer;
     border-radius: 5px;
