@@ -51,7 +51,23 @@ function posiciona() {
     tituloVezDeQuem.style.top = '100px'
 
     tituloVezDeQuem.style.transition = 'all 1s'
+
+    tituloVezDeQuem.innerHTML = 'Quem joga agora: <span id="spanX"></span><span id="spanBolinha"></span> '
     
+    var simboloNoTituloX = document.getElementById('spanX')
+    simboloNoTituloX.innerHTML = '"X"'
+    simboloNoTituloX.style.display = 'none'
+    simboloNoTituloX.style.position = 'absolute'
+    simboloNoTituloX.style.fontSize = '0.1px'
+
+    var simboloNoTituloBolinha = document.getElementById('spanBolinha')
+    simboloNoTituloBolinha.innerHTML = '"O"'
+    simboloNoTituloBolinha.style.position = 'absolute'
+    simboloNoTituloBolinha.style.display = 'none'
+    simboloNoTituloBolinha.style.fontSize = '0.1px'
+
+
+
 
 }
 posiciona()
@@ -71,12 +87,23 @@ function start() {
 
     rodadas = 0
     tituloEndgame.innerHTML = ''
-    subtituloEndgame.innerHTML = ''    
-    tituloVezDeQuem.innerHTML = 'Quem joga agora: "<span></span>"'
+    subtituloEndgame.innerHTML = ''
 
-    var simboloNoTitulo = document.getElementsByTagName('span')[0]
 
-    simboloNoTitulo.innerHTML = 'X'
+    var simboloNoTituloX = document.getElementById('spanX')
+    var simboloNoTituloBolinha = document.getElementById('spanBolinha')
+
+    if (simboloDaVez == 'xis') {
+        simboloNoTituloX.style.display = 'inline'
+        simboloNoTituloX.style.fontSize = '1em'
+    }
+    else{
+        simboloNoTituloBolinha.style.display = 'inline'
+        simboloNoTituloBolinha.style.fontSize = '1em'
+
+    }
+
+
     
     
 
@@ -315,8 +342,9 @@ function back() {
 
 function marcar(posicao) {    
 
-    var simboloNoTitulo = document.getElementsByTagName('span')[0] 
-    simboloNoTitulo.style.transition = 'color 1s'
+    var simboloNoTituloX = document.getElementById('spanX')
+    var simboloNoTituloBolinha = document.getElementById('spanBolinha')
+
 
     if (simboloDaVez == 'xis') {
         /* se é x */
@@ -330,10 +358,6 @@ function marcar(posicao) {
 
         checar()
         simboloDaVez = 'bolinha'
-        simboloNoTitulo.style.transition = 'all 1s'
-
-        simboloNoTitulo.innerHTML = "O"
-
 
     }
     else{
@@ -344,11 +368,9 @@ function marcar(posicao) {
         obj1.style.border = '5px solid black'  
 
         checar()
-        simboloDaVez = 'xis'        
-        simboloNoTitulo.innerHTML = "X"
+        simboloDaVez = 'xis'    
 
     }
-    simboloNoTitulo.style.color = 'black'
 
 }
 
