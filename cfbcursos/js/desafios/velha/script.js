@@ -5,7 +5,8 @@ var bloco11Check, bloco12Check, bloco13Check, bloco21Check, bloco22Check, bloco2
 var rodadas = 0
 
 var tituloEndgame = document.getElementsByTagName('h2')[0]
-var subtituloEndgame = document.getElementsByTagName('h3')[0]
+var subtituloEndgame = document.getElementsByTagName('h3')[1]
+var tituloVezDeQuem = document.getElementsByTagName('h3')[0]
 
 function posiciona() {
     var top = 100
@@ -42,6 +43,16 @@ function posiciona() {
         obj.style.transition = 'all 1s'
         top += 95
     }
+
+    tituloVezDeQuem.style.color = 'transparent'
+    tituloVezDeQuem.style.fontSize = '0.1px'
+    tituloVezDeQuem.style.height = '10px'    
+    tituloVezDeQuem.style.position = 'relative'
+    tituloVezDeQuem.style.top = '100px'
+
+    tituloVezDeQuem.style.transition = 'all 1s'
+    
+
 }
 posiciona()
     
@@ -62,8 +73,21 @@ function start() {
     tituloEndgame.innerHTML = ''
     subtituloEndgame.innerHTML = ''
 
-    tituloEndgame.style.fontSize = '1px'
-    subtituloEndgame.style.fontSize = '1px'
+    if (simboloDaVez == 'xis'){
+        tituloVezDeQuem.innerHTML = 'Quem joga agora: "X"'
+    }
+    else{
+        tituloVezDeQuem.innerHTML = 'Quem joga agora: "O"'
+    }
+
+    tituloEndgame.style.fontSize = '0.1px'
+    subtituloEndgame.style.fontSize = '0.1px'
+
+    tituloVezDeQuem.style.color = 'black'
+    tituloVezDeQuem.style.top = '-30px'
+    tituloVezDeQuem.style.height = '0px'
+    tituloVezDeQuem.style.fontSize = '1.1em'
+    tituloVezDeQuem.style.fontWeight = 'normal'
 
     for (let c = 1; c < 4; c++) {
         for (let l = 1; l < 4; l++) {
@@ -201,7 +225,15 @@ function back() {
     tituloEndgame.style.color = 'transparent'
     subtituloEndgame.style.fontSize = '0.1px'
     subtituloEndgame.style.color = 'transparent'
+    tituloVezDeQuem.style.fontSize = '0.1px'
+    tituloVezDeQuem.style.color = 'transparent'
 
+    tituloVezDeQuem.style.color = 'transparent'
+    tituloVezDeQuem.style.fontSize = '0.1px'
+    tituloVezDeQuem.style.height = '10px'    
+    tituloVezDeQuem.style.transition = 'all 1s'
+    tituloVezDeQuem.style.position = 'relative'
+    tituloVezDeQuem.style.top = '120px'
     
 
     for (let c = 1; c < 4; c++) {
@@ -306,6 +338,13 @@ function marcar(posicao) {
 
         checar()
         simboloDaVez = 'xis'
+    }
+
+    if (simboloDaVez == 'xis'){
+        tituloVezDeQuem.innerHTML = 'Quem joga agora: "X"'
+    }
+    else{
+        tituloVezDeQuem.innerHTML = 'Quem joga agora: "O"'
     }
 
     
