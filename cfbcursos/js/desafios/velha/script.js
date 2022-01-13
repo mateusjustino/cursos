@@ -71,14 +71,14 @@ function start() {
 
     rodadas = 0
     tituloEndgame.innerHTML = ''
-    subtituloEndgame.innerHTML = ''
+    subtituloEndgame.innerHTML = ''    
+    tituloVezDeQuem.innerHTML = 'Quem joga agora: "<span></span>"'
 
-    if (simboloDaVez == 'xis'){
-        tituloVezDeQuem.innerHTML = 'Quem joga agora: "X"'
-    }
-    else{
-        tituloVezDeQuem.innerHTML = 'Quem joga agora: "O"'
-    }
+    var simboloNoTitulo = document.getElementsByTagName('span')[0]
+
+    simboloNoTitulo.innerHTML = 'X'
+    
+    
 
     tituloEndgame.style.fontSize = '0.1px'
     subtituloEndgame.style.fontSize = '0.1px'
@@ -315,6 +315,9 @@ function back() {
 
 function marcar(posicao) {    
 
+    var simboloNoTitulo = document.getElementsByTagName('span')[0] 
+    simboloNoTitulo.style.transition = 'color 1s'
+
     if (simboloDaVez == 'xis') {
         /* se é x */
         var obj1 = document.getElementById('div' + posicao + 'x1')
@@ -327,6 +330,10 @@ function marcar(posicao) {
 
         checar()
         simboloDaVez = 'bolinha'
+        simboloNoTitulo.style.transition = 'all 1s'
+
+        simboloNoTitulo.innerHTML = "O"
+
 
     }
     else{
@@ -337,18 +344,11 @@ function marcar(posicao) {
         obj1.style.border = '5px solid black'  
 
         checar()
-        simboloDaVez = 'xis'
-    }
+        simboloDaVez = 'xis'        
+        simboloNoTitulo.innerHTML = "X"
 
-    if (simboloDaVez == 'xis'){
-        tituloVezDeQuem.innerHTML = 'Quem joga agora: "X"'
     }
-    else{
-        tituloVezDeQuem.innerHTML = 'Quem joga agora: "O"'
-    }
-
-    
-
+    simboloNoTitulo.style.color = 'black'
 
 }
 
