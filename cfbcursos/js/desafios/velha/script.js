@@ -53,21 +53,6 @@ function posiciona() {
     tituloVezDeQuem.style.transition = 'all 1s'
 
     tituloVezDeQuem.innerHTML = 'Quem joga agora: <span id="spanX"></span><span id="spanBolinha"></span> '
-    
-    var simboloNoTituloX = document.getElementById('spanX')
-    simboloNoTituloX.innerHTML = '"X"'
-    simboloNoTituloX.style.display = 'none'
-    simboloNoTituloX.style.position = 'absolute'
-    simboloNoTituloX.style.fontSize = '0.1px'
-
-    var simboloNoTituloBolinha = document.getElementById('spanBolinha')
-    simboloNoTituloBolinha.innerHTML = '"O"'
-    simboloNoTituloBolinha.style.position = 'absolute'
-    simboloNoTituloBolinha.style.display = 'none'
-    simboloNoTituloBolinha.style.fontSize = '0.1px'
-
-
-
 
 }
 posiciona()
@@ -89,20 +74,12 @@ function start() {
     tituloEndgame.innerHTML = ''
     subtituloEndgame.innerHTML = ''
 
-
-    var simboloNoTituloX = document.getElementById('spanX')
-    var simboloNoTituloBolinha = document.getElementById('spanBolinha')
-
-    if (simboloDaVez == 'xis') {
-        simboloNoTituloX.style.display = 'inline'
-        simboloNoTituloX.style.fontSize = '1em'
+    if (simboloDaVez == 'xis'){
+        tituloVezDeQuem.innerHTML = 'Quem joga agora é: "X"'
     }
     else{
-        simboloNoTituloBolinha.style.display = 'inline'
-        simboloNoTituloBolinha.style.fontSize = '1em'
-
+        tituloVezDeQuem.innerHTML = 'Quem joga agora é: "O"'
     }
-
 
     
     
@@ -342,10 +319,6 @@ function back() {
 
 function marcar(posicao) {    
 
-    var simboloNoTituloX = document.getElementById('spanX')
-    var simboloNoTituloBolinha = document.getElementById('spanBolinha')
-
-
     if (simboloDaVez == 'xis') {
         /* se é x */
         var obj1 = document.getElementById('div' + posicao + 'x1')
@@ -358,6 +331,7 @@ function marcar(posicao) {
 
         checar()
         simboloDaVez = 'bolinha'
+        tituloVezDeQuem.innerHTML = 'Quem joga agora é: "O"'
 
     }
     else{
@@ -369,6 +343,7 @@ function marcar(posicao) {
 
         checar()
         simboloDaVez = 'xis'    
+        tituloVezDeQuem.innerHTML = 'Quem joga agora é: "X"'
 
     }
 
