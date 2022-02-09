@@ -39,77 +39,46 @@
         .words{
             overflow: hidden;
         }
-
         span{
             display: block;
             height: 100%;
             padding-left: 10px;
             color: #0e6ffc;
-             /* animation: spinWords 3s; */
-        }
-
-        @keyframes spinWords{
-            50%{
-                transform: translateY(-112%);
-            }
-            100%{
-                transform: translateY(-100%);
-            }
-
-            
-            
-            
-            /*
-            10%{
-                transform: translateY(-112%);
-            }
-            25%{
-                transform: translateY(-100%);
-            }
-            35%{
-                transform: translateY(-212%);
-            }
-            50%{
-                transform: translateY(-200%);
-            }
-            60%{
-                transform: translateY(-312%);
-            }
-            75%{
-                transform: translateY(-300%);
-            }
-            85%{
-                transform: translateY(-412%);
-            }
-            100%{
-                transform: translateY(-400%);
-            }
-            */
         }
     </style>
 </head>
 <body>
-    <button id="btn" onclick="anima()">clique</button>
     <div class="wrapper">
         <p>Coding is</p>
         <div class="words">
-            <span>teste1</span>
-            <span>teste2</span>
-            <span>teste1</span>
+            <span>fantastic</span>
+            <span>awesome</span>
         </div>
     </div>
-    <p id="link">Retirado do vídeo: https://youtu.be/f0qX-lkk8Y8</p>
-
+    <button onclick="ativa()">teste</button>
     <script>
+        var simbolo = 0
 
-        function anima() {
-            var teste = document.getElementsByTagName('span')
-            for (let i = 0; i < teste.length; i++) {
-                teste[i].style.color = 'red' 
-                           
+        function ativa() {
+
+            var span = document.getElementsByTagName('span')
+
+            if (simbolo == 0) {
+                span[0].style.transform = 'translateY(-100%)'
+                span[0].style.transition = 'all 1s'
+                span[1].style.transform = 'translateY(-100%)'            
+                span[1].style.transition = 'all 1s'
+                simbolo = 1
             }
-            teste[0].innerHTML = 'teste'
-            teste[1].style.transform = 'translateY(-100%)'
+            else if (simbolo == 1) {
+
+                span[1].style.transform = 'translateY(0%)'            
+                span[1].style.transition = 'all 1s'
+                span[0].style.transform = 'translateY(0%)'
+                span[0].style.transition = 'all 1s'
+                simbolo = 0
+            }
+            
         }
     </script>
 </body>
