@@ -67,7 +67,8 @@
         var dirJy
 
         //posicao iniciais
-        var posJogIniY = 180, posCpuIniY = 180, posBolaIniX = 475, posBolaIniY = 240
+        var posJogIniY = 180, posJogIniX = 10, posCpuIniY = 180, posCpuIniX = 930, posBolaIniX = 475, posBolaIniY = 240
+
 
         //tamanhos
         var campoX = 0, campoY = 0, campoW = 960, campoH = 500
@@ -88,8 +89,39 @@
         function controlajog() {
             if (jogo) {
                 posJogadorY += velJogador * dirJy
+                if (((posJogadorY + barraH) >= campoH) || ((posJogadorY) <= 0)) {
+                    posJogadorY += (velJogador * dirJy)*(-1)
+                }
                 vjogador.style.top = posJogadorY + 'px'
             }
+        }
+
+        function controlaBola() {
+            //movimentacao bola
+            posBolaX += velBola * bolaX
+            posBolaY += velBola * bolaY
+
+            //colisao com jogador
+            if(
+                (posBolaX <= posJogadorX + barraW) &&
+                ((posBolaY + bolaH >= posJogadorY) && (posBolaY <= posJogadorY + barraH))
+            ){
+                bolaY = (((posBolaY + (bolaH / 2)) - (posJogadorY + (barraH/2))) / 16)
+                bolaX *=-1
+            }
+            //colisao com cpu
+            if(
+                (posBolaX >= posCpuX - barraW) &&
+                ((posBolaY+bolaH >= posCpuY) && (posBolaY <= posCpuY + barraH))
+            ){
+                bolaY = (((posBolaY + (bolaH / 2)) - (posCpuY + (barraH/2))) / 16)
+                bolaX *=-1
+            }
+            //limites superior e inferior
+            
+
+            vbola.style.top = posBolaY + 'px'
+            vbola.style.left = posBolaX + 'px'
         }
 
         function teclaDown(){
@@ -114,6 +146,7 @@
         function game() {
             if (jogo) {
                 controlajog()
+                controlaBola()
                 
             }
             frames = requestAnimationFrame(game)
@@ -124,10 +157,21 @@
                 cancelAnimationFrame(frames)
                 jogo = true
                 dirJy = 0
+                bolaY = 0
+                if ((Math.random()*10)<5){
+                    bolaX =-1
+                }
+                else{
+                    bolaX = 1
+                }
                 posBolaX = posBolaIniX
                 posBolaY = posBolaIniY
-                posJogadorY = 0
+                posJogadorY = posJogIniY
                 posCpuY = posCpuIniY
+
+                posJogadorX = posJogIniX;
+                posCpuX = posCpuIniX;
+
                 game()
             }
 
