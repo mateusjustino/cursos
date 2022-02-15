@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Window</title>
+    <style>
+        body{
+            background-color: rgb(250, 241, 241);
+        }
+        
+    </style>
+    <script>
+        var minhaJanela
+        //window.open() abre uma nova aba
+        //var minhaJanela = window.open('62(objetoWindow1Extra).html')  
+        function abreJ() {
+            //var minhaJanela = window.open('62(objetoWindow1Extra).html', 'cfb') //'_blank' é o padrão, abre nova aba
+            //'_self' abre na mesma pagina
+            //'cfb' abre dentro do frame da pagina
+            minhaJanela = window.open('62(objetoWindow1Extra).html', '_blank', 'width=300, height=300, top=300, left=300') //para determinar o tamanho da aba
+
+        }
+        function fechaJ() {
+            minhaJanela.close()
+        }
+    </script>
+</head>
+<body>
+
+    <button onclick="abreJ()">Abre Nova Janela</button>
+    <button onclick="fechaJ()">Fechar Janela</button>
+
+    <iframe name="cfb" src="" frameborder="1"></iframe>
+
+</body>
+</html>

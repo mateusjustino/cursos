@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerWidth InnerHeight ScreenX ScreenY</title>
+    <style>
+        #painel{
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 15px;
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        var l, a, px, py, painel
+
+        
+        l = window.innerWidth //largura total do navegador (contando apenas a parte da pagina) 
+        a = window.innerHeight //altura total do navegador (contando apenas a parte da pagina) 
+
+        
+
+        function inicia() {
+            var painel = document.getElementById('painel')
+            painel.innerHTML = l
+
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <button onclick="escreve()">Tamanho</button>
+    <div id="painel"></div>
+</body>
+</html>
