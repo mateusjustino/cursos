@@ -24,7 +24,7 @@
 
         function verifica() {
             painel = document.getElementById('painel')
-            painel.innerHTML = `Nme do Browser: ${navigator.appName} <hr>`
+            painel.innerHTML = `Nome do Browser: ${navigator.appName} <hr>`
             painel.innerHTML += `Versão do Browser: ${navigator.appVersion} <hr>`
             painel.innerHTML += `Cookies: ${navigator.cookieEnabled} <hr>`
             navigator.geolocation.getCurrentPosition(localizar)
