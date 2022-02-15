@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerWidth InnerHeight ScreenX ScreenY</title>
+    <style>
+        
+    </style>
+    <script>
+
+        function inicia() {
+            var qtde = window.length
+            var painel = document.getElementById('painel').innerHTML = qtde
+
+            for (let i = 3; i < qtde; i++) {
+                window.frames[i].location = 'http://cfbcursos.com.br'
+            }
+
+        }
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <iframe src="64(extra).html" frameborder="1"></iframe>
+    <iframe src="64(extra).html" frameborder="1"></iframe>
+    <iframe src="64(extra).html" frameborder="1"></iframe>
+    <iframe src="" frameborder="1"></iframe>
+    <iframe src="" frameborder="1"></iframe>
+
+    <div id="painel"></div>
+</body>
+</html>
