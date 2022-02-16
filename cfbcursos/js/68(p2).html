@@ -28,6 +28,15 @@
         //var hre = location.href = 'http://www.youtube.com/cfbcursos' //redereciona para o link citado
         var o = location.origin
         document.write(o + '<hr>') //protocolo, hostname e o numero da porta
+        var p = location.pathname //pega o caminho
+        document.write(p + '<hr>') 
+        var pr = location.protocol //pega o protocolo
+        document.write(pr + '<hr>') 
+
+        aux = location.search
+        dados = aux.split('?')
+        v1 = dados[1].split('=')[1]
+        document.write(v1 + '<hr>') 
         
 
     </script>
