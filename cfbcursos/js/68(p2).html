@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(163, 32, 32);
+            color: #fff;
+        }
+        a{
+            color: #fff;
+        }
+    </style>
+    <script>
+        var aux = location.hash  // para pegar o que esta escrito na hashtag do link
+        var dados = aux.split('#')
+        var v1 = dados[1]
+        var v2 = dados[2]
+        document.write(v1 + '<hr>')
+        document.write(v2 + '<hr>')
+        var h = location.hostname  //pega o host do link ex:youtube.com/google   o host é o youtube.com
+        document.write(h + '<hr>')
+        var hr = location.href //pega o link completo
+        document.write(hr + '<hr>')
+        //var hre = location.href = 'http://www.youtube.com/cfbcursos' //redereciona para o link citado
+        var o = location.origin
+        document.write(o + '<hr>') //protocolo, hostname e o numero da porta
+        
+
+    </script>
+</head>
+<body>
+    <h1>Página 2 - p2.html</h1>
+
+    <a href="68(objetoLocation).html">Voltar</a>
+</body>
+</html>
