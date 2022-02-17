@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Location</title>
+    <script>
+        //location.assign('69(p2).html')  //direciona para pagina indicada
+
+        //location.replace('69(p2).html')  //igual ao assing só que remove a url do historico
+
+        function p2() {
+             location.replace('69(p2).html')
+        }
+
+        function rec() {
+            location.reload() //da um reload na pagina
+            
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>Objeto Location</h1>
+    <button id="btnP2" onclick="p2()">Página 2</button>
+    <button id="btnReload" onclick="rec()">Recarregar</button>
+</body>
+</html>

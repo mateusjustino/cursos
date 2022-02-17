@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script>
+        if (typeof(Storage) != 'undefined') {
+            //localStorage.setItem('canal', 'CFBCursos') //cria uma chave no local storage do navegador
+            //localStorage.removeItem('canal', 'CFBCursos') //remove uma chave
+
+            //var vcanal = localStorage.getItem('canal') //pra pegar o valor da chave
+            //var vcanal = localStorage.canal //faz o mesmo que o de cima, só colocar o nome da chave depois do '.'
+            //document.write(vcanal)
+
+            if (localStorage.visitas) {
+                localStorage.visitas = Number(localStorage.visitas) + 1
+            }
+            else{
+                //localStorage.setItem('visitas', '1')
+                localStorage.visitas = 1 //tanto a linha de cima quanto essa faz a mesma coisa
+            }
+            document.write(`Visitas: ${localStorage.visitas}`)
+        }
+        else{
+            document.write('sem suporte a web storage')
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
