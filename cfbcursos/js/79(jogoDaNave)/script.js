@@ -3,6 +3,9 @@ var velT
 var tamTelaW, tamTelaH
 var jogo
 var frames
+var contBombas, painelContBombas, velB, tmpCriaBomba
+var bombasTotal
+var vidaPlaneta
 
 function teclaDw() {
     var tecla = event.keyCode
@@ -43,6 +46,24 @@ function criaBomba() {
         att2.value = `top: ${y}px; left: ${x}px;`
         bomba.setAttributeNode(att1)
         bomba.setAttributeNode(att2)
+        document.body.appendChild(bomba)
+        contBombas --
+    }
+}
+
+function controlaBomba() {
+    bombasTotal = document.getElementsByClassName('bomba')
+    var tam = bombasTotal.length
+    for (let i = 0; i < tam; i++) {
+        if (bombasTotal[i]) {
+            var pi = bombasTotal[i].offsetTop
+            pi += velB
+            bombasTotal[i].style.top = pi + 'px'
+            if (pi > tamTelaH) {
+                vidaPlaneta -= 10
+                bombasTotal[i].remove()
+            }
+        }
     }
 }
 
@@ -84,6 +105,7 @@ function gameLoop() {
         // funções do controle
         controlaJogador()
         controleTiros()
+        controlaBomba()
     }
     frames.requestAnimationFrame(gameLoop)
 }
@@ -103,6 +125,15 @@ function inicia() {
     jog = document.getElementById('navJog')
     jog.style.top = pjy + 'px'
     jog.style.left = pjx + 'px'
+
+    //controles das bombas
+    contBombas = 150
+    velB = 3
+    tmpCriaBomba = setInterval(criaBomba, 1700)
+
+    //controles do planeta
+    vidaPlaneta = 300
+
 
     gameLoop()
 }
