@@ -8,13 +8,16 @@
     <script>
         function inicia() {
             var elemento = document.getElementById('p5')
-            document.write(elemento.parentNode)
+            //document.write(elemento.parentNode.nodeName) //fala quem é o elemento pai (o elemento que está acima do citado)
+            elemento.remove() //remove o elemento
+            var elementos = document.getElementById('cfbcursos').childNodes //pega todos os filhos do elemento
+            document.getElementById('cfbcursos').removeChild(elementos[1]) // remove o filho citado pela ordem do elemento pai
         }
         window.addEventListener('load', inicia)
     </script>
 </head>
 <body>
-
+    
     <div id="cfbcursos">
         <p id="p1">Curso de JavaScript</p>
         <p id="p2">Curso de HTML</p>
@@ -25,6 +28,6 @@
         <p id="p7">Curso de C#</p>
         <p id="p8">Curso de Flash</p>
     </div>
-    
+
 </body>
 </html>
