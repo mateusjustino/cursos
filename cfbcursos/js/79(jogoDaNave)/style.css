@@ -18,3 +18,22 @@ body{
     height: 621px;
     display: none;
 }
+#medidorPlaneta{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 300px;
+    height: 20px;
+    background-color: white;
+}
+#barraPlaneta{
+    width: 300px;
+    height: 20px;
+    background-color: rgb(102, 102, 206);
+}
+.tiroJog{
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 6px;
+    position: absolute;
+}
