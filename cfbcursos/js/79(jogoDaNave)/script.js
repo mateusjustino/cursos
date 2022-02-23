@@ -5,8 +5,9 @@ var jogo
 var frames
 var contBombas, painelContBombas, velB, tmpCriaBomba
 var bombasTotal
-var vidaPlaneta
+var vidaPlaneta, barraPlaneta
 var ie, isom
+var telaMsg
 
 function teclaDw() {
     var tecla = event.keyCode
@@ -173,6 +174,23 @@ function controlaJogador() {
     jog.style.left = pjx + 'px'
 }
 
+function gerenciaGame() {
+    barraPlaneta.style.width = vidaPlaneta + 'px'
+    if (contBombas <= 0) {
+        jogo = false
+        clearInterval(tmpCriaBomba)
+        telaMsg.style.backgroundImage = 'url("vitoria.jpg")'
+        telaMsg.style.display = 'block'
+    }
+    if (vidaPlaneta <= 0) {
+        jogo = false
+        clearInterval(tmpCriaBomba)
+        telaMsg.style.backgroundImage = 'url("derrota.jpg")'
+
+        telaMsg.style.display = 'block'
+    }
+}
+
 function gameLoop() {
     if (jogo) {
         // funções do controle
@@ -180,11 +198,34 @@ function gameLoop() {
         controleTiros()
         controlaBomba()
     }
+    gerenciaGame()
     frames.requestAnimationFrame(gameLoop)
 }
 
-function inicia() {
+function reinicia() {
+    bombasTotal = document.getElementsByClassName('bomba')
+    var tam = bombasTotal.length
+    for (let i = 0; i < tam; i++) {
+        if (bombasTotal[i]) {
+            bombasTotal[i].remove()
+        }
+    }
+    telaMsg.style.display = 'none'
+    clearInterval(tmpCriaBomba)
+    cancelAnimationFrame(frames)
+    vidaPlaneta = 300
+    pjx = tamTelaW / 2
+    pjy = tamTelaH / 2
+    jog.style.top = pjy + 'px'
+    jog.style.left = pjx + 'px'
+    contBombas = 150
     jogo = true
+    tmpCriaBomba = setInterval(criaBomba, 1700)
+    gameLoop()
+}
+
+function inicia() {
+    jogo = false
 
     //ini tela
     tamTelaH = window.innerHeight
@@ -201,15 +242,21 @@ function inicia() {
 
     //controles das bombas
     contBombas = 150
-    velB = 3
-    tmpCriaBomba = setInterval(criaBomba, 1700)
+    velB = 3    
 
     //controles do planeta
     vidaPlaneta = 300
+    barraPlaneta = document.getElementById('barraPlaneta')
+    barraPlaneta.style.width = vidaPlaneta + 'px'
 
     //controles de explosao
     ie = isom = 0
 
+    //telas
+    telaMsg = document.getElementById('telaMsg')
+    telaMsg.style.backgroundImage = 'url("intro.jpg")'
+    telaMsg.style.display = 'block'
+    document.getElementById('btnJogar').addEventListener('click', reinicia)
 
     gameLoop()
 }
