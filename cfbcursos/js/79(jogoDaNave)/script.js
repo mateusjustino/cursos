@@ -6,6 +6,7 @@ var frames
 var contBombas, painelContBombas, velB, tmpCriaBomba
 var bombasTotal
 var vidaPlaneta
+var ie, isom
 
 function teclaDw() {
     var tecla = event.keyCode
@@ -61,6 +62,7 @@ function controlaBomba() {
             bombasTotal[i].style.top = pi + 'px'
             if (pi > tamTelaH) {
                 vidaPlaneta -= 10
+                criaExplosao(2, bombasTotal[i].offsetLeft, null)
                 bombasTotal[i].remove()
             }
         }
@@ -86,11 +88,82 @@ function controleTiros() {
             var pt = tiros[i].offsetTop //offsetTop pega a posição atual em relação a top=0 da janela
             pt -= velT
             tiros[i].style.top = pt + 'px'
+            colisaoTiroBomba(tiros[i])
             if (pt < 0) {
                 tiros[i].remove()
             }
         }
     }
+}
+
+function colisaoTiroBomba(tiro) {
+    var tam = bombasTotal.length
+    for (let i = 0; i < tam; i++) {
+        if (bombasTotal[i]) {
+            if (
+                (
+                    (tiro.offsetTop <= (bombasTotal[i].offsetTop + 40)) && //parte de cima do tiro com a parte de baixo da bomba
+                    ((tiro.offsetTop + 6) >= (bombasTotal[i].offsetTop)) //parte de baixo do tiro com a parte de cima da bomba
+                )
+                &&
+                (
+                    (tiro.offsetLeft <= (bombasTotal[i].offsetLeft + 24)) && // parte esquerda do tiro com a parte direita da bomba
+                    ((tiro.offsetLeft + 6) >= (bombasTotal[i].offsetLeft)) // parte direita do tiro com a parte esquerda da bomba
+                )
+            ) {
+                criaExplosao(1, bombasTotal[i].offsetLeft - 25, bombasTotal[i].offsetTop)
+                bombasTotal[i].remove()
+                tiro.remove()
+            }
+        }
+    }
+}
+
+function criaExplosao(tipo, x, y) { //tipo 1 = ar, 2 = terra
+    if (document.getElementById('explosao' + (ie - 1))) {
+        document.getElementById('explosao' + (ie - 1)).remove()
+    }
+
+    var explosao = document.createElement('div')
+    var img = document.createElement('img')
+    var som = document.createElement('audio')
+    //atributos para div
+    var att1 = document.createAttribute('class')
+    var att2 = document.createAttribute('style')
+    var att3 = document.createAttribute('id')
+    //atributos para img
+    var att4 = document.createAttribute('src')
+    //atributos para audio
+    var att5 = document.createAttribute('src')
+    var att6 = document.createAttribute('id')
+
+    att3.value = 'explosao' + ie
+    if (tipo == 1) {
+        att1.value = 'explosaoAr'
+        att2.value = `top: ${y}px; left: ${x}px;`
+        att4.value = 'explosao_ar.gif?' + new Date()
+    }
+    else{
+        att1.value = 'explosaoChao'
+        att2.value = `top: ${tamTelaH - 57}px; left: ${x - 17}px;`
+        att4.value = 'explosao_chao.gif'
+    }
+    att5.value = 'exp1.mp3'
+    att6.value = 'som' + isom
+    explosao.setAttributeNode(att1)
+    explosao.setAttributeNode(att2)
+    explosao.setAttributeNode(att3)
+    img.setAttributeNode(att4)
+    som.setAttributeNode(att5)
+    som.setAttributeNode(att6)
+    explosao.appendChild(img)
+    explosao.appendChild(som)
+    document.body.appendChild(explosao)
+    document.getElementById('som' + isom).play()
+    
+    ie++
+    isom++
+
 }
 
 function controlaJogador() {
@@ -133,6 +206,9 @@ function inicia() {
 
     //controles do planeta
     vidaPlaneta = 300
+
+    //controles de explosao
+    ie = isom = 0
 
 
     gameLoop()
