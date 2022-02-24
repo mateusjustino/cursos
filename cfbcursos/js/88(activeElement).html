@@ -20,10 +20,15 @@
         }
 
         function ativo() {
+            /*
             var cx = document.getElementById('textoSelecionado')
             var elemento = document.activeElement
             var selecao = elemento.value.substring(elemento.selectionStart, elemento.selectionEnd)
             cx.innerHTML = selecao
+            */
+
+            //mesmo que o de cima só que em uma linha só
+            document.getElementById('textoSelecionado').innerHTML = document.activeElement.value.substring(document.activeElement.selectionStart, document.activeElement.selectionEnd)
         }
 
         function inicia() {
