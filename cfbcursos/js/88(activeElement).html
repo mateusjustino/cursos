@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActiveElement</title>
+    <style>
+        img{
+            width: 250px;
+        }
+    </style>
+    <script>
+
+        var dvcx, frames
+        
+        function loop() {
+            dvcx.innerHTML = document.activeElement.tagName 
+            frames = requestAnimationFrame(loop)
+        }
+
+        function ativo() {
+            var cx = document.getElementById('textoSelecionado')
+            var elemento = document.activeElement
+            var selecao = elemento.value.substring(elemento.selectionStart, elemento.selectionEnd)
+            cx.innerHTML = selecao
+        }
+
+        function inicia() {
+            dvcx = document.getElementById('cx')
+            loop()
+
+            var texto = document.getElementById('txtOriginal')
+            texto.addEventListener('mouseup', ativo)
+        }
+
+        window.addEventListener('load', inicia)
+    </script>
+</head>
+<body>
+    <div id="cx"></div>
+    <input type="text" name="txt" id="">
+    <button>teste</button>
+    <p>CFB Cursos - Curso de JavaScript</p>
+    <textarea name="" id="txtOriginal" cols="20" rows="5">Aula 88 - Atributo activeElement</textarea><br>
+    <button id="btnCopiar">Copiar</button>
+    Texto Selecionado: <span id="textoSelecionado"></span>
+</body>
+</html>
