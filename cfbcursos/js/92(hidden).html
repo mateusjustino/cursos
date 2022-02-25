@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden</title>
+    <style>
+        *{
+            border-radius: 10px;
+        }
+        
+        img{
+            height: 100px;
+            width: 122px;
+            cursor: pointer;
+        }
+        
+        .menuitem{
+            height: 100%;
+            cursor: pointer;
+            
+        }
+        .carro{
+            width: 200px;
+            height: 400px;
+            margin-bottom: 50px;
+        }
+        #menu{
+            border: solid 3px black;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+            background-color: white;
+        }
+        body{
+            padding: 0px;
+        }
+    </style>
+    <script>
+
+        
+        function mostrar() {
+            for (let i = 1; i  < 5; i++) {
+                document.getElementById(`c${i}`).hidden = true                
+            }
+
+            var obj = event.target.dataset.nome
+            document.getElementById(obj).hidden = false
+
+        }
+
+        function inicia() {
+            document.getElementById('btnc1').addEventListener('click', mostrar)
+            document.getElementById('btnc2').addEventListener('click', mostrar)
+            document.getElementById('btnc3').addEventListener('click', mostrar)
+            document.getElementById('btnc4').addEventListener('click', mostrar)
+
+            for (let i = 1; i  < 5; i++) {
+                document.getElementById(`c${i}`).hidden = true                
+            }
+
+        }
+
+        window.addEventListener('load', inicia)
+
+    </script>
+</head>
+<body>
+    
+    <div id="menu">
+        
+        <img id="btnc1" class="menuItem" data-nome="c1" src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <img id="btnc2" class="menuItem" data-nome="c2" src="https://images.pexels.com/photos/1164778/pexels-photo-1164778.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <img id="btnc3" class="menuItem" data-nome="c3" src="https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <img id="btnc4" class="menuItem" data-nome="c4" src="https://images.pexels.com/photos/1805053/pexels-photo-1805053.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+    </div>
+
+        <img id="c1" class="carro" src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <img id="c2" class="carro" src="https://images.pexels.com/photos/1164778/pexels-photo-1164778.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <img id="c3" class="carro" src="https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <img id="c4" class="carro" src="https://images.pexels.com/photos/1805053/pexels-photo-1805053.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+    
+</body>
+</html>
