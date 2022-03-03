@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In For Of</title>
+    <script>
+
+        const aluno = {nome: 'Bruno', sobrenome: 'Campos'}
+        const notas = {n1:80, n2:75, n3:92, n4:85}
+        const info = {...aluno, ...notas}
+
+        for(var dado in aluno){ //for in
+            console.log(dado) //imprime a propriedade
+            console.log(aluno[dado]) //imprime o valor da propriedade
+        }
+
+        let nota = [100, 80, 75, 30, 64, 47, 98, 81, 60]
+        for(var n of nota){ //for of
+            console.log(n) //imprime os valores de cada item de nota
+        }
+
+        let aprovados = 0
+        let reprovados = 0
+        for (var n of nota){
+            n >= 60 ? aprovados++: reprovados++
+        }
+        console.log(`Aprovados: ${aprovados}`)
+        console.log(`Reprovados: ${reprovados}`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
