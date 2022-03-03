@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Literais</title>
+    <script>
+
+        const Carro = {
+            marca: 'VW',
+            modelo: 'Golf',
+            info: function () {
+                console.log('Marca: ' + this.marca)
+                console.log('Modelo: ' + this.modelo)
+            }
+        }        
+
+        Carro.marca = 'Honda'
+        Carro.modelo = 'HRV'
+
+        Carro['marca'] = 'GM'
+        Carro['modelo'] = 'Camaro'
+        
+        //console.log(Carro.marca)
+        //console.log(Carro.modelo)
+        //ao inves de fazer como acima, se faz
+        Carro.info()
+
+        let c2 = Object.create(Carro)
+        c2.marca = 'Honda'
+        c2.modelo = 'HRV'
+        c2.info()
+
+        const Veiculo = {
+            marca: 'VW',
+            modelo: 'Golf',
+            info: function () {
+                console.log('Marca: ' + this.marca)
+                console.log('Modelo: ' + this.modelo)
+            }
+        } 
+        const Caracteristica = {
+            cor: 'Cinza',
+            cambio: 'Automático'
+        }    
+
+        delete Caracteristica.cor
+
+        const Carro1 = Object.assign(Veiculo, Caracteristica)
+        console.log(Carro1)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

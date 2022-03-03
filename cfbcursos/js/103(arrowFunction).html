@@ -13,9 +13,17 @@
                 r += n
             }
             return r
-        } 
+        }
+
+        const par = num => {
+            if (num % 2 == 0)
+                return true
+            else
+                return false
+        }
 
         console.log(soma(2, 3, 3, 7))
+        console.log(par(3) ? 'É par' : 'Não é par')
 
     </script>
 </head>
