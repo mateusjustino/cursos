@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObjetoMap</title>
+    <script>
+
+        let produtos = new Map([
+            ['01', 'Mouse'],
+            ['02', 'Teclado'],
+            ['03', 'Monitor'],
+            ['04', 'Gabinete'],
+            ['05', 'Memoria']
+        ])
+
+        console.log(produtos.has('02') ? 'Produto Encontrado' : 'Não está na lista') //para ver se tem a chave citada
+
+        //produtos.clear() //deleta todo os itens do map
+        //produtos.delete('03') //deleta o item 3
+        function info(chave, valor) {
+            console.log('Chave: ' + chave + ' - Valor: ' + valor)
+        }
+        //produtos.forEach(info) // retorna cada item do map de cada vez
+        
+        let itk = produtos.keys() //retorna a chave do map
+        let itv = produtos.values() //retorna o valor da chave do map
+
+        console.log(itk.next().value) 
+        console.log(itv.next().value) 
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
