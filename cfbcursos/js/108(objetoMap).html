@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObjetoMap</title>
+    <script>
+
+        let produtos = new Map([
+            ['01', 'Mouse'],
+            ['02', 'Teclado']
+        ])
+
+        produtos.set('03', 'Monitor') //para adicionar item ao map
+        produtos.set('04', 'Gabinete')
+
+        console.log(produtos.size) //retorna a qtde dos elementos
+        //console.log(produtos.get('03')) //retorna o valor do map citado
+        for (const p of produtos) {
+            console.log(p) //retorna todos os valores do map
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
