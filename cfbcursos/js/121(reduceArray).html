@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce Array</title>
+    <script>        
+        console.log('')
+
+        let num = [0, 1, 2, 3, 4, 5]
+        let soma = num.reduce((n1, n2) => {
+            console.log(n1 + ' + ' + n2)
+            return n1 + n2
+        })
+
+        console.log(soma)
+
+        let pessoas = [
+            {nome:'Bruno', idade: 40},
+            {nome:'Scarlindo', idade: 30},
+            {nome:'Fatsgrida', idade: 25},
+            {nome:'Glebsonaldo', idade: 18}
+        ]
+        
+        let nomes = pessoas.reduce((p1, p2) => {
+            p1.push(p2.nome)
+            return p1
+        }, [])
+        console.log(nomes)
+
+        let idade = pessoas.reduce((p1, p2) => {
+            p1.push(p2.idade)
+            return p1
+        }, [])
+        console.log(idade)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
