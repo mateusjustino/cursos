@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POO Herança</title>
+    <title>Prototype</title>
     <script>
+        Object.prototype
         console.log('===================')
         class carro{
             constructor(tpCarro, tpComb){
@@ -14,7 +15,7 @@
                 this.ligado = false
                 this.tipoComb = tpComb //1=gasolia 2=diesel 3=etanol
             }
-            info(){ // é um metodo
+            info(){  // é um metodo
                 console.log('-------------------')
 
                 console.log('Qtde Comb.: ' + this.qtdeComb)
@@ -65,12 +66,24 @@
             }
         }
 
+        carro.prototype.potencia = 500
+        carro.prototype.velocidade = 0
+        carro.prototype.velMax = 0
+
+        carro.prototype.info = function () {
+            //this.info()
+            console.log('Potência..: ' + this.potencia)
+            console.log('Velocidade: ' + this.velocidade)
+            console.log('Vel. max..: ' + this.velMax)
+        }
+
         let c1 = new carroCombate(100)
         let c2 = new carroTransporte()
         
         c1.setLigado = true
         c1.info()
-        c2.info()
+        //c1.info2()
+
 
     </script>
 </head>
