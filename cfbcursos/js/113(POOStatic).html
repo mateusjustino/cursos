@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POO Métodos</title>
+    <title>POO Static</title>
     <script>
-        console.log('')
+        console.log('===================')
         console.log('-------------------')
         class carro{
+            static alerta = true //mantem atributo static servindo com padrão para todos os objetos que usarem esse atributo
             //cor = 'Vermelho'
             constructor(marca, modelo, cor){
                 this.marca = marca                
@@ -25,6 +26,7 @@
                 console.log('Ligado.....: ' + (this.ligado ? 'Sim' : 'Não'))
                 console.log('KM.........: ' + this.km)
                 console.log('Combustível: ' + this.comb)
+                console.log('Alerta.....: ' + (carro.alerta? 'Sim' : 'Não'))
                 console.log('-------------------')
             }
             liga(){
@@ -33,6 +35,19 @@
             desligar(){
                 this.ligado = false
             }
+            set setAlerta(t){
+                carro.alerta = t
+            }
+            get getAlerta(){
+                return carro.alerta
+            }
+            set setComb(v){
+                this.comb = v
+                console.log('Combustível alterado, valor atual: ' + this.comb)
+            }
+            get getComb(){
+               return this.comb 
+            }
         }
 
         let c1 = new carro('Honda', 'HRV', 'Vermelho')
@@ -40,8 +55,10 @@
         let c3 = new carro('GM', 'Camaro', 'Azul')
         let c4 = new carro('Ford', 'Mustang', 'Amarelo')
 
-        c1.cor = 'Preto'
-        c1.liga()
+        c1.setComb = 100
+        
+        //c1.setAlerta = false
+        carro.alerta = false //tanto o de cima quanto esse tem a mesma função
 
         c1.info()
         c2.info()
