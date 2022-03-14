@@ -194,4 +194,4 @@
 
 <h4>Desafios</h4>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/js/desafios/slider.html">Slider</a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/js/desafios/velha/index.html">Jogo da Velha</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/js/desafios/velha/jogo.html">Jogo da Velha</a> <br>
