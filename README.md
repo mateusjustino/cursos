@@ -1,4 +1,4 @@
-# Cursos (em manutenção)
+# Cursos
 
 <p> Links com acesso rápido aos materiais criado durante os cursos com conteúdos aprendidos durante as aulas para rever quando necessário</p>
 
