@@ -66,23 +66,21 @@
 # CFB Cursos
 <h3> CSS </h3>
 
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/animation.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/animation2.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/boxSizing.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/colunas.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/display(block_inline).html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/display(desafio).html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/display(flex).html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/display(table).html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/filter.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/float.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/media.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/media(parte2).html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/media(parte3).html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/overflow.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/pseudoElementos(afterBefore).html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/pseudoElementos(firtLetterFirtLineSelection).html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/resize.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/transition.html"></a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/.html"></a> <br>
-
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/animation.html">Animation keyframes (parte1)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/animation2.html">Animation keyframes (parte2)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/boxSizing.html">Box Sizing</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/colunas.html">Colunas em texto</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/display(block_inline).html">Display Block Inline</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/display(flex).html">Display Flex (parte1)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/display(desafio).html">Display Flex (parte2)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/display(table).html">Display Table</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/filter.html">Filter</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/float.html">Float</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/media.html">Media Screen (parte1)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/media(parte2).html">Media Screen (parte2)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/media(parte3).html">Media Screen (parte3)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/overflow.html">Overflow</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/pseudoElementos(afterBefore).html">Pseudo Elementos (after before)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/pseudoElementos(firtLetterFirtLineSelection).html">Pseudo Elementos (first letter, first line, selection)</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/resize.html">Resize</a> <br>
+<a href="https://mateusjustino.github.io/cursos/cfbcursos/css/transition.html">Transition</a> <br>
