@@ -191,7 +191,3 @@
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/js/120(filterArray).html">Filter Array</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/js/121(reduceArray).html">Reduce Array</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/js/122(json).html">Json</a> <br>
-
-<h4>Desafios</h4>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/js/desafios/slider.html">Slider</a> <br>
-<a href="https://mateusjustino.github.io/cursos/cfbcursos/js/desafios/velha/jogo.html">Jogo da Velha</a> <br>
