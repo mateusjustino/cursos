@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+        .box{
+            background-color: #154bad;
+            height: 300px;
+            width: 300px;
+            transition-property: background-color, border-radius; /* escolhe o que vai alterar*/
+            transition-duration: 2s, 1s; /* escolhe o tempo para alterar*/
+            /*transition-delay: 1s; /* escolhe o tempo para começar a alterar*/
+            transition-timing-function: ease-in; /* o estilo do transition*/
+        }
+        .box:hover{
+            background-color: #ec5840;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
