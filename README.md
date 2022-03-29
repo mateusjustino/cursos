@@ -4,7 +4,9 @@
 
 # Curso em Vídeo
 <h3> HTML e CSS </h3>
-<h4>Playlist: https://www.youtube.com/watch?v=ofFgnDtn_1c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ <h4>
+<h4>Playlist Módulo I: https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n <h4>
+<h4>Playlist Módulo II: https://www.youtube.com/playlist?list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s <h4>
+<h4>Playlist Módulo III: https://www.youtube.com/playlist?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ <h4>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/001/index.html">Olá, Mundo!</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/002(paragrafosQuesbrasSimbolosEmoji)/index.html">Parágrafos, quebras, símbolos e emoji</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/003(imagens)/index.html">Imagens</a> <br>
