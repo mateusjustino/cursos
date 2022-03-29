@@ -46,7 +46,7 @@
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/htmlcss/desafios/projetocordel/index.html">Projeto Cordel</a> <br>
 
 <h3> Javascript </h3>
-
+<p>Playlist: https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1 </p>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex001.html">Alert, confirm, prompt</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex002(promptAlert).html">Prompt e alert</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cursoemvideo/javascript/ex003(somaVar).html">Somando variáveis</a> <br>
@@ -67,7 +67,7 @@
 
 # CFB Cursos
 <h3> CSS </h3>
-
+<p>Playlist: https://www.youtube.com/playlist?list=PLx4x_zx8csUi47Bnugpk78nqJN6rYvEnV </p>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/css/animation.html">Animation keyframes (parte1)</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/css/animation2.html">Animation keyframes (parte2)</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/css/boxSizing.html">Box Sizing</a> <br>
@@ -88,7 +88,7 @@
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/css/transition.html">Transition</a> <br>
 
 <h3> JavaScript </h3>
-
+<p>Playlist: https://www.youtube.com/playlist?list=PLx4x_zx8csUj3IbPQ4_X5jis_SkCol3eC </p>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/js/01(print).html">Print</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/js/02(variavel).html">Variável</a> <br>
 <a href="https://mateusjustino.github.io/cursos/cfbcursos/js/03(constantes).html">Constantes</a> <br>
