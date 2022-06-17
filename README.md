@@ -1,6 +1,6 @@
 # Cursos
 
-<p> Links com acesso rápido aos materiais criado durante os cursos com conteúdos aprendidos durante as aulas para rever quando necessário</p>
+<p> Links com acesso rápido aos materiais criado sobre desenvolvimento web durante os cursos com conteúdos aprendidos durante as aulas para rever quando necessário</p>
 
 # Curso em Vídeo
 <h3> HTML e CSS </h3>
