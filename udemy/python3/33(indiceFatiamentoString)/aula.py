@@ -1,6 +1,6 @@
 
 #positivos   [012345]
-texto =      'Python'
+texto =      'Pythonn'
 #negativos  -[654321]
 
 print(texto[2]) #ira printar o indice 2, que é o t
