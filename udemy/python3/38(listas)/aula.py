@@ -37,6 +37,22 @@ print(l2)
 
 print()
 del(l2[1]) #deleta o item no indice 1
+del(l2[2]) #deleta o item no indice 3
 print(l2)
 
-#parei no minuto 25 -----------------------------------
+print()
+print(max(l2)) #pega lista que tenha apenas int e mostra o maior valor
+print()
+
+print()
+print(min(l2)) #pega lista que tenha apenas int e mostra o menor valor
+print()
+
+print()
+l2 = list(range(1, 10)) #cria uma lista usando range
+print(l2) 
+print()
+
+l2 = ['String', True, 10, -20.5]
+for elem in l2:
+    print(f'O tipo do elem é {type(elem)} e seu valor é {elem}')
