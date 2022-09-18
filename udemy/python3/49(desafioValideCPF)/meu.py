@@ -1,4 +1,4 @@
-cpfTeste = '168.995.350-09'
+cpfTeste = '43416133701'
 cpfTesteSemPonto = ''
 guarda9numeros = ''
 
@@ -53,6 +53,8 @@ if cpfTesteSemPonto == cpfGerado:
     print('Válido!')
 else:
     print('Inválido!')
+
+
 
 
 

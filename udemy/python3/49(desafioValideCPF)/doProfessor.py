@@ -17,7 +17,7 @@ CPF = 168.995.350-09
 Digito 1 = 0            # Digito 2 = 9
 """
 
-cpf = '43416122801'
+cpf = '43416124801'
 novoCpf = cpf[:-2]
 
 reverso = 10
