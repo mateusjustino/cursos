@@ -1,15 +1,14 @@
-def func1(func2):
-    saudacao('Olá')
-    nome('Mateus!')
-    return func2
+def mestre(funcao, *args, **kwargs):
+    return funcao(*args, **kwargs)
 
-def func2():
-    print(f'Função 22222') 
+def falaOi(nome):
+    return f'Oi {nome}'
 
-def saudacao(saudacao):
-    print(saudacao)
+def saudacao(nome, saudacao):
+    return f'{saudacao} {nome}'
 
-def nome(nome):
-    print(nome)
+var = mestre(falaOi, 'Mateus')
+var2 = mestre(saudacao, 'Mateus', saudacao='Bom dia!')
 
-func1(func2())
+print(var)
+print(var2)

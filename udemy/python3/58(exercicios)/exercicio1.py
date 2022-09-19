@@ -1,7 +1,8 @@
-def func1(func2):
-    return 1
+def func1(funcao):
+    return funcao()
 
 def func2():
-    print(f'Função 2') 
+    return 'Olá mundo!'
 
-func1(func2())
+var = func1(func2)
+print(var)
