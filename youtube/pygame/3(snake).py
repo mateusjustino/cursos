@@ -1,4 +1,3 @@
-
 import pygame
 from random import randint
 
@@ -32,24 +31,25 @@ fonte = pygame.font.SysFont('arial', 40, True, True) # font, tamanho, negrito, i
 pontos = 0
 
 
-#defino o tamanho da minha janela
-tela = pygame.display.set_mode((largura, altura))
-#defino o titulo da janela
-pygame.display.set_caption('Hello World')
+tela = pygame.display.set_mode((largura, altura)) #defino o tamanho da minha janela
+pygame.display.set_caption('Hello World') #defino o titulo da janela
 relogio = pygame.time.Clock() # crio a variavel com o time.clock()
 
 listaCobra = []
-comprimentoInicial = 50
+comprimento = 5
 morreu = False
 
 def aumentaCobra(listaCobra): # aqui vou aumentando a cobra, pegando o x e y que estao dentro da minha lista e aumentando a cobra
     for XeY in listaCobra:
-        pygame.draw.rect(tela, (0, 255, 0), (XeY[0], XeY[1], 20, 20), border_radius=5)
+        if XeY == listaCobra[-1]:
+            pygame.draw.rect(tela, (255, 0, 0), (XeY[0], XeY[1], 20, 20), border_radius=5)
+        else:
+            pygame.draw.rect(tela, (0, 255, 0), (XeY[0], XeY[1], 20, 20), border_radius=5)
 
 def reiniciarJogo():
-    global pontos, comprimentoInicial, xCobra, yCobra, listaCobra, listaCabeca, xMaca, yMaca, morreu
+    global pontos, comprimento, xCobra, yCobra, listaCobra, listaCabeca, xMaca, yMaca, morreu
     pontos = 0
-    comprimentoInicial = 5
+    comprimento = 5
     xCobra = largura / 2
     yCobra = altura / 2
     listaCobra = []
@@ -106,7 +106,7 @@ while True:
         yMaca = randint(50, 430) 
         pontos += 1
         somColisao.play()
-        comprimentoInicial += 1
+        comprimento += 1
 
     listaCabeca = []
     listaCabeca.append(xCobra)
@@ -114,7 +114,7 @@ while True:
 
     listaCobra.append(listaCabeca)
 
-    if listaCobra.count(listaCabeca) > 1:
+    if listaCobra.count(listaCabeca) > 1: # aqui checo se já tem a uma posicao com a mesma posicao da cabeca
         fonte2 = pygame.font.SysFont('arial', 20, True, True)
         mensagem2 = 'Game Over! Pressione a tecla "R" para jogar novamente'
         texto2 = fonte2.render(mensagem2, True, (255, 255, 255))
@@ -143,7 +143,7 @@ while True:
     if yCobra < 0:
         yCobra = altura
 
-    if len(listaCobra) > comprimentoInicial:
+    if len(listaCobra) > comprimento:
         del listaCobra[0]
 
     aumentaCobra(listaCobra)
