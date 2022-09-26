@@ -26,3 +26,13 @@ if d1.get('novaChave') is not None:
 
 del d1['str'] # para deletar uma chave
 print(d1)
+
+print(123 in d1) # checo se tem a chave 123 em d1
+print('tupla' in d1.values()) # checo se tem a string 'tupla' nos valores de d1
+
+for k in d1: # printa as chaves do dicionario
+    print(k)
+for k in d1.items(): # printo as chaves e os valores
+    print(k)
+for k, v in d1.items(): # printo as chaves e os valores separadamente
+    print(k, v)
