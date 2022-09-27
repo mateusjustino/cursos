@@ -41,8 +41,11 @@ morreu = False
 
 def aumentaCobra(listaCobra): # aqui vou aumentando a cobra, pegando o x e y que estao dentro da minha lista e aumentando a cobra
     for XeY in listaCobra:
-        if XeY == listaCobra[-1]:
+        if XeY == listaCobra[-1]:             
             pygame.draw.rect(tela, (255, 0, 0), (XeY[0], XeY[1], 20, 20), border_radius=5)
+            pygame.draw.rect(tela, (0, 0, 255), (XeY[0], XeY[1]+5, 5, 5), border_radius=5)
+            pygame.draw.rect(tela, (0, 0, 255), (XeY[0], XeY[1]+15, 5, 5), border_radius=5)
+
         else:
             pygame.draw.rect(tela, (0, 255, 0), (XeY[0], XeY[1], 20, 20), border_radius=5)
 
