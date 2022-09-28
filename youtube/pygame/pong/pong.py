@@ -10,7 +10,7 @@ pygame.display.set_caption('Pong')
 
 # formato dos desenhos que vou usar
 ball = pygame.Rect(screenWidth/2 - 15, screenHeight/2 - 15, 30, 30)
-player = pygame.Rect(screenWidth - 20 - 300, screenHeight/2 - 70, 10 + 300, 140)
+player = pygame.Rect(screenWidth - 20, screenHeight/2 - 70, 10, 140)
 opponent = pygame.Rect(10, screenHeight/2 -70, 10, 140)
 
 
@@ -46,9 +46,11 @@ def ballAnimation():
 
     
     if ball.colliderect(player):
-        ballSpeedX *= -1
+        if ball.left < player.left:
+            ballSpeedX *= -1
     if ball.colliderect(opponent): # aqui checo se ela colidiu no player ou no opponent
-        ballSpeedX *= -1
+        if ball.right > opponent.right:
+            ballSpeedX *= -1
 
 def playerAnimation():
     player.y += playerSpeed # aqui movimento o player de acordo com o playerSpeed, que foi alterado nos eventos de teclas
