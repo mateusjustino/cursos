@@ -10,7 +10,7 @@ pygame.display.set_caption('Pong')
 
 # formato dos desenhos que vou usar
 ball = pygame.Rect(screenWidth/2 - 15, screenHeight/2 - 15, 30, 30)
-player = pygame.Rect(screenWidth - 20, screenHeight/2 - 70, 10, 140)
+player = pygame.Rect(screenWidth - 20 - 300, screenHeight/2 - 70, 10 + 300, 140)
 opponent = pygame.Rect(10, screenHeight/2 -70, 10, 140)
 
 
@@ -36,6 +36,7 @@ def ballAnimation():
 
     if ball.top <= 0 or ball.bottom >= screenHeight: # se bater em cima ou em baixo ela rebate
         ballSpeedY *= -1
+    
     if ball.left <= 0:
         playerScore += 1
         ballRestart()
@@ -43,7 +44,10 @@ def ballAnimation():
         opponentScore += 1
         ballRestart()
 
-    if ball.colliderect(player) or ball.colliderect(opponent): # aqui checo se ela colidiu no player ou no opponent
+    
+    if ball.colliderect(player):
+        ballSpeedX *= -1
+    if ball.colliderect(opponent): # aqui checo se ela colidiu no player ou no opponent
         ballSpeedX *= -1
 
 def playerAnimation():
@@ -65,9 +69,9 @@ def opponentAnimation():
         opponent.bottom = screenHeight
     
 def ballRestart():
-    global ballSpeedX, ballSpeedY    
+    global ballSpeedX, ballSpeedY
     ball.center = (screenWidth/2, screenHeight/2)
-    time.sleep(1)
+    time.sleep(1)    
     ballSpeedX *= random.choice((-1, 1))
     ballSpeedY *= random.choice((-1, 1))
 
