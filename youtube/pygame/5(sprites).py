@@ -14,16 +14,16 @@ class Sapo(pygame.sprite.Sprite): # aqui minha classe que criei herda a classe S
     def __init__(self):
         pygame.sprite.Sprite.__init__(self) 
         self.sprites = [] # aqui crio uma lista
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_1.png')) # adiciona as imagens na lista
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_2.png'))
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_3.png'))
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_4.png'))
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_5.png'))
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_6.png'))
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_7.png'))
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_8.png'))
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_9.png'))
-        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/attack_10.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_1.png')) # adiciona as imagens na lista
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_2.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_3.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_4.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_5.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_6.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_7.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_8.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_9.png'))
+        self.sprites.append(pygame.image.load('/home/admin/Documents/cursos/youtube/pygame/sprites/sapo/attack_10.png'))
         self.atual = 0
         self.image = self.sprites[self.atual] # defino a primeira imagem
         self.image = pygame.transform.scale(self.image, (128*3, 64*3)) # aqui aumento o tamanho da imagem, pega a resolução original dela e ampliando vezes 3
