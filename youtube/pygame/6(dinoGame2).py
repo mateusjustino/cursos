@@ -29,10 +29,11 @@ choiceObstacle = random.choice([0, 1])
 points = 0
 gameSpeed = 10
 
+currentRecord = 0
+
 def showMessage(msg, size, color):
     font = pygame.font.SysFont('arial', size, True, False)
-    mensagem = f'{msg}'
-    textFormated = font.render(mensagem, True, color)
+    textFormated = font.render(msg, True, color)
     return textFormated
 
 def restart():
@@ -205,7 +206,7 @@ while True:
     
     allSprites.draw(screen) #aqui desenho as sprites
 
-    if cacto.rect.topright[0] <= 0 or flyingDino.rect.topright[0] <= 0:
+    if cacto.rect.topright[0] <= 0 or flyingDino.rect.topright[0] <= 0: 
         choiceObstacle = random.choice([0, 1])
         cacto.rect.x = screenWidth
         flyingDino.rect.x = screenWidth
@@ -218,22 +219,32 @@ while True:
         soundCollision.play()
 
     if collided == True:  # aqui checo se ouve alguma colisao, se nao atualizo o game
-        gameOverText = showMessage('GAME OVER', 40, (0, 0, 0))
+        gameOverText = showMessage(f'GAME OVER', 40, (0, 0, 0))
         screen.blit(gameOverText, (screenWidth/2, screenHeight/2))
-        restartText = showMessage('Press "r" to restart', 20, (0, 0, 0))
+        restartText = showMessage(f'Press "r" to restart', 20, (0, 0, 0))
         screen.blit(restartText, (screenWidth/2, screenHeight/2 + 60))
+
+        if points > currentRecord:
+            currentRecord = points
+
+        recordText = showMessage(f'Record: {currentRecord}', 20, (0, 0, 0))
+        screen.blit(recordText, (20, 20))
 
     else:
         points += 1
-        pointsText = showMessage(points, 40, (0, 0, 0))
+        pointsText = showMessage(f'{points}', 40, (0, 0, 0))
         allSprites.update()        
 
         if points % 100 == 0:
             soundPoints.play()
             gameSpeed += 1
+
+        if currentRecord != 0:
+            recordText = showMessage(f'Record: {currentRecord}', 20, (0, 0, 0))
+            screen.blit(recordText, (20, 20))
             
     screen.blit(pointsText, (screenWidth - 150, 20))
     
 
     
-    pygame.display.flip()
+    pygame.display.flip()    
