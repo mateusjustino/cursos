@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: rgb(247, 247, 247);
+}
+
+#areaCabecalho {
+  background: #f7b600;
+  padding: 15px;
+  text-align: center;
+}
+#areaLogo,
+#areaMenu {
+  padding: 10px;
+}
+#areaPrincipal {
+  width: 920px;
+  margin: 0 auto;
+}
+#areaPostagens,
+#areaLateral {
+  background: orange;
+}
+#areaPostagens {
+  width: 660px;
+  float: left;
+}
+#areaLateral {
+  width: 240px;
+  float: right;
+}
+#rodape {
+  clear: both;
+  background: #ccc;
+  text-align: center;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  color: #fff;
+  padding: 8px 12px;
+}
+a:hover {
+  color: #f7b600;
+  background: #fff;
+  border-radius: 5px;
+}
+
+h1 {
+  color: #4e4e4e;
+  font-size: 2.5em;
+}
+
+.branco {
+  color: white;
+}
