@@ -22,11 +22,9 @@ body {
 #areaPrincipal {
   width: 920px;
   margin: 0 auto;
+  padding: 15px;
 }
-#areaPostagens,
-#areaLateral {
-  background: orange;
-}
+
 #areaPostagens {
   width: 660px;
   float: left;
@@ -35,6 +33,22 @@ body {
   width: 240px;
   float: right;
 }
+.postagem {
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+}
+.conteudoLateral {
+  background: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.postagemLateral {
+  font-size: 0.8em;
+  padding: 5px;
+  border-bottom: 1px dotted #ccc;
+}
+
 #rodape {
   clear: both;
   background: #ccc;
@@ -47,20 +61,50 @@ a {
 }
 a:link,
 a:visited {
+  color: #f7b600;
+}
+a:hover {
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+}
+#areaCabecalho a:link,
+#areaCabecalho a:visited {
   color: #fff;
   padding: 8px 12px;
 }
-a:hover {
+#areaCabecalho a:hover {
   color: #f7b600;
   background: #fff;
   border-radius: 5px;
+  text-decoration: none;
+}
+.textoLateral {
+  font-size: 0.8em;
+  padding: 5px;
 }
 
 h1 {
   color: #4e4e4e;
   font-size: 2.5em;
 }
+h2 {
+  color: #f7b600;
+}
+h3 {
+  color: #3f3f3f;
+  background: #ccc;
+  padding: 5px;
+}
 
 .branco {
   color: white;
+}
+.dataPostagem {
+  font-size: 0.8em;
+  border-bottom: 1px solid #f4f4f4;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: block;
 }
