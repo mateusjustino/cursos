@@ -1,103 +1,60 @@
-/* ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-ul a {
-  width: 200px;
-  height: 40px;
-  display: block;
-  background: #f7b600 url(./img/menu.png) no-repeat left bottom;
-  text-decoration: none;
-  text-indent: 40px;
-  line-height: 40px;
-  color: #000;
-}
-
-a:hover {
-  background-position: right bottom;
-  background-color: #f99200;
-  color: #fff;
-}
-
-#home #navegacao .home a,
-#sobre #navegacao .sobre a,
-#servicos #navegacao .servicos a,
-#noticias #navegacao .noticias a,
-#contato #navegacao .contato a {
-  background-position: right bottom;
-  background-color: #f99200;
-  color: #fff;
-} */
-/* 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 720px;
-  background: #159cb0 url(./img/fundo-horizontal.png) repeat-x;
-  float: left;
-}
-
-ul li {
-  float: left;
-}
-
-ul a {
-  display: block;
-  padding: 0 2em;
-  line-height: 2em;
-  text-decoration: none;
-  color: #fff;
-  background: url(./img/divisor.png) repeat-y left top;
-}
-ul .primeiro a {
-  background: none;
-}
-ul a:hover {
-  color: #085662;
-  background: #44cade;
-}
-
-#home #navegacao .home a,
-#sobre #navegacao .sobre a,
-#servicos #navegacao .servicos a,
-#noticias #navegacao .noticias a,
-#contato #navegacao .contato a {
-  color: #085662;
-  background: #44cade;
-} */
-
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  background: #f2f2f2;
 }
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 720px;
+#container {
+  width: 90%;
+  margin: 0 auto;
+  background: #fff;
+  min-width: 720px;
+  /* max-width: 960px; */
 }
-ul li {
+#marca {
+  width: 100%;
+  height: 100px;
+  background: #9e9e9e;
+  text-align: center;
+  line-height: 100px;
+}
+#conteudo {
+  width: 75%;
+  float: right;
+}
+#navegacao {
+  width: 24%;
   float: left;
-  background: url(./img/aba-direita.png) no-repeat top right;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #d1d1d1;
 }
-li a {
-  display: block;
-  padding: 0 2em;
-  line-height: 3em;
-  text-decoration: none;
-  background: url(./img//aba-esquerda.png) no-repeat top left;
-  color: #fff;
+#conteudoPrincipal {
+  border: 1px solid red;
+  width: 64%;
+  float: left;
+}
+#conteudoSecundario {
+  border: 1px solid red;
+  width: 34%;
+  float: right;
+  background: #d1d1d1;
+}
+#conteudoSecundario h1,
+#conteudoSecundario h2,
+#conteudoSecundario h3,
+#conteudoSecundario p {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-ul a:hover {
-  color: #894a1f;
+#navegacao ul {
+  list-style: none;
 }
-ul #atual {
-  background: url(./img/aba-direita-atual.png) no-repeat top right;
+#navegacao li a {
+  text-decoration: none;
 }
-ul #atual a {
-  background: url(./img//aba-esquerda-atual.png) no-repeat top left;
+#rodape {
+  clear: both;
+  background: #c4c4c4;
+  padding: 5px;
 }
