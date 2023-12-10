@@ -3,44 +3,145 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS3</title>
+    <title>Notícias cidade</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body id="home">
+  <body class="home">
     <div id="container">
-      <div id="marca">Marca</div>
-      <div id="conteudo">
-        <div id="conteudoPrincipal">
-          <h2>Lorem ipsum dolor sit</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio odit
-            officia eveniet beatae provident ducimus fugiat rem corporis, iure
-            commodi et unde ea nulla, velit sed doloribus consectetur eum
-            reiciendis?
-          </p>
-        </div>
-        <div id="conteudoSecundario">
-          <h2>Lorem ipsum dolor sit 2</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio odit
-            officia eveniet beatae provident ducimus fugiat rem corporis, iure
-            commodi et unde ea nulla, velit sed doloribus consectetur eum
-            reiciendis?
-          </p>
-        </div>
-      </div>
-      <div id="navegacao">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Sobre</a></li>
-          <li><a href="">Noticias</a></li>
-          <li><a href="">Produtos</a></li>
-          <li><a href="">Servicos</a></li>
-          <li><a href="">Clientes</a></li>
-          <li><a href="">Contato</a></li>
+      <div id="topo">
+        <h1 class="logo">Notícias Cidade</h1>
+        <ul id="navegacao">
+          <li class="primeiro"><a id="home" href="index.html">Home</a></li>
+          <li><a id="brasil" href="brasil.html">Brasil</a></li>
+          <li>
+            <a id="internacional" href="internacional.html">Internacional</a>
+          </li>
+          <li><a id="economia" href="economia.html">Economia</a></li>
+          <li><a id="saude" href="saude.html">Saúde</a></li>
+          <li><a id="ciencia" href="ciencia.html">Ciência</a></li>
+          <li><a id="fotos" href="fotos.html">Fotos</a></li>
         </ul>
       </div>
-      <div id="rodape">Rodape</div>
+      <div id="conteudo">
+        <div id="primario">
+          <div class="caixa destaque">
+            <h2>Destaque</h2>
+            <div class="caixaConteudo">
+              <h3>Nova Legislação</h3>
+              <img class="imagemPrincipal" src="img/taxi.jpg" width="100%" />
+              <p>
+                Commodo in in aute enim aliqua excepteur id ad tempor enim eu
+                consequat. Officia qui eiusmod elit ipsum laborum do irure
+                fugiat veniam eiusmod eiusmod et officia. Cillum amet magna duis
+                qui.
+              </p>
+              <a href="">Leia Mais!</a>
+            </div>
+          </div>
+          <div class="caixa">
+            <h2>Mundo</h2>
+            <div class="caixaConteudo">
+              <ul id="listaNoticias">
+                <li>
+                  <a href="">
+                    <img src="img/tecnologia.jpg" alt="" width="80" />
+                    <h3>Novas Tecnologias!</h3>
+                    <p>
+                      Voluptate proident est voluptate aliqua deserunt culpa et
+                      anim non.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="img/tecnologia.jpg" alt="" width="80" />
+                    <h3>Novas Tecnologias!</h3>
+                    <p>
+                      Voluptate proident est voluptate aliqua deserunt culpa et
+                      anim non.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="img/tecnologia.jpg" alt="" width="80" />
+                    <h3>Novas Tecnologias!</h3>
+                    <p>
+                      Voluptate proident est voluptate aliqua deserunt culpa et
+                      anim non.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="img/tecnologia.jpg" alt="" width="80" />
+                    <h3>Novas Tecnologias!</h3>
+                    <p>
+                      Voluptate proident est voluptate aliqua deserunt culpa et
+                      anim non.
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="secundario">
+          <div class="caixa entrevista">
+            <h2>Última Entrevista</h2>
+            <div class="caixaConteudo">
+              <h3>Entrevista com Felipe Silva</h3>
+              <img class="imagemPrincipal" src="img/doutor.jpg" width="100%" />
+              <p>
+                Commodo in in aute enim aliqua excepteur id ad tempor enim eu
+                consequat. Officia qui eiusmod elit ipsum laborum do irure
+                fugiat veniam eiusmod eiusmod et officia. Cillum amet magna duis
+                qui.
+              </p>
+              <a href="">Leia Mais!</a>
+            </div>
+          </div>
+        </div>
+        <div id="lateral">
+          <div class="caixa">
+            <h2>Entrevistas</h2>
+            <div class="caixaConteudo">
+              <ul>
+                <li><a href="">José Almeida</a></li>
+                <li><a href="">Felipe Silva</a></li>
+                <li><a href="">Renato Rodrigues</a></li>
+                <li><a href="">Abelardo Silveira</a></li>
+                <li><a href="">André Carlos</a></li>
+                <li><a href="">Márcio Mello</a></li>
+                <li><a href="">João Pedro</a></li>
+                <li><a href="">Fernando Weiss</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="caixa">
+            <h2>News</h2>
+            <div class="caixaConteudo">
+              <form>
+                <div>
+                  <label for="email">Email:</label>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="E-mail"
+                  />
+                </div>
+                <div>
+                  <input type="submit" value="Cadastrar" class="submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="containerRodape" style="clear: both">
+      <div id="rodape">&copy; Copyright 2000-2018 Notícias Cidade</div>
     </div>
   </body>
 </html>
