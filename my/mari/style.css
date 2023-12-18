@@ -1,0 +1,10 @@
+:root {
+  --azul: #1a1552ff;
+  --lilas: #7971daff;
+  --amarelo: #dece8dff;
+  --vermelho: #f24141ff;
+}
+
+main {
+  margin-top: 100px;
+}
