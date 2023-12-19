@@ -1,10 +1,134 @@
 :root {
   --azul: #1a1552ff;
   --lilas: #7971daff;
+  --lilasOpacidade: rgba(122, 113, 218, 0.95);
   --amarelo: #dece8dff;
   --vermelho: #f24141ff;
+
+  --fontTitulo: "Girassol", serif;
+  /* --fontTitulo: "Cinzel", serif; */
+
+  --fontGeral: "Source Serif 4", serif;
+}
+/* geral */
+
+* {
+  font-family: var(--fontGeral);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontTitulo);
+}
+
+body {
+  background: rgb(26, 21, 82);
+  background: linear-gradient(
+    180deg,
+    rgba(26, 21, 82, 0.5) 0%,
+    rgba(121, 113, 218, 0.5) 100%
+  );
 }
 
 main {
-  margin-top: 100px;
+  /* margin-top: 85px; */
+  color: white;
+}
+
+.bordaTeste {
+  border: 1px solid red;
+}
+
+.border-radius-all {
+  border-radius: 10px;
+}
+
+footer {
+  padding: 25px 0;
+}
+
+/* fim geral */
+
+/* header */
+
+/* nav {
+  background: rgba(255, 255, 255, 0.9);
+} */
+/* .nav-link {
+  color: white;
+} */
+
+/* .navbar-toggler {
+  border-color: white;
+} */
+
+/* fim header */
+
+/* main */
+
+.container-full-vh {
+  height: 100vh;
+}
+#myMarca {
+  position: relative;
+  color: white;
+  /* padding: 80px 0; */
+  margin-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#myMarca::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/marca/capa.jpg); /* Substitua com o caminho da sua imagem */
+  background-size: cover;
+  background-position: center center;
+  filter: blur(0px); /* Ajuste o valor conforme necessário */
+  z-index: -1; /* Coloca a camada de fundo atrás do conteúdo */
+}
+#txt-marca {
+  padding: 25px;
+  max-width: 800px;
+}
+#txt-marca > p {
+  text-align: justify;
+}
+.container-shadow {
+  background: rgba(0, 0, 0, 0.397);
+  backdrop-filter: blur(6px);
+}
+
+.logo-maxwidth {
+  width: 30%;
+  max-width: 250px;
+}
+.container-maxwidth {
+  max-width: 900px;
+}
+
+.container-project {
+  margin: 80px 0;
+  padding-bottom: 70px;
+}
+.container-project > p {
+  margin: 25px 0;
+}
+/* fim main */
+
+/* rodapé */
+
+.icon-footer {
+  /* margin: 0 15px; */
+}
+footer a {
+  text-decoration: none;
+  padding-bottom: 15px;
+  margin: 0 15px;
 }

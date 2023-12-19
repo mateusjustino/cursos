@@ -12,15 +12,30 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Girassol&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200;0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;0,8..60,800;0,8..60,900;1,8..60,200;1,8..60,300;1,8..60,400;1,8..60,500;1,8..60,600;1,8..60,700;1,8..60,800;1,8..60,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <!-- 
     PARTE DE SERVIÇOS
-    FAQ
+    FAQ (accordion bs)
   -->
   <body>
     <header>
-      <nav class="navbar navbar-expand-md fixed-top bg-primary">
+      <nav
+        class="navbar navbar-expand-md fixed-top bg-dark"
+        data-bs-theme="dark"
+      >
         <div class="container">
           <a href="index.html" class="navbar-brand">
             <img src="img/logo.png" alt="logo" width="80" />
@@ -34,12 +49,23 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="nav-principal">
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="nav-principal"
+          >
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="" class="nav-link">Projetos</a></li>
-              <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
-              <li class="nav-item"><a href="" class="nav-link">Contato</a></li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Projetos</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Contato</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -47,56 +73,200 @@
     </header>
 
     <main>
-      <section>
+      <section id="myMarca">
         <div class="container">
-          <h1 class="display-3">Design para marcas protagonistas</h1>
-          <p>
-            Um estúdio de design gráfico especializado em criar identidades
-            visuais únicas para marcas apaixonadas e distintas. Construímos
-            universos visuais que se alinham à essência da sua marca, tornando-a
-            memorável para seus clientes.
-          </p>
+          <div
+            class="row align-items-center justify-content-center text-center container-full-vh"
+          >
+            <div class="container-shadow border-radius-all" id="txt-marca">
+              <h1 class="display-3">Design para marcas protagonistas</h1>
+              <p>
+                Um estúdio de design gráfico especializado em criar identidades
+                visuais únicas para marcas apaixonadas e distintas. Construímos
+                universos visuais que se alinham à essência da sua marca,
+                tornando-a memorável para seus clientes.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section>
-        <div class="container">
+        <div class="container text-center">
           <h2 class="display-4">Projetos de Identidade Visual</h2>
 
-          <h3 class="display-5">Jefairy</h3>
-          <p>
-            É uma ateliê de artes e acessórios feito a mão, onde a magia se
-            torna realidade.
-          </p>
-          <p>imagem</p>
+          <div class="container-project">
+            <img
+              src="img/Projetos IDV/Jefairy/logo.svg"
+              class="img-fluid logo-maxwidth svg-color"
+            />
+            <p>
+              É uma ateliê de artes e acessórios feito a mão, onde a magia se
+              torna realidade.
+            </p>
 
-          <h3 class="display-5">Xodótopia</h3>
-          <p>descrição do projeto breve</p>
-          <p>imagem</p>
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide container-maxwidth mx-auto"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner border-radius-all">
+                <div class="carousel-item active" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Jefairy/vela.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Jefairy/caixa.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
 
-          <h3 class="display-5">Sitka</h3>
-          <p>descrição do projeto breve</p>
-          <p>imagem</p>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Jefairy/sacola.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <h3 class="display-5">Covil do Chá</h3>
-          <p>descrição do projeto breve</p>
-          <p>imagem</p>
+          <div class="container-project">
+            <img
+              src="img/Projetos IDV/Xodótopia/logo.svg"
+              class="img-fluid logo-maxwidth svg-color"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut in
+              voluptatem repellendus voluptates totam nulla facilis tenetur rem
+              quas sequi reprehenderit, hic ipsa natus dignissimos impedit alias
+              inventore provident consequuntur?.
+            </p>
 
-          <h3 class="display-5">Hakuna</h3>
-          <p>descrição do projeto breve</p>
-          <p>imagem</p>
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide container-maxwidth mx-auto"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner border-radius-all">
+                <div class="carousel-item active" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Xodótopia/cartao.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Xodótopia/sacola.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Xodótopia/outdoor.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <h3 class="display-5">Vital</h3>
-          <p>descrição do projeto breve</p>
-          <p>imagem</p>
+          <div class="container-project">
+            <img
+              src="img/Projetos IDV/Covil do chá/logo.svg"
+              class="img-fluid logo-maxwidth svg-color"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              nobis assumenda alias eaque at. Sint cum necessitatibus id eveniet
+              facilis. Tempore ducimus praesentium quo perferendis magnam
+              officia consectetur inventore maxime?.
+            </p>
+
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide container-maxwidth mx-auto"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner border-radius-all">
+                <div class="carousel-item active" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Covil do chá/caneca.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Covil do chá/placa.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img
+                    src="img/Projetos IDV/Covil do chá/sacola.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="container text-center">
+    <footer class="bg-dark d-flex">
+      <div class="container text-center" style="color: white">
         <p>Studio - Mariana Bonsaglia Designer</p>
-        <p>Redes Sociais icones</p>
+        <a
+          href="https://www.instagram.com/marianabonsagliadesigner/"
+          target="_blank"
+        >
+          <img
+            src="img/icons/instragram.svg"
+            alt=""
+            width="25"
+            class="icon-footer"
+          />
+        </a>
+        <a
+          href="https://br.pinterest.com/marianabonsagliadesigner/"
+          target="_blank"
+        >
+          <img
+            src="img/icons/pinterest.svg"
+            alt=""
+            width="25"
+            class="icon-footer"
+          />
+        </a>
+        <a href="https://www.behance.net/MarianaBonsaglia" target="_blank">
+          <img
+            src="img/icons/behance.svg"
+            alt=""
+            width="25"
+            class="icon-footer"
+          />
+        </a>
+        <a href="https://www.facebook.com/MarianaBonsaglia" target="_blank">
+          <img
+            src="img/icons/facebook.svg"
+            alt=""
+            width="25"
+            class="icon-footer"
+          />
+        </a>
       </div>
     </footer>
 

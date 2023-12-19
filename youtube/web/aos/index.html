@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AOS</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #303030;
+        color: #e3e3e3;
+      }
+      header {
+        text-align: center;
+        padding: 100px;
+      }
+      .cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-x: hidden;
+      }
+      .card {
+        width: 40%;
+        font-size: 24px;
+        margin: 100px 10px;
+        border: 1px solid #e3e3e3;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 data-aos="flip-down" data-aos-duration="1000" data-aos-delay="500">
+        Project AOS
+      </h1>
+    </header>
+
+    <main>
+      <div class="cards">
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-duration="10"
+          data-aos-delay="10"
+          data-aos-easing="ease-in-out-back"
+        >
+          Card-1
+        </div>
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-duration="10"
+          data-aos-delay="10"
+          data-aos-easing="ease-in-out-back"
+        >
+          Card-2
+        </div>
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-duration="10"
+          data-aos-delay="10"
+          data-aos-easing="ease-in-out-back"
+        >
+          Card-3
+        </div>
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-duration="10"
+          data-aos-delay="10"
+          data-aos-easing="ease-in-out-back"
+        >
+          Card-4
+        </div>
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-duration="10"
+          data-aos-delay="10"
+          data-aos-easing="ease-in-out-back"
+        >
+          Card-5
+        </div>
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-duration="10"
+          data-aos-delay="10"
+          data-aos-easing="ease-in-out-back"
+        >
+          Card-6
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

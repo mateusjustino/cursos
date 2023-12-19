@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1037.5876mm"
+   height="1037.5868mm"
+   viewBox="0 0 1037.5877 1037.5868"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs2"><pattern
+       patternUnits="userSpaceOnUse"
+       width="3921.5904"
+       height="3921.5868"
+       patternTransform="translate(-12828.315,-27726.713)"
+       preserveAspectRatio="xMidYMid"
+       id="pattern105"><rect
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="rect105"
+         width="3921.5894"
+         height="3921.5864"
+         x="0.0010939961"
+         y="0.00029822835" /><path
+         id="path105"
+         style="fill:#f7f6fd;fill-opacity:1;stroke-width:0.0560311;stroke-linecap:square;stroke-miterlimit:100"
+         d="M 964.68926,0 1669.539,112.38879 1378.1681,588.0994 1966.2675,227.89039 2554.3672,588.0994 2262.0234,110.79874 2956.9005,0 Z M 593.57405,1372.6953 5.4746457,1732.9043 0,1729.5507 v 462.4884 l 5.4746457,-3.3536 588.0994043,360.209 -292.3457,-477.2988 820.91035,-130.8967 -798.48037,-127.3202 z m 2745.38875,0 268.9436,439.0938 -808.4534,128.9099 830.8811,132.4845 -291.3713,475.711 582.627,-356.8573 V 1729.5526 Z M 1378.1681,3333.49 l 268.9432,439.0938 -808.45303,128.9102 126.00567,20.092 H 2956.9259 l 126.0056,-20.092 -798.4804,-127.322 269.9161,-440.682 -588.0997,360.209 z" /></pattern></defs><g
+     id="layer1"
+     transform="translate(2130.3938,6870.099)"><rect
+       style="fill:url(#pattern105);stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,1263.7648,465.9269)"
+       width="3921.5903"
+       height="3921.5869"
+       x="-12828.315"
+       y="-27726.713"
+       id="rect106" /></g></svg>

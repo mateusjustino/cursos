@@ -146,6 +146,16 @@ h3 {
   transform: rotate(30deg);
   padding-left: 80px;
 }
+
+#container-btn-slider {
+  /* background: red; */
+  padding: 15px;
+}
+.btn-slider {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .btn-custom {
