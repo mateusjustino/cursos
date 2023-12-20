@@ -1,0 +1,11 @@
+footer {
+  padding: 25px 0;
+}
+.icon-footer {
+  /* margin: 0 15px; */
+}
+footer a {
+  text-decoration: none;
+  padding-bottom: 15px;
+  margin: 0 15px;
+}

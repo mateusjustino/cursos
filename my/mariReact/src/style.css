@@ -1,0 +1,25 @@
+:root {
+  --azul: #1a1552ff;
+  --lilas: #7971daff;
+  --lilasOpacidade: rgba(122, 113, 218, 0.95);
+  --amarelo: #dece8dff;
+  --vermelho: #f24141ff;
+
+  --fontTitulo: "Girassol", serif;
+  /* --fontTitulo: "Cinzel", serif; */
+
+  --fontGeral: "Source Serif 4", serif;
+}
+/* geral */
+
+* {
+  font-family: var(--fontGeral);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontTitulo);
+}
