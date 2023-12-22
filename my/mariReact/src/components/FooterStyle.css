@@ -6,6 +6,6 @@ footer {
 }
 footer a {
   text-decoration: none;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
   margin: 0 15px;
 }

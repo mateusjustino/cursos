@@ -24,13 +24,16 @@ const Home = () => {
     const idSelectedCarousel = `#${idCarousel}`;
     return (
       <>
-        <div className="container-project">
-          <img src={logo} className="img-fluid logo-maxwidth svg-color" />
-          <p className="fs-5">{desc}</p>
+        <div className="py-5">
+          <img
+            src={logo}
+            className="img-fluid home-container-content-logo-maxwidth"
+          />
+          <p className="fs-5 py-4">{desc}</p>
 
           <div
             id={idCarousel}
-            className="carousel slide container-maxwidth mx-auto"
+            className="carousel slide container-max-width mx-auto"
             data-bs-ride="carousel"
           >
             <div className="carousel-inner rounded-3">
@@ -77,13 +80,15 @@ const Home = () => {
     <>
       <Header />
       <main>
-        <section id="myMarca">
+        <section id="home-container-welcome">
           <div className="container">
-            <div className="row align-items-center justify-content-center text-center container-full-vh">
-              <div className="container-shadow rounded-3 " id="txt-marca">
-                <h1 className="display-3">Design para marcas protagonistas</h1>
+            <div className="row align-items-center justify-content-center  home-container-welcome-fullvh">
+              <div className="home-container-welcome-shadow rounded-3 container-max-width p-4">
+                <h1 className="text-center display-3">
+                  Design para marcas protagonistas
+                </h1>
 
-                <p className="fs-5">
+                <p className="fs-5 text-start">
                   Um estúdio de design gráfico especializado em criar
                   identidades visuais únicas para marcas apaixonadas e
                   distintas. Construímos universos visuais que se alinham à
@@ -95,7 +100,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section>
+        <section id="home-container-content" className="py-5">
           <div className="container text-center">
             <h2 className="display-3">Projetos de Identidade Visual</h2>
 
@@ -112,8 +117,7 @@ const Home = () => {
             <DivProject
               id={2}
               logo={XodotopiaLogo}
-              desc="É uma ateliê de artes e acessórios feito a mão, onde a magia se
-              torna realidade."
+              desc="É um espaço focado no bem-estar animal localizado em Araucária - PR. Oferecendo uma ampla gama de serviços, acessórios e cuidados à saúde animal, para que você possa proporcionar o melhor experiência para os tutores e seus filhos!"
               img1={XodotopiaCartao}
               img2={XodotopiaOutdoor}
               img3={XodotopiaSacola}
@@ -122,8 +126,7 @@ const Home = () => {
             <DivProject
               id={3}
               logo={CovilDoChaLogo}
-              desc="É uma ateliê de artes e acessórios feito a mão, onde a magia se
-              torna realidade."
+              desc="É uma casa de chá, com um espaço imersivo que funciona com agendamento, adaptando ao rolê de cada pessoa, ressignificando a experiência de tomar chá!"
               img1={CovilDoChaCaneca}
               img2={CovilDoChaPlaca}
               img3={CovilDoChaSacola}

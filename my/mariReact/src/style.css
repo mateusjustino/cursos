@@ -6,11 +6,15 @@
   --vermelho: #f24141ff;
 
   --fontTitulo: "Girassol", serif;
-  /* --fontTitulo: "Cinzel", serif; */
 
   --fontGeral: "Source Serif 4", serif;
+
+  --backGradient: linear-gradient(
+    180deg,
+    rgba(26, 21, 82, 0.5) 0%,
+    rgba(121, 113, 218, 0.5) 100%
+  );
 }
-/* geral */
 
 * {
   font-family: var(--fontGeral);
@@ -22,4 +26,18 @@ h4,
 h5,
 h6 {
   font-family: var(--fontTitulo);
+}
+
+main {
+  color: white;
+  background: rgb(26, 21, 82);
+  background: linear-gradient(
+    180deg,
+    rgba(26, 21, 82, 0.5) 0%,
+    rgba(121, 113, 218, 0.5) 100%
+  );
+}
+
+.container-max-width {
+  max-width: 900px;
 }

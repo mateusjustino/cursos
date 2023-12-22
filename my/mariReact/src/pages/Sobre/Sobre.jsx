@@ -5,15 +5,17 @@ const Sobre = () => {
     <>
       <Header />
       <main>
-        <h1>Restante da Sobre</h1>
-        <h1>Restante da Sobre</h1>
-        <h1>Restante da Sobre</h1>
-        <h1>Restante da Sobre</h1>
-        <h1>Restante da Sobre</h1>
-        <h1>Restante da Sobre</h1>
-        <h1>Restante da Sobre</h1>
-        <h1>Restante da Sobre</h1>
-        <h1>Restante da Sobre</h1>
+        <section>
+          <h1>Restante da Sobre</h1>
+          <h1>Restante da Sobre</h1>
+          <h1>Restante da Sobre</h1>
+          <h1>Restante da Sobre</h1>
+          <h1>Restante da Sobre</h1>
+          <h1>Restante da Sobre</h1>
+          <h1>Restante da Sobre</h1>
+          <h1>Restante da Sobre</h1>
+          <h1>Restante da Sobre</h1>
+        </section>
       </main>
       <Footer />
     </>
