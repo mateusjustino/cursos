@@ -1,0 +1,54 @@
+@import url(../style.css);
+
+.accordion {
+  /* width: 40%; */
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.accordion-item {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--amarelo);
+  /* box-shadow: 2px 2px 8px rgba(255,255,255, 0.1), -2px -2px 8px rgba(255,255,255, 0.1); */
+}
+
+.accordion-body {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.accordion-button {
+  color: white;
+  background: transparent;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  /* font-weight: bold; */
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  background: none;
+  content: "➺";
+  color: var(--amarelo);
+  transform: rotateZ(270deg) translate(0px, 0px);
+  width: auto;
+  height: auto;
+  transition: all 0.2s;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+  transform: rotateZ(90deg) translate(0px, 0px);
+  color: var(--lilas);
+}

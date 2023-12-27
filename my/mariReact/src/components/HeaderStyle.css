@@ -1,4 +1,13 @@
+@import url(../style.css);
+
 .header-container {
-  /* background: red; */
   margin-bottom: 87px;
+}
+
+.nav-active {
+  color: var(--lilas);
+}
+
+.nav-link:hover {
+  color: var(--amarelo);
 }

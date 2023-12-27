@@ -1,9 +1,8 @@
 :root {
-  --azul: #1a1552ff;
-  --lilas: #7971daff;
-  --lilasOpacidade: rgba(122, 113, 218, 0.95);
-  --amarelo: #dece8dff;
-  --vermelho: #f24141ff;
+  --azul: #1a1552;
+  --lilas: #7971da;
+  --amarelo: #dece8d;
+  --vermelho: #f24141;
 
   --fontTitulo: "Girassol", serif;
 
@@ -28,16 +27,35 @@ h6 {
   font-family: var(--fontTitulo);
 }
 
-main {
-  color: white;
-  background: rgb(26, 21, 82);
-  background: linear-gradient(
-    180deg,
-    rgba(26, 21, 82, 0.5) 0%,
-    rgba(121, 113, 218, 0.5) 100%
-  );
-}
-
 .container-max-width {
   max-width: 900px;
+}
+
+main {
+  color: white;
+
+  background: linear-gradient(
+    317deg,
+    rgba(122, 113, 218, 0.7),
+    rgba(109, 103, 177, 0.7),
+    rgba(71, 66, 134, 0.7),
+    rgba(58, 52, 118, 0.7),
+    rgba(26, 21, 82, 0.7)
+  );
+  background-size: 400% 400%;
+
+  animation: AnimationName 30s ease infinite;
+  /* z-index: -1; */
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 41%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 41%;
+  }
 }

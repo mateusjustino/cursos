@@ -1,6 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 import LogoXodotopia from "../../assets/Xodotopia/logo.svg";
 import ImgXodotopia from "../../assets/Xodotopia/cartao.jpg";
@@ -11,11 +12,17 @@ import ImgCovil from "../../assets/CovilDoCha/caneca.jpg";
 import LogoJefairy from "../../assets/Jefairy/logo.svg";
 import ImgJefairy from "../../assets/Jefairy/vela.jpg";
 
+import LogoSitka from "../../assets/Sitka/logo.svg";
+
+import ImgHakuna from "../../assets/Hakuna/pins.jpg";
+
+import LogoVital from "../../assets/Vital/logo.svg";
+import ImgVital from "../../assets/Vital/copos.jpg";
+
 const Projetos = () => {
   const EachProject = ({ logo, img }) => {
     return (
       <>
-        {/* <div className="position-relative rounded-3 overflow-hidden text-center d-flex align-items-center justify-content-center border h-100 p-3 one-project"> */}
         <div className="h-100 p-3">
           <div className="position-relative rounded-3 overflow-hidden one-project">
             <img className="img-fluid d-block logo" src={img} alt="Logo" />
@@ -40,18 +47,33 @@ const Projetos = () => {
           </div>
           <div className="container container-max-width ">
             <div className="row">
-              <div className="col-sm-6">
-                <EachProject logo={LogoXodotopia} img={ImgXodotopia} />
+              <div className="col-md-6">
+                <Link to="/projetos/xodotopia" className="nav-link fs-5">
+                  <EachProject logo={LogoXodotopia} img={ImgXodotopia} />
+                </Link>
               </div>
-              <div className="col-sm-6">
+              <div className="col-md-6">
                 <EachProject logo={LogoCovil} img={ImgCovil} />
               </div>
             </div>
           </div>
           <div className="container container-max-width ">
             <div className="row">
-              <div className="col-sm-6">
+              <div className="col-md-6">
                 <EachProject logo={LogoJefairy} img={ImgJefairy} />
+              </div>
+              <div className="col-md-6">
+                <EachProject logo={LogoSitka} img={ImgXodotopia} />
+              </div>
+            </div>
+          </div>
+          <div className="container container-max-width ">
+            <div className="row">
+              <div className="col-md-6">
+                <EachProject logo={LogoXodotopia} img={ImgHakuna} />
+              </div>
+              <div className="col-md-6">
+                <EachProject logo={LogoVital} img={ImgVital} />
               </div>
             </div>
           </div>

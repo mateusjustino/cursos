@@ -1,0 +1,27 @@
+@import url(../../style.css);
+
+.logo-size {
+  width: 50%;
+  max-width: 350px;
+}
+
+.local-ano-size {
+  /* height: 200px; */
+  /* background: red; */
+}
+
+.paleta-size {
+  height: 6vh;
+}
+
+.card {
+  width: 40%;
+  font-size: 24px;
+  margin: 100px 10px;
+  border: 1px solid #e3e3e3;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}

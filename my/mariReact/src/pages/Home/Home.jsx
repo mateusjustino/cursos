@@ -18,6 +18,8 @@ import CovilDoChaCaneca from "../../assets/CovilDoCha/caneca.jpg";
 import CovilDoChaPlaca from "../../assets/CovilDoCha/placa.jpg";
 import CovilDoChaSacola from "../../assets/CovilDoCha/sacola.jpg";
 
+import FAQ from "../../components/FAQ";
+
 const Home = () => {
   const DivProject = ({ id, logo, desc, img1, img2, img3 }) => {
     const idCarousel = `carousel-project${id}`;
@@ -100,9 +102,9 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="home-container-content" className="py-5">
-          <div className="container text-center">
-            <h2 className="display-3">Projetos de Identidade Visual</h2>
+        <section id="home-container-content " className="pb-4 pt-5 ">
+          <div className="container text-center container-max-width">
+            <h3 className="display-3">Projetos de Identidade Visual</h3>
 
             <DivProject
               id={1}
@@ -132,6 +134,13 @@ const Home = () => {
               img3={CovilDoChaSacola}
             />
           </div>
+        </section>
+
+        <section className="container pb-5 pt-3 container-max-width">
+          <h3 className="display-3  text-center">FAQ</h3>
+          <h3 className="display-3  text-center">Dúvidas frequentes</h3>
+
+          <FAQ />
         </section>
       </main>
       <Footer />
