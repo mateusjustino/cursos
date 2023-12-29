@@ -8,7 +8,7 @@ function FAQ() {
         <div className="accordion-item">
           <span className="accordion-header">
             <button
-              className="accordion-button fs-5"
+              className="accordion-button fs-6 collapsed"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
@@ -20,23 +20,23 @@ function FAQ() {
           </span>
           <div
             id="collapseOne"
-            className="accordion-collapse collapse show"
+            className="accordion-collapse collapse "
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <p className="fs-5">
+              <p className="fs-6">
                 <strong>Por posicionamento</strong>: O primeiro contato que o
                 seu cliente terá com seu negócio, é como uma ponte que facilita
                 o caminho deles até você;
               </p>
-              <p className="fs-5">
+              <p className="fs-6">
                 <strong>Percepção de valor</strong>: Uma identidade visual
                 (adequada e com bom design) afinal não adianta PARECER ser bom,
                 você precisa parecer excelente, agregando uma experiência melhor
                 ao cliente, e enriquece (potencializa) a visão de qualidade e
                 sentimento com seu produto ou serviço
               </p>
-              <p className="fs-5">
+              <p className="fs-6">
                 <strong>Poupa seu tempo e dinheiro</strong>: IDV facilitará não
                 só o seu trabalho e sim a delegação para outros profissionais
                 como: arquitetos, pintores, gráficas, designer de posts, web
@@ -50,7 +50,7 @@ function FAQ() {
         <div className="accordion-item">
           <span className="accordion-header">
             <button
-              className="accordion-button collapsed fs-5"
+              className="accordion-button collapsed fs-6"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
@@ -66,7 +66,7 @@ function FAQ() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <p className="fs-5">
+              <p className="fs-6">
                 Única diferença é que o logotipo é um elemento individual de uma
                 identidade visual! Já que o logotipo faz parte do conjunto que
                 as compõe, e a mais importante, no entanto sua representação
@@ -83,7 +83,7 @@ function FAQ() {
         <div className="accordion-item">
           <span className="accordion-header">
             <button
-              className="accordion-button collapsed fs-5"
+              className="accordion-button collapsed fs-6"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
@@ -100,7 +100,7 @@ function FAQ() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <p className="fs-5">
+              <p className="fs-6">
                 No pacote protagonista total, está incluso o mapeamento de
                 comunicação da marca.
               </p>
@@ -110,7 +110,7 @@ function FAQ() {
         <div className="accordion-item">
           <span className="accordion-header">
             <button
-              className="accordion-button collapsed fs-5"
+              className="accordion-button collapsed fs-6"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseFour"
@@ -126,7 +126,7 @@ function FAQ() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <p className="fs-5">
+              <p className="fs-6">
                 Quem faz o registro é nossa parceira Manacá, com modalidade de
                 acompanhamento e de indicação com cupom de 10% de desconto!
               </p>
@@ -136,7 +136,7 @@ function FAQ() {
         <div className="accordion-item">
           <span className="accordion-header">
             <button
-              className="accordion-button collapsed fs-5"
+              className="accordion-button collapsed fs-6"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseFive"
@@ -152,7 +152,7 @@ function FAQ() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <p className="fs-5">
+              <p className="fs-6">
                 No momento disponibilizo 3 pacotes de identidade visual
                 <ul>
                   <li>Pacote essencial</li>
@@ -166,7 +166,7 @@ function FAQ() {
         <div className="accordion-item">
           <span className="accordion-header">
             <button
-              className="accordion-button collapsed fs-5"
+              className="accordion-button collapsed fs-6"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseSix"
@@ -182,7 +182,7 @@ function FAQ() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <p className="fs-5">
+              <p className="fs-6">
                 Dependendo do pacote que você escolher, é em média entre 25 dias
                 à 35 dias.
               </p>
@@ -192,7 +192,7 @@ function FAQ() {
         <div className="accordion-item">
           <span className="accordion-header">
             <button
-              className="accordion-button collapsed fs-5"
+              className="accordion-button collapsed fs-6"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseSeven"
@@ -208,7 +208,7 @@ function FAQ() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <p className="fs-5">
+              <p className="fs-6">
                 Os reajustes possuem limitações em até 2 alterações (podendo
                 interferir também no tempo na entrega gerando atrasos), caso
                 ultrapasse deste limite, será solicitado um novo orçamento para
@@ -220,7 +220,7 @@ function FAQ() {
         <div className="accordion-item">
           <span className="accordion-header">
             <button
-              className="accordion-button collapsed fs-5"
+              className="accordion-button collapsed fs-6"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseEight"
@@ -236,7 +236,7 @@ function FAQ() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <p className="fs-5">
+              <p className="fs-6">
                 No cartão de crédito em até 3x sem juros, ou com modalidade de
                 40% de entrada, e 60% na etapa final!
               </p>

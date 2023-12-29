@@ -8,6 +8,6 @@
   color: var(--lilas);
 }
 
-.nav-link:hover {
+.nav-link-style:hover {
   color: var(--amarelo);
 }

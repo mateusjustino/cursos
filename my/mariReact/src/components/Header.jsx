@@ -44,7 +44,7 @@ const Header = () => {
                   to="/"
                   className={({ isActive, isPending, isTransitioning }) =>
                     [
-                      "nav-link fs-5 ",
+                      "nav-link fs-6 nav-link-style",
                       isActive ? "nav-active" : "",
                       isPending ? "nav-active" : "",
                       isTransitioning ? "nav-active" : "",
@@ -59,7 +59,7 @@ const Header = () => {
                   to="/projetos"
                   className={({ isActive, isPending, isTransitioning }) =>
                     [
-                      "nav-link fs-5 ",
+                      "nav-link fs-6 nav-link-style",
                       isActive ? "nav-active" : "",
                       isPending ? "nav-active" : "",
                       isTransitioning ? "nav-active" : "",
@@ -74,7 +74,7 @@ const Header = () => {
                   to="/sobre"
                   className={({ isActive, isPending, isTransitioning }) =>
                     [
-                      "nav-link fs-5 ",
+                      "nav-link fs-6 nav-link-style",
                       isActive ? "nav-active" : "",
                       isPending ? "nav-active" : "",
                       isTransitioning ? "nav-active" : "",
@@ -89,7 +89,7 @@ const Header = () => {
                   to="/contato"
                   className={({ isActive, isPending, isTransitioning }) =>
                     [
-                      "nav-link fs-5 ",
+                      "nav-link fs-6 nav-link-style",
                       isActive ? "nav-active" : "",
                       isPending ? "nav-active" : "",
                       isTransitioning ? "nav-active" : "",

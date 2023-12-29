@@ -3,7 +3,12 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 // rotas
 import Home from "./pages/Home/Home";
 import Projetos from "./pages/Projetos/Projetos";
-import Xodotopia from "./pages/Projetos/Xodotopia/Xodotopia";
+import Xodotopia from "./pages/Projetos/ProjetoIndividual/Xodotopia";
+import Covil from "./pages/Projetos/ProjetoIndividual/Covil";
+import Jefairy from "./pages/Projetos/ProjetoIndividual/Jefairy";
+import Sitka from "./pages/Projetos/ProjetoIndividual/Sitka";
+import Hakuna from "./pages/Projetos/ProjetoIndividual/Hakuna";
+import Vital from "./pages/Projetos/ProjetoIndividual/Vital";
 import Contato from "./pages/Contato/Contato";
 import Sobre from "./pages/Sobre/Sobre";
 import ErrorPage from "./pages/Error/ErrorPage";
@@ -11,6 +16,9 @@ import ErrorPage from "./pages/Error/ErrorPage";
 // aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import React, { useState, useEffect } from "react";
+import Loading from "./components/Loading";
 
 const router = createHashRouter([
   {
@@ -27,6 +35,26 @@ const router = createHashRouter([
     element: <Xodotopia />,
   },
   {
+    path: "/projetos/covil-do-cha",
+    element: <Covil />,
+  },
+  {
+    path: "/projetos/jefairy",
+    element: <Jefairy />,
+  },
+  {
+    path: "/projetos/sitka",
+    element: <Sitka />,
+  },
+  {
+    path: "/projetos/hakuna",
+    element: <Hakuna />,
+  },
+  {
+    path: "/projetos/vital",
+    element: <Vital />,
+  },
+  {
     path: "/contato",
     element: <Contato />,
   },
@@ -35,9 +63,6 @@ const router = createHashRouter([
     element: <Sobre />,
   },
 ]);
-
-import React, { useState, useEffect } from "react";
-import Loading from "./components/Loading";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

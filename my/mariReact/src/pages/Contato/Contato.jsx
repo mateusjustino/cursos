@@ -57,14 +57,14 @@ const Contato = () => {
     return (
       <>
         <div className="my-4 w-100 ">
-          <label htmlFor="nome" className="fs-5 fw-bold p-1  w-100">
+          <label htmlFor="nome" className="fs-6 fw-bold p-1  w-100">
             {label}
             <br />
             <input
               type={type}
               id={idName}
               name={idName}
-              className="p-1 pt-2 fs-5 input-style w-100"
+              className="p-1 pt-2 fs-6 input-style w-100"
               placeholder="Digite aqui..."
             />
           </label>
@@ -82,13 +82,13 @@ const Contato = () => {
     return (
       <>
         <div className="m-1 my-3">
-          <label htmlFor="selecao" className="fs-5 fw-bold p-1">
+          <label htmlFor="selecao" className="fs-6 fw-bold p-1">
             Escolha uma opção:
             <br />
             <select
               id="selecao"
               name="selecao"
-              className="p-1 fs-5 select-style"
+              className="p-1 fs-6 select-style"
               value={selectedOption}
               onChange={handleChange}
             >
@@ -107,7 +107,7 @@ const Contato = () => {
     return (
       <>
         <div className="my-4">
-          <label className="fs-5 fw-bold p-1">{idName}</label>
+          <label className="fs-6 fw-bold p-1">{idName}</label>
           <br />
 
           <div className="d-flex align-items-center mb-1">
@@ -118,7 +118,7 @@ const Contato = () => {
               value={option1}
               className="ms-3"
             />
-            <label className="fs-5 ms-3" htmlFor={idName + option1}>
+            <label className="fs-6 ms-3" htmlFor={idName + option1}>
               {option1}
             </label>
             <br />
@@ -132,7 +132,7 @@ const Contato = () => {
               value={option2}
               className="ms-3"
             />
-            <label className="fs-5 ms-3" htmlFor={idName + option2}>
+            <label className="fs-6 ms-3" htmlFor={idName + option2}>
               {option2}
             </label>
             <br />
@@ -146,7 +146,7 @@ const Contato = () => {
               value={option3}
               className="ms-3"
             />
-            <label className="fs-5 ms-3" htmlFor={idName + option3}>
+            <label className="fs-6 ms-3" htmlFor={idName + option3}>
               {option3}
             </label>
             <br />
@@ -162,7 +162,7 @@ const Contato = () => {
                   value={option3}
                   className="ms-3"
                 />
-                <label className="fs-5 ms-3" htmlFor={idName + option4}>
+                <label className="fs-6 ms-3" htmlFor={idName + option4}>
                   {option4}
                 </label>
                 <br />
@@ -192,13 +192,13 @@ const Contato = () => {
     return (
       <>
         <div className="row my-4 py-3 ">
-          <label className="fs-5 fw-bold">
+          <label className="fs-6 fw-bold">
             🌿✨Para alinharmos a melhor fase da sua empresa/negócio, elaborei 3
             pacotes que podem adaptar melhor a sua realidade! <br />
           </label>
           <div className="col-md-4 py-2 ps-2 d-flex flex-column  justify-content-start align-items-start ">
-            <div className="h3-height d-flex align-items-center">
-              <h3 className="ms-3 ">PACOTE ESSENCIAL</h3>
+            <div className="div-h1-height d-flex align-items-center">
+              <h1 className="ms-3 fw-bold">PACOTE ESSENCIAL</h1>
             </div>
             <ul className="table-pack">
               <li>
@@ -273,8 +273,8 @@ const Contato = () => {
           </div>
 
           <div className="col-md-4 py-2 ps-2 d-flex flex-column  justify-content-start align-items-start ">
-            <div className="h3-height  d-flex align-items-center">
-              <h3 className="ms-3 ">PACOTE INTERMEDIÁRIO</h3>
+            <div className="div-h1-height  d-flex align-items-center">
+              <h1 className="ms-3 fw-bold">PACOTE INTERMEDIÁRIO</h1>
             </div>
             <ul className="table-pack">
               <li>
@@ -349,8 +349,8 @@ const Contato = () => {
           </div>
 
           <div className="col-md-4 py-2 ps-2 d-flex flex-column  justify-content-start align-items-start ">
-            <div className="h3-height  d-flex align-items-center">
-              <h3 className="ms-3">PACOTE PROTAGONISTA TOTAL</h3>
+            <div className="div-h1-height  d-flex align-items-center">
+              <h1 className="ms-3 fw-bold">PACOTE PROTAGONISTA TOTAL</h1>
             </div>
             <ul className="table-pack">
               <li>
@@ -473,7 +473,7 @@ const Contato = () => {
       <main>
         <section className="">
           <div className="container py-1 container-max-width">
-            <p className="fs-5">
+            <p className="fs-6">
               Oie! Bora agendar uma call para escolher o melhor projeto para sua
               marca? E para primeiro contato
             </p>

@@ -2,10 +2,61 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "./TemplateStyle.css";
 
+const Paleta = ({ colorsPaleta }) => {
+  return (
+    <>
+      <div className="row rounded-3 overflow-hidden">
+        {colorsPaleta.map((item) => (
+          <div
+            className="col paleta-size"
+            style={{ background: `${item.color}` }}
+            key={item.id}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
+
+const BtnImgModal = ({ item }) => {
+  return (
+    <>
+      <div data-aos="fade-up">
+        <button
+          type="button"
+          className="btn p-0 my-2"
+          data-bs-toggle="modal"
+          data-bs-target={`#modal${item.id}`}
+        >
+          <img src={item.local} className="img-fluid img-thumbnail rounded-3" />
+        </button>
+      </div>
+
+      <div
+        className="modal fade"
+        id={`modal${item.id}`}
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <img
+              src={item.local}
+              className="img-fluid img-thumbnail rounded-3"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
 const TemplateProjeto = ({
   logo,
   local,
   ano,
+  paragraphs,
   traco1,
   traco2,
   traco3,
@@ -16,54 +67,6 @@ const TemplateProjeto = ({
   imgsE,
   imgsD,
 }) => {
-  const Paleta = ({ colorsPaleta }) => {
-    return (
-      <>
-        <div className="row rounded-3 overflow-hidden">
-          {colorsPaleta.map((item) => (
-            <div
-              className="col paleta-size"
-              style={{ background: `${item.color}` }}
-              key={item.key}
-            />
-          ))}
-        </div>
-      </>
-    );
-  };
-
-  const BtnImgModal = ({ key, local }) => {
-    return (
-      <>
-        <div data-aos="fade-up">
-          <button
-            type="button"
-            class="btn p-0 my-2"
-            data-bs-toggle="modal"
-            data-bs-target={`#modalE${key}`}
-            key={key}
-          >
-            <img src={local} className="img-fluid img-thumbnail rounded-3" />
-          </button>
-        </div>
-
-        <div
-          class="modal fade"
-          id={`modalE${key}`}
-          tabIndex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <img src={local} className="img-fluid img-thumbnail rounded-3" />
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  };
-
   return (
     <>
       <Header />
@@ -73,63 +76,54 @@ const TemplateProjeto = ({
             <img src={logo} alt="" className="logo-size" />
             <div className="row my-2">
               <div className="col-md-6 py-3 local-ano-size d-flex align-items-center justify-content-center">
-                <h3 className="display-6">{ano}</h3>
+                <h1 className="fw-bold">{ano}</h1>
               </div>
               <div className="col-md-6 py-3 local-ano-size d-flex align-items-center justify-content-center">
                 <div>
-                  <i class="bi bi-geo-alt-fill"></i>
-                  <h3 className="display-6">{local}</h3>
+                  <i className="bi bi-geo-alt-fill fs-5"></i>
+                  <h1 className="fw-bold">{local}</h1>
                 </div>
               </div>
             </div>
           </section>
           <section>
-            <p className="fs-5">
-              É um espaço focado no bem-estar animal, oferecendo uma ampla gama
-              de serviços, acessórios e cuidados à saúde animal, para que você
-              possa proporcionar o melhor experiência para os tutores e seus
-              filhos!
-            </p>
-            <p className="fs-5">
-              O projeto foi um rebranding, pela necessidade de realinhamento com
-              acomunicação da marca, pela mudança de comando do espaço,e pela
-              expansão dos serviços, persona, que precisavam ser alinhados por
-              um rebranding, ou seja não somente influênciou claramente no seu
-              redesign, mas sim no comportamento e personalidade da marca.
-            </p>
-            <p className="fs-5">
-              E identificamos os seguinte traços de personalidade da marca:
-            </p>
+            <div className="my-2">
+              {paragraphs.map((item) => (
+                <p key={item.id} className="fs-6">
+                  {item.text}
+                </p>
+              ))}
+            </div>
             <div className="row text-center">
               <div className="col-sm-6">
-                <h3 className="display-6">{traco1}</h3>
+                <h1 className=" fw-bold">{traco1}</h1>
               </div>
               <div className="col-sm-6">
-                <h3 className="display-6">{traco2}</h3>
+                <h1 className=" fw-bold">{traco2}</h1>
               </div>
             </div>
             <div className="row text-center">
               <div className="col-sm-6">
-                <h3 className="display-6">{traco3}</h3>
+                <h1 className=" fw-bold">{traco3}</h1>
               </div>
               <div className="col-sm-6">
-                <h3 className="display-6">{traco4}</h3>
+                <h1 className=" fw-bold">{traco4}</h1>
               </div>
             </div>
             <div className="row text-center">
               {traco6 ? (
                 <>
                   <div className="col-sm-6">
-                    <h3 className="display-6">{traco5}</h3>
+                    <h1 className=" fw-bold">{traco5}</h1>
                   </div>
                   <div className="col-sm-6">
-                    <h3 className="display-6">{traco6}</h3>
+                    <h1 className=" fw-bold">{traco6}</h1>
                   </div>
                 </>
               ) : (
                 <>
                   <div className="col-12">
-                    <h3 className="display-6">{traco5}</h3>
+                    <h1 className=" fw-bold">{traco5}</h1>
                   </div>
                 </>
               )}
@@ -141,12 +135,16 @@ const TemplateProjeto = ({
             <div className="row mt-5">
               <div className="col-sm-6 ">
                 {imgsE.map((item) => (
-                  <BtnImgModal key={item.key} local={item.local} />
+                  <div key={item.id}>
+                    <BtnImgModal item={item} />
+                  </div>
                 ))}
               </div>
               <div className="col-sm-6 ">
                 {imgsD.map((item) => (
-                  <BtnImgModal key={item.key} local={item.local} />
+                  <div key={item.id}>
+                    <BtnImgModal item={item} />
+                  </div>
                 ))}
               </div>
             </div>

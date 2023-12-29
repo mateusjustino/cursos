@@ -8,6 +8,11 @@ footer a {
   text-decoration: none;
   margin: 0 15px;
 }
+
 .icon-color {
+  transition: all 0.3s;
   color: white;
+}
+footer a:hover .icon-color {
+  color: var(--amarelo);
 }

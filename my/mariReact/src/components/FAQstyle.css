@@ -41,7 +41,7 @@
   background: none;
   content: "➺";
   color: var(--amarelo);
-  transform: rotateZ(270deg) translate(0px, 0px);
+  transform: rotateZ(90deg) translate(0px, 0px);
   width: auto;
   height: auto;
   transition: all 0.2s;
@@ -49,6 +49,6 @@
 
 .accordion-button:not(.collapsed)::after {
   background-image: none;
-  transform: rotateZ(90deg) translate(0px, 0px);
+  transform: rotateZ(270deg) translate(0px, 0px);
   color: var(--lilas);
 }

@@ -4,19 +4,19 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 import JefairyLogo from "../../assets/Jefairy/logo.svg";
-import JefairyVela from "../../assets/Jefairy/vela.jpg";
-import JefairyCaixa from "../../assets/Jefairy/caixa.jpg";
-import JefairySacola from "../../assets/Jefairy/sacola.jpg";
+import JefairyVela from "../../assets/Jefairy/velaCarrosel.jpg";
+import JefairyCaixa from "../../assets/Jefairy/caixaCarrosel.jpg";
+import JefairySacola from "../../assets/Jefairy/sacolaCarrosel.jpg";
 
 import XodotopiaLogo from "../../assets/Xodotopia/logo.svg";
-import XodotopiaCartao from "../../assets/Xodotopia/cartao.jpg";
-import XodotopiaOutdoor from "../../assets/Xodotopia/outdoor.jpg";
-import XodotopiaSacola from "../../assets/Xodotopia/sacola.jpg";
+import XodotopiaCartao from "../../assets/Xodotopia/cartaoCarrosel.jpg";
+import XodotopiaOutdoor from "../../assets/Xodotopia/outdoorCarrosel.jpg";
+import XodotopiaSacola from "../../assets/Xodotopia/sacolaCarrosel.jpg";
 
 import CovilDoChaLogo from "../../assets/CovilDoCha/logo.svg";
-import CovilDoChaCaneca from "../../assets/CovilDoCha/caneca.jpg";
-import CovilDoChaPlaca from "../../assets/CovilDoCha/placa.jpg";
-import CovilDoChaSacola from "../../assets/CovilDoCha/sacola.jpg";
+import CovilDoChaCaneca from "../../assets/CovilDoCha/canecaCarrosel.jpg";
+import CovilDoChaPlaca from "../../assets/CovilDoCha/placaCarrosel.jpg";
+import CovilDoChaSacola from "../../assets/CovilDoCha/sacolaCarrosel.jpg";
 
 import FAQ from "../../components/FAQ";
 
@@ -31,7 +31,7 @@ const Home = () => {
             src={logo}
             className="img-fluid home-container-content-logo-maxwidth"
           />
-          <p className="fs-5 py-4">{desc}</p>
+          <p className="fs-6 py-4">{desc}</p>
 
           <div
             id={idCarousel}
@@ -86,11 +86,11 @@ const Home = () => {
           <div className="container">
             <div className="row align-items-center justify-content-center  home-container-welcome-fullvh">
               <div className="home-container-welcome-shadow rounded-3 container-max-width p-4">
-                <h1 className="text-center display-3">
+                <h1 className="text-center fw-bold">
                   Design para marcas protagonistas
                 </h1>
 
-                <p className="fs-5 text-start">
+                <p className="fs-6 text-start">
                   Um estúdio de design gráfico especializado em criar
                   identidades visuais únicas para marcas apaixonadas e
                   distintas. Construímos universos visuais que se alinham à
@@ -104,7 +104,7 @@ const Home = () => {
 
         <section id="home-container-content " className="pb-4 pt-5 ">
           <div className="container text-center container-max-width">
-            <h3 className="display-3">Projetos de Identidade Visual</h3>
+            <h1 className="fw-bold">Projetos de Identidade Visual</h1>
 
             <DivProject
               id={1}
@@ -137,8 +137,8 @@ const Home = () => {
         </section>
 
         <section className="container pb-5 pt-3 container-max-width">
-          <h3 className="display-3  text-center">FAQ</h3>
-          <h3 className="display-3  text-center">Dúvidas frequentes</h3>
+          <h1 className="fw-bold text-center">FAQ</h1>
+          <h1 className="fw-bold text-center">Dúvidas frequentes</h1>
 
           <FAQ />
         </section>
