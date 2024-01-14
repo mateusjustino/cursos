@@ -5,7 +5,7 @@ import "./TemplateStyle.css";
 const Paleta = ({ colorsPaleta }) => {
   return (
     <>
-      <div className="row rounded-3 overflow-hidden">
+      <div className="row rounded-3 overflow-hidden mt-5 mx-1">
         {colorsPaleta.map((item) => (
           <div
             className="col paleta-size"
@@ -71,7 +71,7 @@ const TemplateProjeto = ({
     <>
       <Header />
       <main>
-        <section className="py-5 px-2 container container-max-width">
+        <section className="py-5 container container-max-width">
           <section className="text-center">
             <img src={logo} alt="" className="logo-size" />
             <div className="row my-2">
@@ -94,44 +94,45 @@ const TemplateProjeto = ({
                 </p>
               ))}
             </div>
+          </section>
+          <section>
             <div className="row text-center">
-              <div className="col-sm-6">
-                <h1 className=" fw-bold">{traco1}</h1>
+              <div className="col-6">
+                <h1 className="fw-bold my-2">{traco1}</h1>
               </div>
-              <div className="col-sm-6">
-                <h1 className=" fw-bold">{traco2}</h1>
+              <div className="col-6">
+                <h1 className="fw-bold my-2">{traco2}</h1>
               </div>
             </div>
             <div className="row text-center">
-              <div className="col-sm-6">
-                <h1 className=" fw-bold">{traco3}</h1>
+              <div className="col-6">
+                <h1 className="fw-bold my-2">{traco3}</h1>
               </div>
-              <div className="col-sm-6">
-                <h1 className=" fw-bold">{traco4}</h1>
+              <div className="col-6">
+                <h1 className="fw-bold my-2">{traco4}</h1>
               </div>
             </div>
             <div className="row text-center">
               {traco6 ? (
                 <>
-                  <div className="col-sm-6">
-                    <h1 className=" fw-bold">{traco5}</h1>
+                  <div className="col-6">
+                    <h1 className="fw-bold my-2">{traco5}</h1>
                   </div>
-                  <div className="col-sm-6">
-                    <h1 className=" fw-bold">{traco6}</h1>
+                  <div className="col-6">
+                    <h1 className="fw-bold my-2">{traco6}</h1>
                   </div>
                 </>
               ) : (
                 <>
                   <div className="col-12">
-                    <h1 className=" fw-bold">{traco5}</h1>
+                    <h1 className="fw-bold my-2">{traco5}</h1>
                   </div>
                 </>
               )}
             </div>
-          </section>
-          <section className="px-2">
             <Paleta colorsPaleta={colors} />
-
+          </section>
+          <section className="">
             <div className="row mt-5">
               <div className="col-sm-6 ">
                 {imgsE.map((item) => (

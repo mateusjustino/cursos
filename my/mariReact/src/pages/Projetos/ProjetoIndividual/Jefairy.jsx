@@ -2,13 +2,11 @@ import TemplateProjeto from "../TemplateProjeto";
 import Logo from "../../../assets/Jefairy/logo.svg";
 import Img1 from "../../../assets/Jefairy/avental.jpg";
 import Img2 from "../../../assets/Jefairy/bag.jpg";
-import Img3 from "../../../assets/Jefairy/caixaCarrosel.jpg";
-import Img4 from "../../../assets/Jefairy/crachá.jpg";
-import Img5 from "../../../assets/Jefairy/moca.png";
-import Img6 from "../../../assets/Jefairy/quadro.jpg";
-import Img7 from "../../../assets/Jefairy/sacolaCarrosel.jpg";
-import Img8 from "../../../assets/Jefairy/vela1.jpg";
-import Img9 from "../../../assets/Jefairy/vela2.jpg";
+import Img3 from "../../../assets/Jefairy/cracha.jpg";
+import Img4 from "../../../assets/Jefairy/moca.png";
+import Img5 from "../../../assets/Jefairy/quadro.jpg";
+import Img6 from "../../../assets/Jefairy/vela1.jpg";
+import Img7 from "../../../assets/Jefairy/vela2.jpg";
 
 import uniqueID from "../../../scripts/UniqueId";
 
@@ -42,14 +40,12 @@ const Jefairy = () => {
         { id: uniqueID(), local: Img1 },
         { id: uniqueID(), local: Img4 },
         { id: uniqueID(), local: Img5 },
-        { id: uniqueID(), local: Img8 },
+        { id: uniqueID(), local: Img6 },
       ]}
       imgsD={[
         { id: uniqueID(), local: Img7 },
         { id: uniqueID(), local: Img2 },
         { id: uniqueID(), local: Img3 },
-        { id: uniqueID(), local: Img6 },
-        { id: uniqueID(), local: Img9 },
       ]}
     />
   );

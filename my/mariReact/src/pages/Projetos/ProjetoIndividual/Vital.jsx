@@ -15,29 +15,23 @@ const Vital = () => {
   return (
     <TemplateProjeto
       logo={Logo}
-      local="Araucária - Paraná"
-      ano="2023"
+      local="x"
+      ano="2022"
       paragraphs={[
         {
           id: uniqueID(),
-          text: "",
-        },
-        {
-          id: uniqueID(),
-          text: "",
+          text: "Uma cafeteria projetada para quem busca um ambiente para trabalhar enquanto desfruta de um bom café. Priorizei unir a praticidade de um espaço produtivo com uma oferta de alimentos leves e saborosos. Meu objetivo foi criar um local onde o trabalho se funde harmoniosamente com a experiência de uma alimentação saudável",
         },
       ]}
-      traco1="Divertida"
-      traco2="Criativa"
-      traco3="Minimalista"
-      traco4="Carinhosa"
-      traco5="Cuidadosa"
+      traco1="Natural"
+      traco2="Saudável"
+      traco3="Aconchegante"
+      traco4="Light"
       colors={[
-        { id: uniqueID(), color: "#b195ed" },
-        { id: uniqueID(), color: "#cbb2ff" },
-        { id: uniqueID(), color: "#fff7ac" },
-        { id: uniqueID(), color: "#f16c3f" },
-        { id: uniqueID(), color: "#005541" },
+        { id: uniqueID(), color: "#f8dd80" },
+        { id: uniqueID(), color: "#036b67" },
+        { id: uniqueID(), color: "#547531" },
+        { id: uniqueID(), color: "#260901" },
       ]}
       imgsE={[
         { id: uniqueID(), local: Img1 },

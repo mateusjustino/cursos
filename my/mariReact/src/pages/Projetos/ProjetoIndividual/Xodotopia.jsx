@@ -3,10 +3,9 @@ import Logo from "../../../assets/Xodotopia/logo.svg";
 import Img1 from "../../../assets/Xodotopia/almofada.jpg";
 import Img2 from "../../../assets/Xodotopia/bag.jpg";
 import Img3 from "../../../assets/Xodotopia/carimbo.jpg";
-import Img4 from "../../../assets/Xodotopia/cartaoCarrosel.jpg";
-import Img5 from "../../../assets/Xodotopia/outdoor1.jpg";
-import Img6 from "../../../assets/Xodotopia/outdoor2.jpg";
-import Img7 from "../../../assets/Xodotopia/placa.png";
+import Img4 from "../../../assets/Xodotopia/outdoor1.jpg";
+import Img5 from "../../../assets/Xodotopia/outdoor2.jpg";
+import Img6 from "../../../assets/Xodotopia/placa.png";
 
 import uniqueID from "../../../scripts/UniqueId";
 
@@ -45,13 +44,12 @@ const Xodotopia = () => {
       imgsE={[
         { id: uniqueID(), local: Img1 },
         { id: uniqueID(), local: Img4 },
-        { id: uniqueID(), local: Img5 },
-        { id: uniqueID(), local: Img7 },
+        { id: uniqueID(), local: Img6 },
       ]}
       imgsD={[
+        { id: uniqueID(), local: Img5 },
         { id: uniqueID(), local: Img2 },
         { id: uniqueID(), local: Img3 },
-        { id: uniqueID(), local: Img6 },
       ]}
     />
   );

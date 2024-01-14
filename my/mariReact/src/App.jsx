@@ -18,7 +18,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import React, { useState, useEffect } from "react";
-import Loading from "./components/Loading";
 
 const router = createHashRouter([
   {
@@ -65,8 +64,6 @@ const router = createHashRouter([
 ]);
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     AOS.init({
       duration: 2000, // Duração das animações em milissegundos
@@ -74,24 +71,9 @@ function App() {
       once: true,
       anchorPlacement: "top-top",
     });
-
-    const handleLoad = () => {
-      setIsLoading(false);
-    };
-
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
   }, []);
 
-  return isLoading ? (
-    <Loading />
-  ) : (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

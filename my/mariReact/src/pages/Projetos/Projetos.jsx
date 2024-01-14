@@ -4,7 +4,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 import LogoXodotopia from "../../assets/Xodotopia/logo.svg";
-import ImgXodotopia from "../../assets/Xodotopia/cartaoCarrosel.jpg";
+import ImgXodotopia from "../../assets/Xodotopia/outdoor1.jpg";
 
 import LogoCovil from "../../assets/CovilDoCha/logo.svg";
 import ImgCovil from "../../assets/CovilDoCha/caneca.jpg";
@@ -13,6 +13,7 @@ import LogoJefairy from "../../assets/Jefairy/logo.svg";
 import ImgJefairy from "../../assets/Jefairy/vela1.jpg";
 
 import LogoSitka from "../../assets/Sitka/logo.svg";
+import ImgSitka from "../../assets/Sitka/bexiga.png";
 
 import LogoHakuna from "../../assets/Hakuna/logo.svg";
 import ImgHakuna from "../../assets/Hakuna/bottons.jpg";
@@ -37,6 +38,7 @@ const Projetos = () => {
       </>
     );
   };
+
   return (
     <>
       <Header />
@@ -46,7 +48,7 @@ const Projetos = () => {
             <h1 className="fw-bold">Título para Projetos</h1>
             <p className="fs-6">Aqui estarão todos os projetos</p>
           </div>
-          <div className="container container-max-width ">
+          <div className="container container-max-width">
             <div className="row">
               <div className="col-sm-6">
                 <Link to="/projetos/xodotopia" className="nav-link fs-6">
@@ -69,7 +71,7 @@ const Projetos = () => {
               </div>
               <div className="col-sm-6">
                 <Link to="/projetos/sitka" className="nav-link fs-6">
-                  <EachProject logo={LogoSitka} img={ImgXodotopia} />
+                  <EachProject logo={LogoSitka} img={ImgSitka} />
                 </Link>
               </div>
             </div>
