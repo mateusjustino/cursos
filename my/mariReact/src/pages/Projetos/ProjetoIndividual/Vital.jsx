@@ -15,12 +15,11 @@ const Vital = () => {
   return (
     <TemplateProjeto
       logo={Logo}
-      local="x"
       ano="2022"
       paragraphs={[
         {
           id: uniqueID(),
-          text: "Uma cafeteria projetada para quem busca um ambiente para trabalhar enquanto desfruta de um bom café. Priorizei unir a praticidade de um espaço produtivo com uma oferta de alimentos leves e saborosos. Meu objetivo foi criar um local onde o trabalho se funde harmoniosamente com a experiência de uma alimentação saudável",
+          text: "Um projeto fictício para uma cafeteria projetada para quem busca um ambiente para trabalhar enquanto desfruta de um bom café. Priorizei unir a praticidade de um espaço produtivo com uma oferta de alimentos leves e saborosos. Meu objetivo foi criar um local onde o trabalho se funde harmoniosamente com a experiência de uma alimentação saudável",
         },
       ]}
       traco1="Natural"

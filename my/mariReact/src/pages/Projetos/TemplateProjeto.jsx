@@ -73,18 +73,26 @@ const TemplateProjeto = ({
       <main>
         <section className="py-5 container container-max-width">
           <section className="text-center">
-            <img src={logo} alt="" className="logo-size" />
-            <div className="row my-2">
-              <div className="col-md-6 py-3 local-ano-size d-flex align-items-center justify-content-center">
-                <h1 className="fw-bold">{ano}</h1>
-              </div>
-              <div className="col-md-6 py-3 local-ano-size d-flex align-items-center justify-content-center">
-                <div>
-                  <i className="bi bi-geo-alt-fill fs-5"></i>
-                  <h1 className="fw-bold">{local}</h1>
+            <img src={logo} alt="" className="logo-size my-2" />
+            {local ? (
+              <div className="row my-2">
+                <div className="col-6 py-3 local-ano-size d-flex align-items-center justify-content-center">
+                  <h1 className="fw-bold">{ano}</h1>
+                </div>
+                <div className="col-6 py-3 local-ano-size d-flex align-items-center justify-content-center">
+                  <div>
+                    <i className="bi bi-geo-alt-fill fs-5"></i>
+                    <h1 className="fw-bold">{local}</h1>
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="row my-2">
+                <div className="col-12 py-3 local-ano-size d-flex align-items-center justify-content-center">
+                  <h1 className="fw-bold">{ano}</h1>
+                </div>
+              </div>
+            )}
           </section>
           <section>
             <div className="my-2">

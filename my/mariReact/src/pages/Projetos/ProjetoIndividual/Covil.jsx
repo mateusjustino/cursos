@@ -13,12 +13,11 @@ const Covil = () => {
   return (
     <TemplateProjeto
       logo={Logo}
-      local="Projeto Fictício"
       ano="2023"
       paragraphs={[
         {
           id: uniqueID(),
-          text: "Uma casa de chá, com um espaço imersivo que funciona com agendamento, adaptando ao rolê de cada pessoa, ressignificando a experiência de tomar chá!",
+          text: "Um projeto fictício para uma casa de chá, com um espaço imersivo que funciona com agendamento, adaptando ao rolê de cada pessoa, ressignificando a experiência de tomar chá!",
         },
         {
           id: uniqueID(),

@@ -19,6 +19,10 @@ const Sitka = () => {
           id: uniqueID(),
           text: "Um núcleo terapêutico especialista em desenvolvimento infantil para crianças neuro atípicas, que necessitava de uma comunicação visual para aproximar a comunicação com os pais dessas crianças!  E fortemente inspirada na nostalgia da fundadora para criar reflexo afetivo e puro da marca!",
         },
+        {
+          id: uniqueID(),
+          text: "Colaboração: Michelly Moreno - Brand marketing",
+        },
       ]}
       traco1="Cuidadosa"
       traco2="Proteção"

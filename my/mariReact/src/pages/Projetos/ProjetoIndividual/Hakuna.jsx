@@ -12,12 +12,11 @@ const Hakuna = () => {
   return (
     <TemplateProjeto
       logo={Logo}
-      local="x"
       ano="x"
       paragraphs={[
         {
           id: uniqueID(),
-          text: "Como designer, criei uma marca de moda praiana com cortes exclusivos, transmitindo a energia moderna e viva do verão tropical. Com uma abordagem visando fundir o estilo contemporâneo com elementos tropicais, oferecendo uma identidade única para aqueles que desejam expressar seu estilo de vida à beira-mar através do design de moda.",
+          text: "Um projeto fictício para uma marca de moda praiana com cortes exclusivos, transmitindo a energia moderna e viva do verão tropical. Com uma abordagem visando fundir o estilo contemporâneo com elementos tropicais, oferecendo uma identidade única para aqueles que desejam expressar seu estilo de vida à beira-mar através do design de moda.",
         },
       ]}
       traco1="Moderna"
