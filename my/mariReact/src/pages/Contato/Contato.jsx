@@ -4,6 +4,47 @@ import "./style.css";
 
 import React, { useState } from "react";
 
+const InputCustom = ({ label, idName, type }) => {
+  return (
+    <>
+      <div className="my-4 w-100">
+        <label htmlFor={idName} className="fs-6 fw-bold p-1 w-100">
+          {label}
+          <br />
+          <input
+            type={type}
+            id={idName}
+            name={idName}
+            className="p-1 pt-2 fs-6 input-style w-100"
+            placeholder="Digite aqui..."
+          />
+        </label>
+      </div>
+    </>
+  );
+};
+
+const TextAreaCustom = ({ id, label1, label2 }) => {
+  return (
+    <>
+      <div className="my-4 w-100">
+        <label for={id} className="p-1">
+          {label1}
+        </label>
+        <label for={id} className="p-1">
+          {label2}:
+        </label>
+        <textarea
+          id={id}
+          rows="4"
+          className="p-2 w-100 rounded-3"
+          placeholder="Digite aqui..."
+        ></textarea>
+      </div>
+    </>
+  );
+};
+
 const Contato = () => {
   // envio do form
   const [envioConcluido, setEnvioConcluido] = useState(false);
@@ -59,30 +100,6 @@ const Contato = () => {
     );
   };
 
-  const InputCustom = ({ label, idName, type }) => {
-    return (
-      <>
-        <div className="my-4 w-100 ">
-          <label htmlFor="nome" className="fs-6 fw-bold p-1  w-100">
-            {label}
-            <br />
-            <input
-              type={type}
-              id={idName}
-              name={idName}
-              className="p-1 pt-2 fs-6 input-style w-100"
-              placeholder="Digite aqui..."
-            />
-          </label>
-        </div>
-      </>
-    );
-  };
-
-  const TextAreaCustom = () => {
-    return <textarea />;
-  };
-
   return (
     <>
       <Header />
@@ -107,8 +124,9 @@ const Contato = () => {
               method="POST"
               id="form"
               onSubmit={handleSubmit}
-              className="my-5 py-3 px-3 rounded-3 form-style d-flex flex-column"
+              className="my-4 p-3 rounded-3 form-style d-flex flex-column"
             >
+              <h1 className="text-center">Formulário</h1>
               <InputCustom
                 label="Informe seu nome completo!:"
                 idName="nome"
@@ -125,14 +143,12 @@ const Contato = () => {
                 type="email"
               />
 
-              <p>
-                Como está a situação atual do design da empresa/negócio? 🎨📊
-              </p>
-              <p>
-                Descreva o que a empresa já tem ou faz em termos de Design hoje
-                em dia.
-              </p>
-              <TextAreaCustom />
+              <TextAreaCustom
+                id=""
+                label1="Como está a situação atual do design da empresa/negócio? 🎨📊"
+                label2="Descreva o que a empresa já tem ou faz em termos de Design hoje em dia"
+              />
+
               <SubmitCustom />
             </form>
 

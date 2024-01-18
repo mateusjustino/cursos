@@ -77,4 +77,16 @@
 
 .form-style {
   border: 2px solid var(--amarelo);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  border: 1px solid var(--amarelo);
+  background: transparent;
+  color: white;
+  resize: none;
+}
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--lilas);
 }
