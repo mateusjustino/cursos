@@ -71,15 +71,12 @@
   background-size: 400% 400%;
 }
 
-.button-style.clicked {
-  transform: scale(0.99);
-}
-
 .form-style {
   border: 2px solid var(--amarelo);
   background: rgba(0, 0, 0, 0.2);
 }
 
+/* textArea */
 textarea {
   border: 1px solid var(--amarelo);
   background: transparent;
@@ -89,4 +86,38 @@ textarea {
 textarea:focus {
   outline: none;
   border: 1px solid var(--lilas);
+}
+/* fim textArea */
+
+/* radio button */
+.container-radio {
+  background: red;
+  display: flex;
+  align-items: center;
+}
+.radio-custom {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-clip: content-box;
+  border: 2px solid var(--amarelo);
+  background-color: var(--amarelo);
+  padding: 1px;
+}
+.radio-custom:checked {
+  transition: all 0.3s;
+  background-color: var(--lilas);
+  padding: 2px;
+  border: 2px solid var(--lilas);
+}
+/*fim radio button */
+
+.Toastify__toast-theme--colored.Toastify__toast--info {
+  color: red;
+}
+
+.Toastify__progress-bar {
+  color: red;
+  background: red;
 }

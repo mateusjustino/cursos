@@ -1,8 +1,10 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "./style.css";
-
+import { ToastContainer, toast } from "react-toastify";
 import React, { useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import Logo from "../../assets/logo.png";
 
 const InputCustom = ({ label, idName, type }) => {
   return (
@@ -17,6 +19,7 @@ const InputCustom = ({ label, idName, type }) => {
             name={idName}
             className="p-1 pt-2 fs-6 input-style w-100"
             placeholder="Digite aqui..."
+            required
           />
         </label>
       </div>
@@ -28,18 +31,79 @@ const TextAreaCustom = ({ id, label1, label2 }) => {
   return (
     <>
       <div className="my-4 w-100">
-        <label for={id} className="p-1">
+        <label htmlFor={id} className="p-1 fw-bold fs-6">
           {label1}
         </label>
-        <label for={id} className="p-1">
+        <label htmlFor={id} className="p-1 fw-bold fs-6">
           {label2}:
         </label>
         <textarea
           id={id}
           rows="4"
-          className="p-2 w-100 rounded-3"
+          className="p-2 mx-1 w-100 rounded-3 fs-6"
           placeholder="Digite aqui..."
+          required
         ></textarea>
+      </div>
+    </>
+  );
+};
+
+const RadioCustom = ({}) => {
+  return (
+    <>
+      <div>
+        <p className="p-1 fw-bold fs-6 m-0">
+          Qual serviço você possui interesse?
+        </p>
+        <div className="d-flex align-items-center m-2">
+          <input
+            id="identidade"
+            name="servico"
+            type="radio"
+            value="identidade"
+            className="radio-custom"
+            required
+          />
+          <label htmlFor="identidade" className="ps-2">
+            Identidade Visual
+          </label>
+        </div>
+
+        <div className="d-flex align-items-center m-2">
+          <input
+            id="idv+gm"
+            name="servico"
+            type="radio"
+            value="idv+gm"
+            className="radio-custom"
+            required
+          />
+          <label htmlFor="idv+gm" className="ps-2">
+            Identidade Visual + Gestão de Marca
+          </label>
+        </div>
+
+        <div className="d-flex align-items-center m-2">
+          <input
+            id="outro"
+            name="servico"
+            type="radio"
+            value="outro"
+            className="radio-custom"
+            required
+          />
+          <label htmlFor="outro" className="ps-2">
+            Outro
+          </label>
+          <input
+            id="outro-servico"
+            name="outro-servico"
+            type="text"
+            className="p-1 pt-2 fs-6 input-style w-100 ms-2"
+            placeholder="Digite aqui..."
+          />
+        </div>
       </div>
     </>
   );
@@ -47,8 +111,8 @@ const TextAreaCustom = ({ id, label1, label2 }) => {
 
 const Contato = () => {
   // envio do form
-  const [envioConcluido, setEnvioConcluido] = useState(false);
   const handleSubmit = async (e) => {
+    handleClick();
     e.preventDefault(); // Impede o comportamento padrão do formulário (enviar a requisição e recarregar a página)
 
     const form = e.target; // Obtém a referência ao formulário que acionou o evento
@@ -67,7 +131,7 @@ const Contato = () => {
       // Verifica o status da resposta
       if (response.status === 200) {
         console.log("Sucesso!"); // Se a resposta htmlFor bem-sucedida (status 200), imprime "Sucesso!"
-        setEnvioConcluido(true);
+        notify();
       } else {
         console.log("Falha!"); // Se a resposta não htmlFor bem-sucedida, imprime "Falha!"
       }
@@ -83,7 +147,8 @@ const Contato = () => {
     // Opcional: Remover a classe após um tempo para permitir futuros cliques com a animação
     setTimeout(() => {
       setIsClicked(false);
-    }, 10);
+    }, 100);
+    // handleSubmit();
   };
   const SubmitCustom = () => {
     return (
@@ -94,10 +159,30 @@ const Contato = () => {
           className={`align-self-center button-style rounded-3 p-2 px-4 fs-6 ${
             isClicked ? "clicked" : ""
           }`}
-          onClick={handleClick}
+          // onClick={handleClick}
         />
       </>
     );
+  };
+
+  const notify = () => {
+    toast("✓ Enviado com sucesso!", {
+      position: "bottom-center",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      icon: Logo,
+      style: {
+        background: "#7a71da", // Cor de fundo desejada
+      },
+      progressStyle: {
+        background: "#dece8d",
+      },
+    });
   };
 
   return (
@@ -123,6 +208,7 @@ const Contato = () => {
               action="https://usebasin.com/f/3cc33622376e"
               method="POST"
               id="form"
+              encType="multipart/form-data"
               onSubmit={handleSubmit}
               className="my-4 p-3 rounded-3 form-style d-flex flex-column"
             >
@@ -139,24 +225,34 @@ const Contato = () => {
               />
               <InputCustom
                 label="Informe seu e-mail:"
-                idName="e-mail"
+                idName="email"
                 type="email"
               />
 
               <TextAreaCustom
-                id=""
+                id="textArea"
                 label1="Como está a situação atual do design da empresa/negócio? 🎨📊"
                 label2="Descreva o que a empresa já tem ou faz em termos de Design hoje em dia"
               />
 
+              <RadioCustom />
+
               <SubmitCustom />
             </form>
-
-            {envioConcluido && (
-              <div style={{ color: "green", marginTop: "10px" }}>
-                Envio concluído com sucesso!
-              </div>
-            )}
+            {/* <button onClick={notify}>Notify !</button> */}
+            <ToastContainer
+              position="bottom-center"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+              // limit={1}
+            />
           </div>
         </section>
       </main>

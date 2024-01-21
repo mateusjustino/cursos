@@ -2,36 +2,37 @@
 
 .accordion {
   /* width: 40%; */
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .accordion-item {
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(0, 0, 0, 0.01);
   border: 1px solid var(--amarelo);
-  /* box-shadow: 2px 2px 8px rgba(255,255,255, 0.1), -2px -2px 8px rgba(255,255,255, 0.1); */
+  /* box-shadow: 2px 2px 8px rgba(0,0,0, 0.1), -2px -2px 8px rgba(0,0,0, 0.1); */
 }
 
 .accordion-body {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   color: white;
 }
 
 .accordion-button {
   color: white;
-  background: transparent;
+  /* background: transparent; */
+  background: rgba(0, 0, 0, 0.1);
   outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   font-weight: 500;
 }
 
 .accordion-button:focus {
   box-shadow: none;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: white;
 }
 
 .accordion-button:not(.collapsed) {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   color: white;
   /* font-weight: bold; */
   box-shadow: none;

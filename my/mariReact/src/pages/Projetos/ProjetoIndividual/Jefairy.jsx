@@ -15,7 +15,7 @@ const Jefairy = () => {
     <TemplateProjeto
       logo={Logo}
       local="Bauru - SP"
-      ano="2023"
+      ano="2022"
       paragraphs={[
         {
           id: uniqueID(),
