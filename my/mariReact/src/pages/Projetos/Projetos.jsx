@@ -43,10 +43,14 @@ const Projetos = () => {
     <>
       <Header />
       <main>
-        <section className="text-center py-5">
+        <section className="py-5 container container-max-width">
           <div>
-            <h1 className="fw-bold">Título para Projetos</h1>
-            <p className="fs-6">Aqui estarão todos os projetos</p>
+            <h1 className="fw-bold text-center">Marcas Protagonistas</h1>
+            <p className="fs-6">
+              Explore minha coleção de projetos de identidade visual, cada
+              projeto é uma expressão única e memorável, refletindo o
+              comprometimento em destacar marcas de maneira inesquecível.
+            </p>
           </div>
           <div className="container container-max-width">
             <div className="row">

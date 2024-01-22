@@ -39,6 +39,7 @@ const TextAreaCustom = ({ id, label1, label2 }) => {
         </label>
         <textarea
           id={id}
+          name={id}
           rows="4"
           className="p-2 mx-1 w-100 rounded-3 fs-6"
           placeholder="Digite aqui..."
@@ -214,7 +215,7 @@ const Contato = () => {
             >
               <h1 className="text-center">Formulário</h1>
               <InputCustom
-                label="Informe seu nome completo!:"
+                label="Informe seu nome completo:"
                 idName="nome"
                 type="text"
               />
@@ -230,7 +231,7 @@ const Contato = () => {
               />
 
               <TextAreaCustom
-                id="textArea"
+                id="situacao-design"
                 label1="Como está a situação atual do design da empresa/negócio? 🎨📊"
                 label2="Descreva o que a empresa já tem ou faz em termos de Design hoje em dia"
               />
@@ -239,7 +240,7 @@ const Contato = () => {
 
               <SubmitCustom />
             </form>
-            {/* <button onClick={notify}>Notify !</button> */}
+            <button onClick={notify}>Notify !</button>
             <ToastContainer
               position="bottom-center"
               autoClose={3000}

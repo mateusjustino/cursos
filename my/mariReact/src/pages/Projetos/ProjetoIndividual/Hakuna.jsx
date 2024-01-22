@@ -12,7 +12,7 @@ const Hakuna = () => {
   return (
     <TemplateProjeto
       logo={Logo}
-      ano="x"
+      ano="2022"
       paragraphs={[
         {
           id: uniqueID(),
