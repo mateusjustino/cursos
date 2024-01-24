@@ -1,7 +1,7 @@
 @import url(../../style.css);
 
 .vh-custom {
-  height: 100vh;
+  height: 30vh;
 }
 .img-back {
   position: relative;
@@ -15,8 +15,9 @@
   background-size: cover;
   background-position: center center;
   z-index: -1; /* Coloca a camada de fundo atrás do conteúdo */
+  background-attachment: fixed;
 }
-.img-back::after {
+/* .img-back::after {
   content: "";
   position: absolute;
   top: 0;
@@ -29,7 +30,7 @@
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.2)
   );
-}
+} */
 #img-back-1::before {
   background-image: url(../../assets/Mari/bussola.jpg);
 }
