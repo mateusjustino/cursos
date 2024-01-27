@@ -104,6 +104,7 @@ textarea:focus {
   border: 2px solid var(--amarelo);
   background-color: var(--amarelo);
   padding: 1px;
+  margin: 0 10px;
 }
 .radio-custom:checked {
   transition: all 0.3s;
@@ -113,11 +114,9 @@ textarea:focus {
 }
 /*fim radio button */
 
-.Toastify__toast-theme--colored.Toastify__toast--info {
-  color: red;
+.Toastify__toast-container {
 }
 
-.Toastify__progress-bar {
-  color: red;
-  background: red;
+::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }

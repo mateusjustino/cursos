@@ -51,6 +51,10 @@ const TextAreaCustom = ({ id, label1, label2 }) => {
 };
 
 const RadioCustom = ({}) => {
+  const [radioChecked, setRadioChecked] = useState(null);
+  const handleRadioChange = (event) => {
+    setRadioChecked(event.target.value);
+  };
   return (
     <>
       <div>
@@ -65,6 +69,8 @@ const RadioCustom = ({}) => {
             value="identidade"
             className="radio-custom"
             required
+            checked={radioChecked == "identidade"}
+            onChange={handleRadioChange}
           />
           <label htmlFor="identidade" className="ps-2">
             Identidade Visual
@@ -79,6 +85,8 @@ const RadioCustom = ({}) => {
             value="idv+gm"
             className="radio-custom"
             required
+            checked={radioChecked == "idv+gm"}
+            onChange={handleRadioChange}
           />
           <label htmlFor="idv+gm" className="ps-2">
             Identidade Visual + Gestão de Marca
@@ -93,16 +101,22 @@ const RadioCustom = ({}) => {
             value="outro"
             className="radio-custom"
             required
+            checked={radioChecked == "outro"}
+            onChange={handleRadioChange}
           />
           <label htmlFor="outro" className="ps-2">
-            Outro
+            Outro:
           </label>
+        </div>
+        <div className="w-100 ps-5 mb-5">
           <input
             id="outro-servico"
             name="outro-servico"
             type="text"
-            className="p-1 pt-2 fs-6 input-style w-100 ms-2"
+            className="fs-6 input-style w-100"
             placeholder="Digite aqui..."
+            disabled={radioChecked !== "outro"}
+            // disabled={radioChecked != "outro" ? "true" : "false"}
           />
         </div>
       </div>
@@ -130,10 +144,11 @@ const Contato = () => {
       });
 
       // Verifica o status da resposta
-      if (response.status === 200) {
+      if (response.status == 200) {
         console.log("Sucesso!"); // Se a resposta htmlFor bem-sucedida (status 200), imprime "Sucesso!"
-        notify();
+        notifySucess();
       } else {
+        notifyError();
         console.log("Falha!"); // Se a resposta não htmlFor bem-sucedida, imprime "Falha!"
       }
     } catch (error) {
@@ -166,10 +181,33 @@ const Contato = () => {
     );
   };
 
-  const notify = () => {
-    toast("✓ Enviado com sucesso!", {
+  const notifySucess = () => {
+    toast("✅ Enviado com sucesso!", {
       position: "bottom-center",
-      autoClose: 4000,
+      // autoClose: 4000,
+      autoClose: 1000,
+
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      icon: Logo,
+      style: {
+        background: "#7a71da", // Cor de fundo desejada
+      },
+      progressStyle: {
+        background: "#dece8d",
+      },
+    });
+  };
+  const notifyError = () => {
+    toast("❌ Erro no envio!", {
+      position: "bottom-center",
+      // autoClose: 4000,
+      autoClose: 1000,
+
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -240,7 +278,8 @@ const Contato = () => {
 
               <SubmitCustom />
             </form>
-            <button onClick={notify}>Notify !</button>
+            <button onClick={notifySucess}>Notify sucess!</button>
+            <button onClick={notifyError}>Notify error!</button>
             <ToastContainer
               position="bottom-center"
               autoClose={3000}
