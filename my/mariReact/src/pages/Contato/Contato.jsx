@@ -113,10 +113,11 @@ const RadioCustom = ({}) => {
             id="outro-servico"
             name="outro-servico"
             type="text"
-            className="fs-6 input-style w-100"
+            className={`fs-6 input-style w-100 ${
+              radioChecked !== "outro" ? "input-disable" : ""
+            }`}
             placeholder="Digite aqui..."
             disabled={radioChecked !== "outro"}
-            // disabled={radioChecked != "outro" ? "true" : "false"}
           />
         </div>
       </div>

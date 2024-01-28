@@ -13,45 +13,6 @@
   border-bottom: 2px solid var(--lilas);
 }
 
-/* para o select (aquele que vc clica e aparece opção logo abaixo) */
-.select-style {
-  color: white;
-  background: transparent;
-  border: 0;
-  border-bottom: 2px solid var(--amarelo);
-  transition: all 0.5s;
-  border-radius: 2px;
-}
-.select-style:focus {
-  outline: none;
-  border-bottom: 2px solid var(--lilas);
-}
-
-.select-style > option {
-  color: white;
-  background: var(--amarelo);
-  padding: 10px;
-  /* border-bottom: 1px solid white; */
-}
-.select-style > option:hover {
-  background: red;
-}
-
-/* fim para o select (aquele que vc clica e aparece opção logo abaixo) */
-
-/* utilizando o radio button */
-.table-pack {
-  list-style: none;
-}
-.div-h1-height {
-  height: 100px;
-  text-align: center;
-}
-/* .table-pack li::marker {
-  content: "⭐ ";
-} */
-/* fim utilizando o radio button */
-
 .button-style {
   background: 0;
   outline: none;
@@ -78,23 +39,18 @@
 
 /* textArea */
 textarea {
-  border: 1px solid var(--amarelo);
+  border: 2px solid var(--amarelo);
   background: transparent;
   color: white;
   resize: none;
 }
 textarea:focus {
   outline: none;
-  border: 1px solid var(--lilas);
+  border: 2px solid var(--lilas);
 }
 /* fim textArea */
 
 /* radio button */
-.container-radio {
-  background: red;
-  display: flex;
-  align-items: center;
-}
 .radio-custom {
   appearance: none;
   width: 17px;
@@ -114,9 +70,10 @@ textarea:focus {
 }
 /*fim radio button */
 
-.Toastify__toast-container {
-}
-
 ::placeholder {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.input-disable {
+  border-bottom: 2px solid gray;
 }
