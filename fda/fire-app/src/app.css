@@ -1,0 +1,13 @@
+* {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+body {
+  background: rgba(245, 245, 245, 1);
+}
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
