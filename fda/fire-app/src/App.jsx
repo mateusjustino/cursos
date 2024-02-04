@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { db } from "./firebase-connection";
+import { db, auth } from "./firebase-connection";
 import {
   doc,
   setDoc,
@@ -11,6 +11,12 @@ import {
   deleteDoc,
   onSnapshot,
 } from "firebase/firestore";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
 
 import "./app.css";
 
@@ -18,6 +24,11 @@ function App() {
   const [titulo, setTitulo] = useState("");
   const [autor, setAutor] = useState("");
   const [idPost, setIdPost] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const [user, setUser] = useState(false);
+  const [userDetail, setUserDetail] = useState({});
 
   const [posts, setPosts] = useState([]);
 
@@ -36,6 +47,26 @@ function App() {
       });
     };
     loadPosts();
+  }, []);
+  useEffect(() => {
+    const checkLogin = async () => {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // se tem usuario logado
+          // console.log(user);
+          setUserDetail({
+            uid: user.uid,
+            email: user.email,
+          });
+          setUser(true);
+        } else {
+          //não possui usuario logado
+          setUserDetail({});
+          setUser(false);
+        }
+      });
+    };
+    checkLogin();
   }, []);
 
   const handleAdd = async () => {
@@ -112,13 +143,93 @@ function App() {
       console.log("deletado");
     });
   };
+
+  const handleNovoUsuario = async () => {
+    await createUserWithEmailAndPassword(auth, email, senha)
+      .then((value) => {
+        console.log("deu certo");
+        console.log(value);
+        setEmail("");
+        setSenha("");
+      })
+      .catch((error) => {
+        console.log(error);
+        if (error.code == "auth/weak-password") {
+          alert("Senha muito fraca");
+        } else if (error.code == "auth/email-already-in-use") {
+          alert("Email já existe!");
+        }
+      });
+  };
+
+  const handleLogarUsuario = async () => {
+    await signInWithEmailAndPassword(auth, email, senha)
+      .then((value) => {
+        alert("usuario logado");
+
+        setUserDetail({
+          uid: value.user.uid,
+          email: value.user.email,
+        });
+        setUser(true);
+
+        setEmail("");
+        setSenha("");
+      })
+      .catch(() => {
+        alert("erro ao logar");
+      });
+  };
+
+  const handleLogout = async () => {
+    await signOut(auth);
+    setUserDetail({});
+    setUser(false);
+  };
   return (
     <>
       <div>
         <h1>Firebase</h1>
+
+        {user && (
+          <div>
+            <strong>Seja bem vindo(a)</strong> <br />
+            <span>ID: {userDetail.uid}</span> <br />
+            <span>Email: {userDetail.email}</span> <br />
+            <button onClick={handleLogout}>Logout</button>
+            <br />
+            <br />
+          </div>
+        )}
       </div>
 
       <div className="container">
+        <h2>Usuário</h2>
+        <label htmlFor="">Email</label>
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Digite um email"
+        />
+
+        <label htmlFor="">Senha</label>
+        <input
+          type="text"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+          placeholder="Digite uma senha"
+        />
+
+        <button onClick={handleNovoUsuario}>Cadastrar</button>
+        <button onClick={handleLogarUsuario}>Login</button>
+      </div>
+
+      <br />
+      <br />
+
+      <div className="container">
+        <h2>Posts</h2>
         <label htmlFor="">Id do Post:</label>
         <input
           type="text"
