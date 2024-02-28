@@ -6,6 +6,7 @@ import "./home.css";
 //https://api.themoviedb.org/3/movie/now_playing?api_key=6876ef12b2f4338d57e35ac8d4f4faf8&language=pt-br
 const Home = () => {
   const [filmes, setFilmes] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadFilmes() {
@@ -19,10 +20,19 @@ const Home = () => {
       // console.log(response.data.results.slice(0, 10));
       // console.log(response.data.results);
       setFilmes(response.data.results.slice(0, 10));
+      setLoading(false);
     }
 
     loadFilmes();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="loading">
+        <h2>Loading...</h2>
+      </div>
+    );
+  }
 
   return (
     <div className="container">
