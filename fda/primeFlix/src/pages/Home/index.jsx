@@ -19,7 +19,8 @@ const Home = () => {
       });
       // console.log(response.data.results.slice(0, 10));
       // console.log(response.data.results);
-      setFilmes(response.data.results.slice(0, 10));
+      // setFilmes(response.data.results.slice(0, 10));
+      setFilmes(response.data.results);
       setLoading(false);
     }
 
